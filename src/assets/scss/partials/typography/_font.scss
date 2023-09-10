@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Public Sans';
+    src: url('#{$font-path}/PublicSans-Thin.woff2') format('woff2'),
+        url('#{$font-path}/PublicSans-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Public Sans';
+    src: url('#{$font-path}/PublicSans-ExtraLight.woff2') format('woff2'),
+        url('#{$font-path}/PublicSans-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Public Sans';
+    src: url('#{$font-path}/PublicSans-Light.woff2') format('woff2'),
+        url('#{$font-path}/PublicSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Public Sans';
+    src: url('#{$font-path}/PublicSans-Regular.woff2') format('woff2'),
+        url('#{$font-path}/PublicSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Public Sans';
+    src: url('#{$font-path}/PublicSans-Medium.woff2') format('woff2'),
+        url('#{$font-path}/PublicSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Public Sans';
+    src: url('#{$font-path}/PublicSans-SemiBold.woff2') format('woff2'),
+        url('#{$font-path}/PublicSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Public Sans';
+    src: url('#{$font-path}/PublicSans-Bold.woff2') format('woff2'),
+        url('#{$font-path}/PublicSans-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Public Sans';
+    src: url('#{$font-path}/PublicSans-ExtraBold.woff2') format('woff2'),
+        url('#{$font-path}/PublicSans-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Public Sans';
+    src: url('#{$font-path}/PublicSans-Black.woff2') format('woff2'),
+        url('#{$font-path}/PublicSans-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}

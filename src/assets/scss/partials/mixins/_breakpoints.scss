@@ -1,0 +1,49 @@
+//Media Query
+
+@mixin default-device() {
+	@media only screen and (max-width: 1440px) {
+		@content;
+	}
+}
+
+@mixin xlarge-device() {
+	@media only screen and (max-width: 1280px) {
+		@content;
+	}
+}
+
+@mixin large-device() {
+	@media only screen and (max-width: 1199px) {
+		@content;
+	}
+}
+
+@mixin medium-device() {
+	@media only screen and (max-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin medium-small-device() {
+	@media only screen and (max-width: 991px) {
+		@content;
+	}
+}
+
+@mixin small-height-device() {
+	@media only screen and (max-height: 767px) {
+		@content;
+	}
+}
+
+@mixin small-device() {
+	@media only screen and (max-width: 767px) {
+		@content;
+	}
+}
+
+@mixin extra-small-device() {
+	@media only screen and (max-width: 320px) {
+		@content;
+	}
+} 

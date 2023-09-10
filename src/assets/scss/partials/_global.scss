@@ -1,0 +1,38 @@
+// Global 
+
+* {
+	box-sizing: border-box !important;
+    font-family: $font-family !important;
+}
+
+body {
+    font-size: $font-16;
+    font-weight: $font-400;
+    color: $textColor !important;
+    background: $bgColor;
+    padding: 0px !important;
+    text-rendering: geometricPrecision;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    position: relative; 
+}
+
+.wrapper {
+    @extend .full-cover;
+    @extend .position-fixed;
+}
+
+.content-area {
+    @extend .full-cover;
+    @extend .div-flex;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+.right-content-area {
+    @extend .full-cover;
+}
+
+.content {
+    @extend .full-cover;
+}

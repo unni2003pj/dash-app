@@ -1,0 +1,35 @@
+.header-block {
+    width: 100%;
+    height: 60px;
+    background: $white;
+    box-shadow: 0 1px 4px 0 rgba($color: $black, $alpha: 0.1);
+    padding: 0 0 0 20px;
+    @extend .div-flex-between;
+}
+
+.search-bar {
+    border-radius: 0;
+}
+
+.header-block-right {
+
+    button {
+        width: 60px;
+        height: 60px;
+        display: inline-block;
+        @extend .div-flex-center-cover;
+
+        &:hover {
+
+            .anticon {
+                color: $theme;
+            }
+        }
+
+        .anticon {
+            font-size: 22px !important;
+            color: $textColor;
+        }
+    }
+    
+}

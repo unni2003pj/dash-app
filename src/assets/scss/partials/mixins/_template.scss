@@ -1,0 +1,104 @@
+.div-float {
+    float: left;
+}
+
+.div-float-cover {
+    @extend .div-float;
+    width: 100%;
+}
+
+.full-cover {
+    @extend .div-float-cover;
+    height: 100%;
+}
+
+.div-flex {
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+}
+
+.div-flex-center {
+    @extend .div-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-align-items: center;
+}
+
+.div-flex-center-cover {
+    @extend .div-flex-center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+}
+
+.div-flex-between {
+    @extend .div-flex-center;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+}
+
+.div-flex-column {
+    @extend .div-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -moz-box-direction: column;
+    -ms-flex-direction: column;
+}
+
+.div-flex-column-center {
+    @extend .div-flex-center-cover;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -moz-box-direction: column;
+    -ms-flex-direction: column;
+}
+
+.div-flex-column-between {
+    @extend .div-flex-between;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -moz-box-direction: column;
+    -ms-flex-direction: column;
+}
+
+.position-left-top {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.position-right-top {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.position-left-bottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.position-right-bottom {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.position-fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.position-sticky {
+    position: sticky;
+    left: 0;
+    top: 0;
+}
