@@ -1,8 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Button, Space, Card, Breadcrumb , Tabs, Menu, Dropdown, Avatar, Col, Row } from 'antd';
- 
-const Dashboard = () => {   
-    const { TabPane } = Tabs;
+
+function Dashboard() {
+    // const { TabPane } = Tabs;
+
+    const [tab, setTab] = useState(1);
+    function tabChange(t) {
+        setTab(t)
+    }
 
     return(
         <main className='content'>
@@ -52,7 +57,7 @@ const Dashboard = () => {
                                 <path d="M4.66675 5.83325L3.66675 6.83325" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M10.6667 8.5L14 11.8333L11.3333 14.5L8 11.1667" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M10.6667 11.8333L9.66675 12.8333" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg> 
+                                </svg>
                                 <span>Customize</span>
                             </Button>
                         </Space>
@@ -146,100 +151,112 @@ const Dashboard = () => {
                                         </span>
                                     </Dropdown>
                                 </button>
-                                
+
                             </div>
                         </div>
                         <div className='card-content-area'>
                             <div className='nav-tab-wrapper'>
-                                <Tabs>
-                                    <TabPane tab="Account Details" key="1">
-                                        <div className='dashbaord-data-wrapper div-flex'>
-                                            <Avatar>MQ</Avatar>
-                                            <div className='dashboard-data-right'>
-                                                <div className='dashboard-data-right-top'>
-                                                    <h5>Standard Chartered</h5>
-                                                    <ul className='short-description-wrapper'>
-                                                        <li>
-                                                            <div className='short-description'>
-                                                                <label>Account Number</label>
-                                                                <p>AD001122</p>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div className='short-description'>
-                                                                <label>Customer Type</label>
-                                                                <p>Business</p>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div className='short-description'>
-                                                                <label>Total Revenue</label>
-                                                                <p>$5000.00</p>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div className='short-description'>
-                                                                <label>Customer Rating</label>
-                                                                <p>AD001122</p>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div className='short-description'>
-                                                                <label>KYC Status</label>
-                                                                <p>Verified</p>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div className='short-description'>
-                                                                <label>Loyality Points</label>
-                                                                <p>100</p>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div className='short-description'>
-                                                                <label>Phone Number</label>
-                                                                <p>+123 456 7890</p>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div className='short-description'>
-                                                                <label>Status</label>
-                                                                <p>Active</p>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div className='short-description'>
-                                                                <label>Platform</label>
-                                                                <p>Postpaid</p>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div className='short-description'>
-                                                                <label>Credit Score</label>
-                                                                <p>Good</p>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div className='short-description'>
-                                                                <label>Balance</label>
-                                                                <p>$200.00</p>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div className='short-description'>
-                                                                <label>Address</label>
-                                                                <p>Lorem Ipsum, CA</p>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
+                                   <div className="">
+                                       <nav className={tab===1? "tab-active": ""} onClick={()=>tabChange(1)}>a</nav>
+                                       <nav className={tab===2? "tab-active": ""} onClick={()=>tabChange(2)}>b</nav>
+                                   </div>
+                                    <div className='dashbaord-data-wrapper div-flex'>
+                                    <Avatar>MQ</Avatar>
+                                    <div className='dashboard-data-right'>
+                                        <div className='dashboard-data-right-top'>
+                                            <h5>Standard Chartered</h5>
+                                            <ul className='short-description-wrapper'>
+                                                <li>
+                                                    <div className='short-description'>
+                                                        <label>Account Number</label>
+                                                        <p>AD001122</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div className='short-description'>
+                                                        <label>Customer Type</label>
+                                                        <p>Business</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div className='short-description'>
+                                                        <label>Total Revenue</label>
+                                                        <p>$5000.00</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div className='short-description'>
+                                                        <label>Customer Rating</label>
+                                                        <p>AD001122</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div className='short-description'>
+                                                        <label>KYC Status</label>
+                                                        <p>Verified</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div className='short-description'>
+                                                        <label>Loyality Points</label>
+                                                        <p>100</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div className='short-description'>
+                                                        <label>Phone Number</label>
+                                                        <p>+123 456 7890</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div className='short-description'>
+                                                        <label>Status</label>
+                                                        <p>Active</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div className='short-description'>
+                                                        <label>Platform</label>
+                                                        <p>Postpaid</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div className='short-description'>
+                                                        <label>Credit Score</label>
+                                                        <p>Good</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div className='short-description'>
+                                                        <label>Balance</label>
+                                                        <p>$200.00</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div className='short-description'>
+                                                        <label>Address</label>
+                                                        <p>Lorem Ipsum, CA</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
                                         </div>
-                                    </TabPane>
-                                    <TabPane tab="Customer 360" key="2">
-                                        b
-                                    </TabPane>
-                                </Tabs>
+                                    </div>
+                                </div>
+                                    <div className="">
+                                        {
+                                            tab === 1 &&
+
+                                            <div className="tab-pane">aa
+                                            </div>
+                                        }
+                                        {
+                                            tab === 2 &&
+
+                                            <div className="tab-pane">bb
+
+                                            </div>
+                                        }
+                                    </div>
                             </div>
                         </div>
                     </Card>
