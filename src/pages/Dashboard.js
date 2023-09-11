@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Space, Card, Breadcrumb , Tabs, Menu, Dropdown, Avatar } from 'antd';
+import { Button, Space, Card, Breadcrumb , Tabs, Menu, Dropdown, Avatar, Col, Row } from 'antd';
  
 const Dashboard = () => {   
     const { TabPane } = Tabs;
@@ -153,11 +153,85 @@ const Dashboard = () => {
                             <div className='nav-tab-wrapper'>
                                 <Tabs>
                                     <TabPane tab="Account Details" key="1">
-                                        <div className='dashbaord-data-wrapper div-flex-center'>
+                                        <div className='dashbaord-data-wrapper div-flex'>
                                             <Avatar>MQ</Avatar>
                                             <div className='dashboard-data-right'>
                                                 <div className='dashboard-data-right-top'>
                                                     <h5>Standard Chartered</h5>
+                                                    <ul className='short-description-wrapper'>
+                                                        <li>
+                                                            <div className='short-description'>
+                                                                <label>Account Number</label>
+                                                                <p>AD001122</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div className='short-description'>
+                                                                <label>Customer Type</label>
+                                                                <p>Business</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div className='short-description'>
+                                                                <label>Total Revenue</label>
+                                                                <p>$5000.00</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div className='short-description'>
+                                                                <label>Customer Rating</label>
+                                                                <p>AD001122</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div className='short-description'>
+                                                                <label>KYC Status</label>
+                                                                <p>Verified</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div className='short-description'>
+                                                                <label>Loyality Points</label>
+                                                                <p>100</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div className='short-description'>
+                                                                <label>Phone Number</label>
+                                                                <p>+123 456 7890</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div className='short-description'>
+                                                                <label>Status</label>
+                                                                <p>Active</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div className='short-description'>
+                                                                <label>Platform</label>
+                                                                <p>Postpaid</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div className='short-description'>
+                                                                <label>Credit Score</label>
+                                                                <p>Good</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div className='short-description'>
+                                                                <label>Balance</label>
+                                                                <p>$200.00</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div className='short-description'>
+                                                                <label>Address</label>
+                                                                <p>Lorem Ipsum, CA</p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>

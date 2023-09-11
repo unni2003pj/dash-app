@@ -128,6 +128,8 @@
 
     .ant-tabs {
 
+        color: $textColor !important;
+
         .ant-tabs-tab {
 
             color: $textColor !important;
@@ -174,6 +176,7 @@
         border: 1px solid var(--light-solid-color-primary-primary-500-base, #18A4FF);
         background: var(--light-opacity-color-primary-primary-8, rgba(24, 164, 255, 0.08));
         margin-right: 16px;
+        flex-shrink: 0;
 
         .ant-avatar-string {
             font-size: 32px;
@@ -183,4 +186,40 @@
         }
     }
     
+}
+
+.dashboard-data-right-top {
+
+    h5 {
+        font-size: 26px;
+        font-weight: $font-600;
+        line-height: 36px;
+    }
+}
+
+.short-description-wrapper {
+
+    li {
+        @extend .div-float;
+        margin-right: 32px
+    }
+}
+
+.short-description {
+
+    @extend .div-flex-center;
+
+    label {
+        font-size: $font-13;
+        font-weight: $font-400;
+        line-height: 22px;
+        color: $greyText;
+    }
+
+    P {
+        font-size: $font-15;
+        font-weight: $font-700;
+        line-height: 22px;
+        margin-left: 8px;
+    }
 }
