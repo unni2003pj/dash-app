@@ -72,6 +72,7 @@
     .ant-card {
         border: 0;
         box-shadow: 0px 4px 18px 0px rgba(75, 70, 92, 0.10);
+        margin-bottom: 20px;
     }
 
     .ant-card-body {
@@ -118,57 +119,54 @@
     }
 }
 
-.nav-tab-wrapper {
 
-    .ant-tabs .ant-tabs-tab {
-        padding: 0 20px;
-        line-height: 38px;
-        margin: 0;
-    }
 
-    .ant-tabs {
+.dashboard-nav-tab {
+    @extend .div-float-cover;
+    border-bottom: $border;
 
-        color: $textColor !important;
+    .nav-tab {
+        display: inline-block;
+        padding: 8px 20px;
+        cursor: pointer;
+        position: relative;
+        transition: .3s ease-out;
 
-        .ant-tabs-tab {
-
-            color: $textColor !important;
-
-            &:hover {
-                color: $textColor;
-            }
-        }
-
-        .ant-tabs-tab.ant-tabs-tab-active {
-            
-            .ant-tabs-tab-btn {
-                background: var(--light-gradient-colors-menu-active, linear-gradient(72deg, #18A4FF 22.16%, #05C37F 76.47%));
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                color: transparent;
-
-                
-            }
-
-        }
-
-        .ant-tabs-ink-bar {
+        &:before {
+            content: "";
+            width: 0;
+            height: 2px;
             background: linear-gradient(72deg, #18A4FF 22.16%, #05C37F 76.47%);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 1;
+            transition: .3s ease-out;
         }
 
-        .ant-tabs-nav {
-            margin-bottom: 0;
-        }
-
-        .ant-tabs-tabpane {
-            padding: 16px;
+        &:hover {
+            color: $theme;
         }
     }
-     
+
+    .nav-tab.active {
+        background: var(--light-gradient-colors-menu-active, linear-gradient(72deg, #18A4FF 22.16%, #05C37F 76.47%));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        &:before {
+            width: 100%;
+        }
+    }
 }
+     
+
 
 .dashbaord-data-wrapper {
+
+    @extend .div-float-cover;
+    padding: 16px;
 
     .ant-avatar {
         width: 100px;
@@ -190,14 +188,23 @@
 
 .dashboard-data-right-top {
 
+    @extend .div-float-cover;
+    border-bottom: $border;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+
     h5 {
         font-size: 26px;
         font-weight: $font-600;
+        color: $textColor;
         line-height: 36px;
+        margin-bottom: 4px;
     }
 }
 
 .short-description-wrapper {
+
+    max-width: 70%;
 
     li {
         @extend .div-float;
@@ -220,6 +227,54 @@
         font-size: $font-15;
         font-weight: $font-700;
         line-height: 22px;
+        color: $textColor;
         margin-left: 8px;
     }
+}
+
+.non-sticky-wrapper {
+    @extend .div-float-cover;
+    padding: 0 20px 20px 20px;
+
+    .ant-card {
+        margin-bottom: 20px;
+    }
+}
+
+
+.tag-group {
+    margin-left: 8px;
+
+    .ant-tag  {
+        border-radius: 15px;
+        padding: 0 12px;
+        line-height: 20px;
+    }
+}
+
+.dashboard-data-right-bottom {
+
+    .short-description-wrapper {
+        max-width: 100%;
+    }
+}
+
+.olive-green {
+    background-color: rgba($color: #28C76F, $alpha: 0.15);
+    color: #28C76F;
+}
+
+.sea-blue {
+    background-color: rgba($color: #00CFE8, $alpha: 0.15);
+    color: #00CFE8;
+}
+
+.sandal {
+    background-color: rgba($color: #FF9F43, $alpha: 0.15);
+    color: #FF9F43;
+}
+
+.blue-berry {
+    background-color: rgba($color: #634CE3, $alpha: 0.15);
+    color: #634CE3;
 }

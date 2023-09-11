@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import { Button, Space, Card, Breadcrumb , Tabs, Menu, Dropdown, Avatar, Col, Row } from 'antd';
+import { Container, Row, Col } from 'react-grid-system';
+import { Button, Space, Card, Breadcrumb, Menu, Dropdown, Avatar, Tag } from 'antd';
 
 function Dashboard() {
     // const { TabPane } = Tabs;
@@ -156,11 +157,11 @@ function Dashboard() {
                         </div>
                         <div className='card-content-area'>
                             <div className='nav-tab-wrapper'>
-                                   <div className="">
-                                       <nav className={tab===1? "tab-active": ""} onClick={()=>tabChange(1)}>a</nav>
-                                       <nav className={tab===2? "tab-active": ""} onClick={()=>tabChange(2)}>b</nav>
-                                   </div>
-                                    <div className='dashbaord-data-wrapper div-flex'>
+                                <div className="dashboard-nav-tab">
+                                    <nav className={tab===1? "nav-tab active": "nav-tab"} onClick={()=>tabChange(1)}>Account Details</nav>
+                                    <nav className={tab===2? "nav-tab active": "nav-tab"} onClick={()=>tabChange(2)}>Customer 360</nav>
+                                </div>
+                                <div className='dashbaord-data-wrapper div-flex'>
                                     <Avatar>MQ</Avatar>
                                     <div className='dashboard-data-right'>
                                         <div className='dashboard-data-right-top'>
@@ -240,30 +241,137 @@ function Dashboard() {
                                                 </li>
                                             </ul>
                                         </div>
+                                        <div className='dashboard-data-right-bottom'>
+                                            <ul className='short-description-wrapper'>
+                                                <li>
+                                                    <div className='short-description'>
+                                                        <label>Assigned to</label>
+                                                        <div className='tag-group'>
+                                                            <Tag bordered={false} className='olive-green'>John Doe</Tag>
+                                                            <Tag bordered={false} className='olive-green'>3+ more</Tag>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div className='short-description'>
+                                                        <label>Related Contacts</label>
+                                                        <div className='tag-group'>
+                                                            <Tag bordered={false} className='sea-blue'>SCB</Tag>
+                                                            <Tag bordered={false} className='sea-blue'>3+ more</Tag>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div className='short-description'>
+                                                        <label>Documents</label>
+                                                        <div className='tag-group'>
+                                                            <Tag bordered={false} className='sandal'>Aadhar</Tag>
+                                                            <Tag bordered={false} className='sandal'>3+ more</Tag>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div className='short-description'>
+                                                        <label>Complaints / Ticket</label>
+                                                        <div className='tag-group'>
+                                                            <Tag bordered={false} className='blue-berry'>FYI</Tag>
+                                                            <Tag bordered={false} className='blue-berry'>3+ more</Tag>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                                    <div className="">
-                                        {
-                                            tab === 1 &&
-
-                                            <div className="tab-pane">aa
-                                            </div>
-                                        }
-                                        {
-                                            tab === 2 &&
-
-                                            <div className="tab-pane">bb
-
-                                            </div>
-                                        }
-                                    </div>
                             </div>
                         </div>
                     </Card>
                 </div>
             </div>
             <div className='non-sticky-wrapper'>
+                <div className="nav-tab-holder">
+                    {
+                        tab === 1 &&
 
+                        <div className="tab-pane">
+                            <Row>
+                                <Col sm={12}>
+                                    <Card>dshfihbsadifbhsauiedhfiushuihsf</Card>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col sm={6}>
+                                    <Card>dshfihbsadifbhsauiedhfiushuihsf</Card>
+                                </Col>
+                                <Col sm={6}>
+                                    <Card>dshfihbsadifbhsauiedhfiushuihsf</Card>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col sm={6}>
+                                    <Card>dshfihbsadifbhsauiedhfiushuihsf</Card>
+                                </Col>
+                                <Col sm={6}>
+                                    <Card>dshfihbsadifbhsauiedhfiushuihsf</Card>
+                                </Col>
+                            </Row>
+                        </div>
+                    }
+                    {
+                        tab === 2 &&
+
+                        <div className="tab-pane">
+                            <Row>
+                                <Col>
+                                    <Card>dshfihbsadifbhsauiedhfiushuihsf</Card>
+                                </Col>
+                                <Col>
+                                    <Card>dshfihbsadifbhsauiedhfiushuihsf</Card>
+                                </Col>
+                                <Col>
+                                    <Card>dshfihbsadifbhsauiedhfiushuihsf</Card>
+                                </Col>
+                                <Col>
+                                    <Card>dshfihbsadifbhsauiedhfiushuihsf</Card>
+                                </Col>
+                                <Col>
+                                    <Card>dshfihbsadifbhsauiedhfiushuihsf</Card>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <Card>dshfihbsadifbhsauiedhfiushuihsf</Card>
+                                </Col>
+                                <Col>   
+                                    <Row>
+                                        <Col>  
+                                            <Card>dshfihbsadifbhsauiedhfiushuihsf</Card>
+                                        </Col>
+                                        <Col>  
+                                            <Card>dshfihbsadifbhsauiedhfiushuihsf</Card>
+                                        </Col>
+                                    </Row>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <Card>dshfihbsadifbhsauiedhfiushuihsf</Card>
+                                </Col>
+                                <Col>
+                                <Row>
+                                    <Col>  
+                                            <Card>dshfihbsadifbhsauiedhfiushuihsf</Card>
+                                        </Col>
+                                        <Col>  
+                                            <Card>dshfihbsadifbhsauiedhfiushuihsf</Card>
+                                        </Col>
+                                    </Row>
+                                </Col>
+                            </Row>
+                        </div>
+                    }
+                </div>
             </div>
         </main>
     )
