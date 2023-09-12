@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Row, Col } from 'react-grid-system';
+import { Col, Divider, Row } from 'antd';
 import { Button, Space, Card, Breadcrumb, Menu, Dropdown, Avatar, Tag } from 'antd';
 
 function Dashboard() {
@@ -12,7 +12,9 @@ function Dashboard() {
 
     return(
         <main className='content'>
+
             <div className='pinned-card-wrapper'>
+                
                 <div className='pinned-filter-header div-flex-between'>
                     <div className='filter-header-left'>
                         <Breadcrumb>
@@ -64,8 +66,10 @@ function Dashboard() {
                         </Space>
                     </div>
                 </div>
+
                 <div className='pinned-main-card'>
                     <Card>
+
                         <div className='card-action-area div-flex-between'>
                             <div className='card-action-left'>
                                 <button className='action-link'>
@@ -155,6 +159,7 @@ function Dashboard() {
 
                             </div>
                         </div>
+
                         <div className='card-content-area'>
                             <div className='nav-tab-wrapper'>
                                 <div className="dashboard-nav-tab">
@@ -166,80 +171,80 @@ function Dashboard() {
                                     <div className='dashboard-data-right'>
                                         <div className='dashboard-data-right-top'>
                                             <h5>Standard Chartered</h5>
-                                            <ul className='short-description-wrapper'>
-                                                <li>
+                                            <Row gutter={16}> 
+                                                <Col span={4}>
                                                     <div className='short-description'>
                                                         <label>Account Number</label>
                                                         <p>AD001122</p>
                                                     </div>
-                                                </li>
-                                                <li>
+                                                </Col>
+                                                <Col span={4}>
                                                     <div className='short-description'>
                                                         <label>Customer Type</label>
                                                         <p>Business</p>
                                                     </div>
-                                                </li>
-                                                <li>
+                                                </Col>
+                                                <Col span={4}>
                                                     <div className='short-description'>
                                                         <label>Total Revenue</label>
                                                         <p>$5000.00</p>
                                                     </div>
-                                                </li>
-                                                <li>
+                                                </Col>
+                                                <Col span={4}>
                                                     <div className='short-description'>
                                                         <label>Customer Rating</label>
                                                         <p>AD001122</p>
                                                     </div>
-                                                </li>
-                                                <li>
+                                                </Col>
+                                                <Col span={4}>
                                                     <div className='short-description'>
                                                         <label>KYC Status</label>
                                                         <p>Verified</p>
                                                     </div>
-                                                </li>
-                                                <li>
+                                                </Col>
+                                                <Col span={4}>
                                                     <div className='short-description'>
                                                         <label>Loyality Points</label>
                                                         <p>100</p>
                                                     </div>
-                                                </li>
-                                                <li>
+                                                </Col>
+                                                <Col span={4}>
                                                     <div className='short-description'>
                                                         <label>Phone Number</label>
                                                         <p>+123 456 7890</p>
                                                     </div>
-                                                </li>
-                                                <li>
+                                                </Col>
+                                                <Col span={4}>
                                                     <div className='short-description'>
                                                         <label>Status</label>
                                                         <p>Active</p>
                                                     </div>
-                                                </li>
-                                                <li>
+                                                </Col>
+                                                <Col span={4}>
                                                     <div className='short-description'>
                                                         <label>Platform</label>
                                                         <p>Postpaid</p>
                                                     </div>
-                                                </li>
-                                                <li>
+                                                </Col>
+                                                <Col span={4}>
                                                     <div className='short-description'>
                                                         <label>Credit Score</label>
                                                         <p>Good</p>
                                                     </div>
-                                                </li>
-                                                <li>
+                                                </Col>
+                                                <Col span={4}>
                                                     <div className='short-description'>
                                                         <label>Balance</label>
                                                         <p>$200.00</p>
                                                     </div>
-                                                </li>
-                                                <li>
+                                                </Col>
+                                                <Col span={4}>
                                                     <div className='short-description'>
                                                         <label>Address</label>
                                                         <p>Lorem Ipsum, CA</p>
                                                     </div>
-                                                </li>
-                                            </ul>
+                                                </Col>
+                                            </Row>
                                         </div>
                                         <div className='dashboard-data-right-bottom'>
                                             <ul className='short-description-wrapper'>
@@ -286,17 +291,23 @@ function Dashboard() {
                                 </div>
                             </div>
                         </div>
+
                     </Card>
+
                 </div>
+
             </div>
+
             <div className='non-sticky-wrapper'>
+
                 <div className="nav-tab-holder">
-                    {
-                        tab === 1 &&
+                    
+                    { tab === 1 &&
 
                         <div className="tab-pane">
-                            <Row>
-                                <Col sm={12}>
+
+                            <Row gutter={16}>
+                                <Col span={24}>
                                     <Card>
                                         <div className='card-panel-wrapper'>
                                             <div className='card-panel-header div-flex-between'>
@@ -333,12 +344,16 @@ function Dashboard() {
                                                 </div>
                                             </div>
                                             <div className='card-panel-body'>
-                                                <Row>
-                                                    <Col>
+                                                <Row gutter={16}>
+                                                    <Col span={6}>
                                                         <Card>
                                                             <div className='short-card'>
-                                                                <figure className='icon-box'>
-                                                                    <span></span>
+                                                                <figure className='icon-box olive-green'>
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                                                                    <rect x="7.58331" y="4.33325" width="10.8333" height="17.3333" rx="1" stroke="#28C76F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M11.9167 5.41667H14.0834" stroke="#28C76F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M13 18.4166V18.4275" stroke="#28C76F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    </svg>
                                                                 </figure>
                                                                 <div className='short-card-details'>
                                                                     <h5>iPhone 14 Pro</h5>
@@ -357,15 +372,44 @@ function Dashboard() {
                                                                             <p>None</p>
                                                                         </li>
                                                                     </ul>
+                                                                    <button className='more-option-drop'>
+                                                                        <Dropdown
+                                                                            overlay={(
+                                                                            <Menu>
+                                                                                <Menu.Item key="0">Edit</Menu.Item>
+                                                                                <Menu.Item key="1">Delete</Menu.Item>
+                                                                                <Menu.Item key="2">Preview</Menu.Item>
+                                                                            </Menu>
+                                                                            )}
+                                                                            trigger={['click']}>
+                                                                            <span className="ant-dropdown-link" onClick={e => e.preventDefault()}>
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                                                                <circle cx="12.5999" cy="12" r="1" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <circle cx="12.5999" cy="12" r="1" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <circle cx="12.5999" cy="19" r="1" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <circle cx="12.5999" cy="19" r="1" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <circle cx="12.5999" cy="5" r="1" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <circle cx="12.5999" cy="5" r="1" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                </svg>
+                                                                            </span>
+                                                                        </Dropdown>
+                                                                    </button>
                                                                 </div>
                                                             </div>
                                                         </Card>
                                                     </Col>
-                                                    <Col>
+                                                    <Col span={6}>
                                                         <Card>
                                                             <div className='short-card'>
                                                                 <figure className='icon-box'>
-                                                                    <span></span>
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" fill="none">
+                                                                    <path d="M13.8001 21.6667L10.5501 18.4167H8.38342C6.5885 18.4167 5.13342 16.9617 5.13342 15.1667V8.66675C5.13342 6.87182 6.5885 5.41675 8.38342 5.41675H19.2168C21.0117 5.41675 22.4668 6.87182 22.4668 8.66675V15.1667C22.4668 16.9617 21.0117 18.4167 19.2168 18.4167H17.0501L13.8001 21.6667" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M13.8001 21.6667L10.5501 18.4167H8.38342C6.5885 18.4167 5.13342 16.9617 5.13342 15.1667V8.66675C5.13342 6.87182 6.5885 5.41675 8.38342 5.41675H19.2168C21.0117 5.41675 22.4668 6.87182 22.4668 8.66675V15.1667C22.4668 16.9617 21.0117 18.4167 19.2168 18.4167H17.0501L13.8001 21.6667" stroke="white" stroke-opacity="0.5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M9.46667 9.74992H18.1333" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M9.46667 9.74992H18.1333" stroke="white" stroke-opacity="0.5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M9.46667 14.0834H15.9667" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M9.46667 14.0834H15.9667" stroke="white" stroke-opacity="0.5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    </svg>
                                                                 </figure>
                                                                 <div className='short-card-details'>
                                                                     <h5>100 SMS Pack</h5>
@@ -384,15 +428,42 @@ function Dashboard() {
                                                                             <p>None</p>
                                                                         </li>
                                                                     </ul>
+                                                                    <button className='more-option-drop'>
+                                                                        <Dropdown
+                                                                            overlay={(
+                                                                            <Menu>
+                                                                                <Menu.Item key="0">Edit</Menu.Item>
+                                                                                <Menu.Item key="1">Delete</Menu.Item>
+                                                                                <Menu.Item key="2">Preview</Menu.Item>
+                                                                            </Menu>
+                                                                            )}
+                                                                            trigger={['click']}>
+                                                                            <span className="ant-dropdown-link" onClick={e => e.preventDefault()}>
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                                                                <circle cx="12.5999" cy="12" r="1" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <circle cx="12.5999" cy="12" r="1" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <circle cx="12.5999" cy="19" r="1" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <circle cx="12.5999" cy="19" r="1" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <circle cx="12.5999" cy="5" r="1" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <circle cx="12.5999" cy="5" r="1" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                </svg>
+                                                                            </span>
+                                                                        </Dropdown>
+                                                                    </button>
                                                                 </div>
                                                             </div>
                                                         </Card>
                                                     </Col>
-                                                    <Col>
+                                                    <Col span={6}>
                                                         <Card>
                                                             <div className='short-card'>
-                                                                <figure className='icon-box'>
-                                                                    <span></span>
+                                                                <figure className='icon-box olive-green'>
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" fill="none">
+                                                                    <path d="M17.9333 4.33342L17.9333 21.6667" stroke="#28C76F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M6.0166 18.4167L9.2666 21.6667" stroke="#28C76F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M21.1833 7.58325L17.9333 4.33325" stroke="#28C76F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M9.2666 21.6666L9.2666 4.33325" stroke="#28C76F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    </svg>
                                                                 </figure>
                                                                 <div className='short-card-details'>
                                                                     <h5>100 SMS Pack</h5>
@@ -411,15 +482,41 @@ function Dashboard() {
                                                                             <p>None</p>
                                                                         </li>
                                                                     </ul>
+                                                                    <button className='more-option-drop'>
+                                                                        <Dropdown
+                                                                            overlay={(
+                                                                            <Menu>
+                                                                                <Menu.Item key="0">Edit</Menu.Item>
+                                                                                <Menu.Item key="1">Delete</Menu.Item>
+                                                                                <Menu.Item key="2">Preview</Menu.Item>
+                                                                            </Menu>
+                                                                            )}
+                                                                            trigger={['click']}>
+                                                                            <span className="ant-dropdown-link" onClick={e => e.preventDefault()}>
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                                                                <circle cx="12.5999" cy="12" r="1" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <circle cx="12.5999" cy="12" r="1" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <circle cx="12.5999" cy="19" r="1" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <circle cx="12.5999" cy="19" r="1" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <circle cx="12.5999" cy="5" r="1" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <circle cx="12.5999" cy="5" r="1" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                </svg>
+                                                                            </span>
+                                                                        </Dropdown>
+                                                                    </button>
                                                                 </div>
                                                             </div>
                                                         </Card>
                                                     </Col>
-                                                    <Col>
+                                                    <Col span={6}>
                                                         <Card>
                                                             <div className='short-card'>
-                                                                <figure className='icon-box'>
-                                                                    <span></span>
+                                                                <figure className='icon-box red-shade'>
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" fill="none">
+                                                                    <path d="M5.81657 4.33325H10.1499L12.3166 9.74992L9.60824 11.3749C10.7684 13.7274 12.6724 15.6314 15.0249 16.7916L16.6499 14.0833L22.0666 16.2499V20.5833C22.0666 21.7799 21.0965 22.7499 19.8999 22.7499C11.1549 22.2185 4.18134 15.245 3.6499 6.49992C3.6499 5.3033 4.61995 4.33325 5.81657 4.33325" stroke="#EA5455" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M16.6499 7.58325C17.8465 7.58325 18.8166 8.5533 18.8166 9.74992" stroke="#EA5455" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M16.6499 3.25C20.2398 3.25 23.1499 6.16015 23.1499 9.75" stroke="#EA5455" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    </svg>
                                                                 </figure>
                                                                 <div className='short-card-details'>
                                                                     <h5>100 SMS Pack</h5>
@@ -438,33 +535,28 @@ function Dashboard() {
                                                                             <p>None</p>
                                                                         </li>
                                                                     </ul>
-                                                                </div>
-                                                            </div>
-                                                        </Card>
-                                                    </Col>
-                                                    <Col>
-                                                        <Card>
-                                                            <div className='short-card'>
-                                                                <figure className='icon-box'>
-                                                                    <span></span>
-                                                                </figure>
-                                                                <div className='short-card-details'>
-                                                                    <h5>100 SMS Pack</h5>
-                                                                    <p>Asset Number <span>0637230</span></p>
-                                                                    <ul className='short-card-status'>
-                                                                        <li>
-                                                                            <label>Status</label>
-                                                                            <p className='olive-green-text'>Active</p>
-                                                                        </li>
-                                                                        <li>
-                                                                            <label>Start Dat</label>
-                                                                            <p>12/02/2023</p>
-                                                                        </li>
-                                                                        <li>
-                                                                            <label>Validity Till</label>
-                                                                            <p>None</p>
-                                                                        </li>
-                                                                    </ul>
+                                                                    <button className='more-option-drop'>
+                                                                        <Dropdown
+                                                                            overlay={(
+                                                                            <Menu>
+                                                                                <Menu.Item key="0">Edit</Menu.Item>
+                                                                                <Menu.Item key="1">Delete</Menu.Item>
+                                                                                <Menu.Item key="2">Preview</Menu.Item>
+                                                                            </Menu>
+                                                                            )}
+                                                                            trigger={['click']}>
+                                                                            <span className="ant-dropdown-link" onClick={e => e.preventDefault()}>
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                                                                <circle cx="12.5999" cy="12" r="1" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <circle cx="12.5999" cy="12" r="1" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <circle cx="12.5999" cy="19" r="1" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <circle cx="12.5999" cy="19" r="1" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <circle cx="12.5999" cy="5" r="1" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                <circle cx="12.5999" cy="5" r="1" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                </svg>
+                                                                            </span>
+                                                                        </Dropdown>
+                                                                    </button>
                                                                 </div>
                                                             </div>
                                                         </Card>
@@ -475,8 +567,10 @@ function Dashboard() {
                                     </Card>
                                 </Col>
                             </Row>
-                            <Row>
-                                <Col sm={6}>
+
+                            <Row gutter={16}>
+
+                                <Col span={12}>
                                     <Card>
                                         <div className='card-panel-wrapper'>
                                             <div className='card-panel-header div-flex-between'>
@@ -513,15 +607,83 @@ function Dashboard() {
                                                 </div>
                                             </div>
                                             <div className='card-panel-body'>
-                                                <Row>
-                                                    <Col>
+                                                <Row gutter={16}>
+                                                    <Col span={12}>
                                                         <Card>
-                                                            bdfbs
+                                                            <div className='short-card horizontal-card'>
+                                                                <figure className='icon-box olive-green round'>
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                                                                    <path d="M15.1667 4.33325V8.66658C15.1667 9.26489 15.6517 9.74992 16.25 9.74992H21.6667" stroke="#28C76F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.1905 21.6666H6.8095C5.44194 21.6666 4.33331 20.8043 4.33331 19.7407V6.25918C4.33331 5.19552 5.44194 4.33325 6.8095 4.33325H15.4762L21.6666 9.14807V19.7407C21.6666 20.8043 20.558 21.6666 19.1905 21.6666Z" stroke="#28C76F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M8.66669 8.66667H10.8334" stroke="#28C76F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M8.66669 12.9999H17.3334" stroke="#28C76F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M8.66669 17.3334H17.3334" stroke="#28C76F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    </svg>
+                                                                </figure>
+                                                                <div className='short-card-details'>
+                                                                    <h5>100 SMS Pack</h5>
+                                                                    <ul className='short-card-status'>
+                                                                        <li>
+                                                                            <label>Status</label>
+                                                                            <p className='olive-green-text'>Active</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <label>Duration</label>
+                                                                            <p>12/02/2023</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <label>Start Date</label>
+                                                                            <p>12/02/2023</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <label>End Date</label>
+                                                                            <p>None</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <button className='more-option-drop'>
+                                                                        <Tag bordered={false} className='olive-green'>Download Document</Tag>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
                                                         </Card>
                                                     </Col>
-                                                    <Col>
+                                                    <Col span={12}>
                                                         <Card>
-                                                            bdfbs
+                                                            <div className='short-card horizontal-card'>
+                                                                <figure className='icon-box red-shade round'>
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" fill="none">
+                                                                    <path d="M15.9166 4.33325V8.66658C15.9166 9.26489 16.4017 9.74992 17 9.74992H22.4166" stroke="#EA5455" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9405 21.6666H7.55956C6.192 21.6666 5.08337 20.8043 5.08337 19.7407V6.25918C5.08337 5.19552 6.192 4.33325 7.55956 4.33325H16.2262L22.4167 9.14807V19.7407C22.4167 20.8043 21.3081 21.6666 19.9405 21.6666Z" stroke="#EA5455" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M9.41663 8.66667H11.5833" stroke="#EA5455" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M9.41663 12.9999H18.0833" stroke="#EA5455" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M9.41663 17.3334H18.0833" stroke="#EA5455" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    </svg>
+                                                                </figure>
+                                                                <div className='short-card-details'>
+                                                                    <h5>100 SMS Pack</h5>
+                                                                    <ul className='short-card-status'>
+                                                                        <li>
+                                                                            <label>Status</label>
+                                                                            <p className='olive-green-text'>Active</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <label>Duration</label>
+                                                                            <p>12/02/2023</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <label>Start Date</label>
+                                                                            <p>12/02/2023</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <label>End Date</label>
+                                                                            <p>None</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <button className='more-option-drop'>
+                                                                        <Tag bordered={false} className='red-shade'>Download Document</Tag>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
                                                         </Card>
                                                     </Col>
                                                 </Row>
@@ -529,7 +691,8 @@ function Dashboard() {
                                         </div>
                                     </Card>
                                 </Col>
-                                <Col sm={6}>
+
+                                <Col span={12}>
                                     <Card>
                                         <div className='card-panel-wrapper'>
                                             <div className='card-panel-header div-flex-between'>
@@ -566,15 +729,74 @@ function Dashboard() {
                                                 </div>
                                             </div>
                                             <div className='card-panel-body'>
-                                                <Row>
-                                                    <Col>
+                                                <Row gutter={16}>
+                                                    <Col span={8}>
                                                         <Card>
-                                                            bdfbs
+                                                            <div className='short-card horizontal-card'>
+                                                                <figure className='icon-box blue-berry round'>
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" fill="none">
+                                                                    <circle cx="13.5" cy="7.58333" r="4.33333" stroke="#634CE3" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M7 22.75V20.5833C7 18.1901 8.9401 16.25 11.3333 16.25H15.6667C18.0599 16.25 20 18.1901 20 20.5833V22.75" stroke="#634CE3" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    </svg>
+                                                                </figure>
+                                                                <div className='short-card-details'>
+                                                                    <h5>Identity Card</h5>
+                                                                    <ul className='short-card-status'>
+                                                                        <li>
+                                                                            <p>1234567890</p>
+                                                                            <label>02/02/2025</label>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
                                                         </Card>
                                                     </Col>
-                                                    <Col>
+                                                    <Col span={8}>
                                                         <Card>
-                                                            bdfbs
+                                                            <div className='short-card horizontal-card'>
+                                                                <figure className='icon-box blue-berry round'>
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                                                                    <path d="M3.25 8.66675C3.25 6.87182 4.70507 5.41675 6.5 5.41675H19.5C21.2949 5.41675 22.75 6.87182 22.75 8.66675V17.3334C22.75 19.1283 21.2949 20.5834 19.5 20.5834H6.5C4.70508 20.5834 3.25 19.1283 3.25 17.3334V8.66675Z" stroke="#634CE3" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M6.5 9.75H9.75" stroke="#634CE3" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M6.5 13H9.75" stroke="#634CE3" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M6.5 16.25H9.75" stroke="#634CE3" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M15.9575 9.8014L13.4297 10.7282C13.1697 10.8235 13 11.0381 13 11.2735V12.6741C13 14.3279 14.3867 15.8745 16.25 16.25C18.1133 15.8745 19.5 14.3279 19.5 12.6741V11.2735C19.5 11.0381 19.3303 10.8235 19.0703 10.7282L16.5425 9.8014C16.3583 9.73287 16.1417 9.73287 15.9575 9.8014Z" stroke="#634CE3" stroke-width="1.75"/>
+                                                                    </svg>
+                                                                </figure>
+                                                                <div className='short-card-details'>
+                                                                    <h5>Identity Card</h5>
+                                                                    <ul className='short-card-status'>
+                                                                        <li>
+                                                                            <p>1234567890</p>
+                                                                            <label>02/02/2025</label>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </Card>
+                                                    </Col>
+                                                    <Col span={8}>
+                                                        <Card>
+                                                            <div className='short-card horizontal-card'>
+                                                                <figure className='icon-box blue-berry round'>
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" fill="none">
+                                                                    <path d="M3.75 8.66675C3.75 6.87182 5.20507 5.41675 7 5.41675H20C21.7949 5.41675 23.25 6.87182 23.25 8.66675V17.3334C23.25 19.1283 21.7949 20.5834 20 20.5834H7C5.20508 20.5834 3.75 19.1283 3.75 17.3334V8.66675Z" stroke="#634CE3" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M7 9.75H10.25" stroke="#634CE3" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M7 13H10.25" stroke="#634CE3" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M7 16.25H10.25" stroke="#634CE3" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                    <path d="M16.4575 9.8014L13.9297 10.7282C13.6697 10.8235 13.5 11.0381 13.5 11.2735V12.6741C13.5 14.3279 14.8867 15.8745 16.75 16.25C18.6133 15.8745 20 14.3279 20 12.6741V11.2735C20 11.0381 19.8303 10.8235 19.5703 10.7282L17.0425 9.8014C16.8583 9.73287 16.6417 9.73287 16.4575 9.8014Z" stroke="#634CE3" stroke-width="1.75"/>
+                                                                    </svg>
+                                                                </figure>
+                                                                <div className='short-card-details'>
+                                                                    <h5>Identity Card</h5>
+                                                                    <ul className='short-card-status'>
+                                                                        <li>
+                                                                            <p>1234567890</p>
+                                                                            <label>02/02/2025</label>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
                                                         </Card>
                                                     </Col>
                                                 </Row>
@@ -582,9 +804,12 @@ function Dashboard() {
                                         </div>
                                     </Card>
                                 </Col>
+
                             </Row>
-                            <Row>
-                                <Col sm={6}>
+
+                            <Row gutter={16}>
+
+                                <Col span={12}>
                                     <Card>
                                         <div className='card-panel-wrapper'>
                                             <div className='card-panel-header div-flex-between'>
@@ -598,16 +823,15 @@ function Dashboard() {
                                             <div className='card-panel-body'>
                                                 <Row>
                                                     <Col>
-                                                        <Card>
-                                                            bdfbs
-                                                        </Card>
+                                                        
                                                     </Col>
                                                 </Row>
                                             </div>
                                         </div>
                                     </Card>
                                 </Col>
-                                <Col sm={6}>
+
+                                <Col span={12}>
                                     <Card>
                                         <div className='card-panel-wrapper'>
                                             <div className='card-panel-header div-flex-between'>
@@ -619,13 +843,15 @@ function Dashboard() {
                                                 </div>
                                             </div>
                                             <div className='card-panel-body'>
-                                                <Row>
-                                                    <Col>
-                                                        <Card>
-                                                            bdfbs
-                                                        </Card>
+
+                                                <Row gutter={16}>
+
+                                                    <Col span={24}>
+                                                        
                                                     </Col>
+
                                                 </Row>
+
                                             </div>
                                         </div>
                                     </Card>
@@ -633,11 +859,10 @@ function Dashboard() {
                             </Row>
                         </div>
                     }
-                    {
-                        tab === 2 &&
+                    { tab === 2 &&
 
                         <div className="tab-pane">
-                            <Row>
+                            <Row gutter={16}>
                                 <Col>
                                     <Card>dshfihbsadifbhsauiedhfiushuihsf</Card>
                                 </Col>
@@ -654,7 +879,7 @@ function Dashboard() {
                                     <Card>dshfihbsadifbhsauiedhfiushuihsf</Card>
                                 </Col>
                             </Row>
-                            <Row>
+                            <Row gutter={16}>
                                 <Col>
                                     <Card>dshfihbsadifbhsauiedhfiushuihsf</Card>
                                 </Col>
@@ -669,13 +894,13 @@ function Dashboard() {
                                     </Row>
                                 </Col>
                             </Row>
-                            <Row>
+                            <Row gutter={16}>
                                 <Col>
                                     <Card>dshfihbsadifbhsauiedhfiushuihsf</Card>
                                 </Col>
                                 <Col>
-                                <Row>
-                                    <Col>  
+                                    <Row gutter={16}>
+                                        <Col>  
                                             <Card>dshfihbsadifbhsauiedhfiushuihsf</Card>
                                         </Col>
                                         <Col>  

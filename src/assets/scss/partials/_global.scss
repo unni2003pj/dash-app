@@ -31,8 +31,11 @@ body {
 
 .right-content-area {
     @extend .full-cover;
+    @extend .div-flex-column;
+    align-items: stretch
 }
 
 .content {
     @extend .full-cover;
+    overflow-y: auto;
 }
