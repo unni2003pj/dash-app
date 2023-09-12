@@ -336,9 +336,184 @@ function Dashboard() {
                                                 <Row>
                                                     <Col>
                                                         <Card>
-                                                            bdfbs
+                                                            <div className='short-card'>
+                                                                <figure className='icon-box'>
+                                                                    <span></span>
+                                                                </figure>
+                                                                <div className='short-card-details'>
+                                                                    <h5>iPhone 14 Pro</h5>
+                                                                    <p>Asset Number <span>0637230</span></p>
+                                                                    <ul className='short-card-status'>
+                                                                        <li>
+                                                                            <label>Status</label>
+                                                                            <p className='olive-green-text'>Active</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <label>Start Dat</label>
+                                                                            <p>12/02/2023</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <label>Validity Till</label>
+                                                                            <p>None</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
                                                         </Card>
                                                     </Col>
+                                                    <Col>
+                                                        <Card>
+                                                            <div className='short-card'>
+                                                                <figure className='icon-box'>
+                                                                    <span></span>
+                                                                </figure>
+                                                                <div className='short-card-details'>
+                                                                    <h5>100 SMS Pack</h5>
+                                                                    <p>Asset Number <span>0637230</span></p>
+                                                                    <ul className='short-card-status'>
+                                                                        <li>
+                                                                            <label>Status</label>
+                                                                            <p className='olive-green-text'>Active</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <label>Start Dat</label>
+                                                                            <p>12/02/2023</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <label>Validity Till</label>
+                                                                            <p>None</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </Card>
+                                                    </Col>
+                                                    <Col>
+                                                        <Card>
+                                                            <div className='short-card'>
+                                                                <figure className='icon-box'>
+                                                                    <span></span>
+                                                                </figure>
+                                                                <div className='short-card-details'>
+                                                                    <h5>100 SMS Pack</h5>
+                                                                    <p>Asset Number <span>0637230</span></p>
+                                                                    <ul className='short-card-status'>
+                                                                        <li>
+                                                                            <label>Status</label>
+                                                                            <p className='olive-green-text'>Active</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <label>Start Dat</label>
+                                                                            <p>12/02/2023</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <label>Validity Till</label>
+                                                                            <p>None</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </Card>
+                                                    </Col>
+                                                    <Col>
+                                                        <Card>
+                                                            <div className='short-card'>
+                                                                <figure className='icon-box'>
+                                                                    <span></span>
+                                                                </figure>
+                                                                <div className='short-card-details'>
+                                                                    <h5>100 SMS Pack</h5>
+                                                                    <p>Asset Number <span>0637230</span></p>
+                                                                    <ul className='short-card-status'>
+                                                                        <li>
+                                                                            <label>Status</label>
+                                                                            <p className='olive-green-text'>Active</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <label>Start Dat</label>
+                                                                            <p>12/02/2023</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <label>Validity Till</label>
+                                                                            <p>None</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </Card>
+                                                    </Col>
+                                                    <Col>
+                                                        <Card>
+                                                            <div className='short-card'>
+                                                                <figure className='icon-box'>
+                                                                    <span></span>
+                                                                </figure>
+                                                                <div className='short-card-details'>
+                                                                    <h5>100 SMS Pack</h5>
+                                                                    <p>Asset Number <span>0637230</span></p>
+                                                                    <ul className='short-card-status'>
+                                                                        <li>
+                                                                            <label>Status</label>
+                                                                            <p className='olive-green-text'>Active</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <label>Start Dat</label>
+                                                                            <p>12/02/2023</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <label>Validity Till</label>
+                                                                            <p>None</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </Card>
+                                                    </Col>
+                                                </Row>
+                                            </div>
+                                        </div>
+                                    </Card>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col sm={6}>
+                                    <Card>
+                                        <div className='card-panel-wrapper'>
+                                            <div className='card-panel-header div-flex-between'>
+                                                <div className='card-panel-header-left'>
+                                                    <h5>Contracts</h5>
+                                                </div>
+                                                <div className='card-panel-header-right'>
+                                                    <button className='action-link'>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M12 5V19" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M12 5V19" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M5 12H19" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M5 12H19" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <span>Add</span>
+                                                    </button>
+                                                    <button className='action-link'>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M4 5.5H20" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M4 5.5H20" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M16.5 4V7" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M16.5 4V7" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M4 12H20" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M4 12H20" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M7.5 10.5V13.5" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M7.5 10.5V13.5" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M4 18.5H20" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M4 18.5H20" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M16.5 17V20" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M16.5 17V20" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <span>Manage Assets</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div className='card-panel-body'>
+                                                <Row>
                                                     <Col>
                                                         <Card>
                                                             bdfbs
@@ -349,6 +524,49 @@ function Dashboard() {
                                                             bdfbs
                                                         </Card>
                                                     </Col>
+                                                </Row>
+                                            </div>
+                                        </div>
+                                    </Card>
+                                </Col>
+                                <Col sm={6}>
+                                    <Card>
+                                        <div className='card-panel-wrapper'>
+                                            <div className='card-panel-header div-flex-between'>
+                                                <div className='card-panel-header-left'>
+                                                    <h5>Documents</h5>
+                                                </div>
+                                                <div className='card-panel-header-right'>
+                                                    <button className='action-link'>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M12 5V19" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M12 5V19" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M5 12H19" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M5 12H19" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <span>Add</span>
+                                                    </button>
+                                                    <button className='action-link'>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M4 5.5H20" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M4 5.5H20" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M16.5 4V7" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M16.5 4V7" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M4 12H20" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M4 12H20" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M7.5 10.5V13.5" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M7.5 10.5V13.5" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M4 18.5H20" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M4 18.5H20" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M16.5 17V20" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M16.5 17V20" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <span>Manage Assets</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div className='card-panel-body'>
+                                                <Row>
                                                     <Col>
                                                         <Card>
                                                             bdfbs
@@ -367,18 +585,50 @@ function Dashboard() {
                             </Row>
                             <Row>
                                 <Col sm={6}>
-                                    <Card>dshfihbsadifbhsauiedhfiushuihsf</Card>
+                                    <Card>
+                                        <div className='card-panel-wrapper'>
+                                            <div className='card-panel-header div-flex-between'>
+                                                <div className='card-panel-header-left'>
+                                                    <h5>Order Details</h5>
+                                                </div>
+                                                <div className='card-panel-header-right'>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div className='card-panel-body'>
+                                                <Row>
+                                                    <Col>
+                                                        <Card>
+                                                            bdfbs
+                                                        </Card>
+                                                    </Col>
+                                                </Row>
+                                            </div>
+                                        </div>
+                                    </Card>
                                 </Col>
                                 <Col sm={6}>
-                                    <Card>dshfihbsadifbhsauiedhfiushuihsf</Card>
-                                </Col>
-                            </Row>
-                            <Row>
-                                <Col sm={6}>
-                                    <Card>dshfihbsadifbhsauiedhfiushuihsf</Card>
-                                </Col>
-                                <Col sm={6}>
-                                    <Card>dshfihbsadifbhsauiedhfiushuihsf</Card>
+                                    <Card>
+                                        <div className='card-panel-wrapper'>
+                                            <div className='card-panel-header div-flex-between'>
+                                                <div className='card-panel-header-left'>
+                                                    <h5>Complaint Details</h5>
+                                                </div>
+                                                <div className='card-panel-header-right'>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div className='card-panel-body'>
+                                                <Row>
+                                                    <Col>
+                                                        <Card>
+                                                            bdfbs
+                                                        </Card>
+                                                    </Col>
+                                                </Row>
+                                            </div>
+                                        </div>
+                                    </Card>
                                 </Col>
                             </Row>
                         </div>
@@ -438,7 +688,7 @@ function Dashboard() {
                     }
                 </div>
             </div>
-        </main>
+        </main> 
     )
 }
 

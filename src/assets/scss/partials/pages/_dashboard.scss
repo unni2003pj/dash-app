@@ -255,6 +255,10 @@
     color: #28C76F;
 }
 
+.olive-green-text {
+    color: #28C76F !important;
+}
+
 .sea-blue {
     background-color: rgba($color: #00CFE8, $alpha: 0.15);
     color: #00CFE8;
@@ -312,3 +316,65 @@
         padding: 16px;
     }
 }
+
+.short-card {
+
+    @extend .div-float-cover;
+    @extend .div-flex;
+
+    figure {
+        width: 42px;
+        height: 42px;
+        background: rgba($color: #4B465C, $alpha: 0.08);
+        border-radius: 6px;
+        margin-right: 16px;
+        flex-shrink: 0;
+    }
+}
+.short-card-details {
+
+    @extend .div-float-cover;
+
+    h5 {
+        font-size: $font-18;
+        font-weight: $font-600;
+        line-height: 24px;
+        margin-bottom: 4px;
+    }
+
+    p {
+        font-size: $font-13;
+        font-weight: $font-400;
+        line-height: 20px;
+        color: rgba($color: #4B465C, $alpha: 0.60);
+        margin-bottom: 4px;
+
+        span {
+            color: $textColor;
+        }
+    }
+    
+}
+
+.short-card-status { 
+
+    @extend .div-float-cover;
+    @extend .div-flex-between;
+
+    li {
+
+        label {
+            font-size: $font-11;
+            font-weight: $font-400;
+            line-height: 14px;
+            color: rgba($color: #4B465C, $alpha: 0.60);
+        }
+
+        p {
+            font-size: $font-11;
+            font-weight: $font-400;
+            line-height: 14px;
+            color: $textColor;
+        }
+    }
+} 
