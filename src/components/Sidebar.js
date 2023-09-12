@@ -6,6 +6,7 @@ const Sidebar = () => {
     const [sidebarToggle, setSidebarToggle] = useState(false);
     return(
         <aside className={`side-bar ${sidebarToggle ? '' : 'skew'}`}>
+
             <button className="side-bar-button" onClick={() => setSidebarToggle(!sidebarToggle)}>
                 <span className="section-icon menu-icon">
                     <MenuOutlined />
@@ -39,6 +40,7 @@ const Sidebar = () => {
                     <span className="section-text">Menu text</span>
                 </button>
             </div>
+            
         </aside>
     )
     }

@@ -8,6 +8,7 @@ class Header extends React.Component{
         const { Search } = Input;
         return(
             <header className="header-block">
+
                 <figure className="brand-logo">
                     <img src={Logo} alt="Logo" height={35}/>
                 </figure>
@@ -29,6 +30,7 @@ class Header extends React.Component{
                         <QuestionCircleOutlined />
                     </button>
                 </div>
+                
             </header>
         )
     }
