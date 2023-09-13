@@ -1,0 +1,62 @@
+[
+  { "city": "1", "type": "Success", "value": 14500 },
+  { "city": "1", "type": "Inprogress", "value": 8500 },
+  { "city": "1", "type": "Pending", "value": 10000 },
+  { "city": "1", "type": "Failed", "value": 7000 },
+
+  { "city": "2", "type": "Success", "value": 9000 },
+  { "city": "2", "type": "Inprogress", "value": 8500 },
+  { "city": "2", "type": "Pending", "value": 11000 },
+  { "city": "2", "type": "Failed", "value": 6000 },
+
+  { "city": "3", "type": "Success", "value": 16000 },
+  { "city": "3", "type": "Inprogress", "value": 5000 },
+  { "city": "3", "type": "Pending", "value": 6000 },
+  { "city": "3", "type": "Failed", "value": 10000 },
+
+  { "city": "4", "type": "Success", "value": 14000 },
+  { "city": "4", "type": "Inprogress", "value": 9000 },
+  { "city": "4", "type": "Pending", "value": 10000 },
+  { "city": "4", "type": "Failed", "value": 9000 },
+
+  { "city": "5", "type": "Success", "value": 14000 },
+  { "city": "5", "type": "Inprogress", "value": 9000 },
+  { "city": "5", "type": "Pending", "value": 10000 },
+  { "city": "5", "type": "Failed", "value": 6000 },
+
+  { "city": "6", "type": "Success", "value": 9000 },
+  { "city": "6", "type": "Inprogress", "value": 8500 },
+  { "city": "6", "type": "Pending", "value": 10000 },
+  { "city": "6", "type": "Failed", "value": 6000 },
+
+  { "city": "7", "type": "Success", "value": 17000 },
+  { "city": "7", "type": "Inprogress", "value": 6000 },
+  { "city": "7", "type": "Pending", "value": 7000 },
+  { "city": "7", "type": "Failed", "value": 10000 },
+
+  { "city": "8", "type": "Success", "value": 18000 },
+  { "city": "8", "type": "Inprogress", "value": 11000 },
+  { "city": "8", "type": "Pending", "value": 15000 },
+  { "city": "8", "type": "Failed", "value": 14000 },
+
+  { "city": "9", "type": "Success", "value": 9000 },
+  { "city": "9", "type": "Inprogress", "value": 8500 },
+  { "city": "9", "type": "Pending", "value": 11000 },
+  { "city": "9", "type": "Failed", "value": 6000 },
+
+  { "city": "10", "type": "Success", "value": 16000 },
+  { "city": "10", "type": "Inprogress", "value": 5000 },
+  { "city": "10", "type": "Pending", "value": 6000 },
+  { "city": "10", "type": "Failed", "value": 10000 },
+
+  { "city": "11", "type": "Success", "value": 14000 },
+  { "city": "11", "type": "Inprogress", "value": 9000 },
+  { "city": "11", "type": "Pending", "value": 10000 },
+  { "city": "11", "type": "Failed", "value": 9000 },
+
+  { "city": "12", "type": "Success", "value": 14000 },
+  { "city": "12", "type": "Inprogress", "value": 9000 },
+  { "city": "12", "type": "Pending", "value": 10000 },
+  { "city": "12", "type": "Failed", "value": 6000 }
+  
+]

@@ -24,6 +24,9 @@ const LineChart = () => {
     xField: 'month',
     yField: 'rate',
     seriesField: 'name',
+    shadowBlur: 10,
+    shadowOffsetX: 5,
+    shadowOffsetY: 5,
     yAxis: {
       label: {
         formatter: (v) => `${(v)}`,

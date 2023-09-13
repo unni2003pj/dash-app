@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Column } from '@ant-design/plots';
-import LineData from './linechart.json';
+import ColumnData from './columndata.json';
 
 const Groupchart = () => {
   const [data, setData] = useState([]);
@@ -10,7 +10,7 @@ const Groupchart = () => {
   }, []);
 
   const asyncFetch = () => {
-    setData(LineData)
+    setData(ColumnData)
     // fetch('https://gw.alipayobjects.com/os/antfincdn/PC3daFYjNw/column-data.json')
     //   .then((response) => response.json())
     //   .then((json) => setData(json))
@@ -20,15 +20,14 @@ const Groupchart = () => {
   };
   const config = {
     data,
-    xField: 'month',
-    yField: 'rate',
-    seriesField: 'name',
-    lineWidth: 1,
+    xField: 'city',
+    yField: 'value',
+    seriesField: 'type',
     isGroup: true,
+    color: ['#28C76F', '#18A4FF', '#FF9F43', '#EA5455'],
     columnStyle: {
       radius: [20, 20, 0, 0],
     },
-    color: ['#EA5455', '#FF9F43', '#28C76F'],
   };
 
   return <Column {...config} />;
