@@ -412,3 +412,7 @@
     top: 20px;
     right: 10px;
 }
+
+.chart-wrapper {
+    @extend .div-float-cover;
+}
