@@ -52,6 +52,7 @@
         border-radius: 4px;
         @extend .div-flex-center;
         box-shadow: 0px 5px 20px 0px rgba(75, 70, 92, 0.40);
+        cursor: pointer;
 
         span {
             margin-left: 6px;
@@ -63,6 +64,18 @@
     }
 }
 
+.content {
+
+    .ant-card {
+        border: 0;
+        box-shadow: 0px 4px 18px 0px rgba(75, 70, 92, 0.10);
+    }
+
+    .ant-card-body {
+        padding: 16px;
+    }
+}
+
 .pinned-main-card {
     width: 100%;
     margin-top: 16px;
@@ -70,7 +83,6 @@
     .ant-card {
         border: 0;
         box-shadow: 0px 4px 18px 0px rgba(75, 70, 92, 0.10);
-        margin-bottom: 20px;
     }
 
     .ant-card-body {
@@ -100,6 +112,13 @@
     }
 
     &:hover {
+
+        svg {
+
+            * {
+                stroke: $theme;
+            }
+        }
 
         span {
             color: $theme;
@@ -227,10 +246,6 @@
 .non-sticky-wrapper {
     @extend .div-float-cover;
     padding: 0 20px 20px 20px;
-
-    .ant-card {
-        margin-bottom: 20px;
-    }
 }
 
 .tag-group {
@@ -313,12 +328,12 @@
 .card-panel-body {
 
     .ant-card {
-        margin: 8px 0;
         border: $border;
+        box-shadow: none;
     }
     
     .ant-card-body {
-        padding: 16px;
+        padding: 16px !important;
     }
 }
 
@@ -345,10 +360,6 @@
 .horizontal-card {
 
     flex-direction: column;
-
-    figure {
-        margin-bottom: 16px;
-    }
 }
 
 .short-card-details {
@@ -415,4 +426,12 @@
 
 .chart-wrapper {
     @extend .div-float-cover;
+}
+
+.button-list {
+
+    li {
+        @extend .div-float;
+        margin-left: 16px;
+    }
 }
