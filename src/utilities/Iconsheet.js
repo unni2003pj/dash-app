@@ -255,6 +255,55 @@ function IconCard(props) {
     )
 }
 
+function IconCallAdd(props) {
+    return( 
+        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
+        <path d="M4.15002 3H7.15002L8.65002 6.75L6.77502 7.875C7.57824 9.50365 8.89638 10.8218 10.525 11.625L11.65 9.75L15.4 11.25V14.25C15.4 15.0784 14.7285 15.75 13.9 15.75C7.84576 15.3821 3.01794 10.5543 2.65002 4.5C2.65002 3.67157 3.3216 3 4.15002 3" stroke={props.color} stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M4.15002 3H7.15002L8.65002 6.75L6.77502 7.875C7.57824 9.50365 8.89638 10.8218 10.525 11.625L11.65 9.75L15.4 11.25V14.25C15.4 15.0784 14.7285 15.75 13.9 15.75C7.84576 15.3821 3.01794 10.5543 2.65002 4.5C2.65002 3.67157 3.3216 3 4.15002 3" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11.65 3.625C11.1668 3.625 10.775 4.01675 10.775 4.5C10.775 4.98325 11.1668 5.375 11.65 5.375V3.625ZM16.15 5.375C16.6333 5.375 17.025 4.98325 17.025 4.5C17.025 4.01675 16.6333 3.625 16.15 3.625V5.375ZM14.775 2.25C14.775 1.76675 14.3833 1.375 13.9 1.375C13.4168 1.375 13.025 1.76675 13.025 2.25H14.775ZM13.025 6.75C13.025 7.23325 13.4168 7.625 13.9 7.625C14.3833 7.625 14.775 7.23325 14.775 6.75H13.025ZM11.65 5.375H16.15V3.625H11.65V5.375ZM13.025 2.25V6.75H14.775V2.25H13.025Z" fill={props.color}/>
+        <path d="M11.65 3.625C11.1668 3.625 10.775 4.01675 10.775 4.5C10.775 4.98325 11.1668 5.375 11.65 5.375V3.625ZM16.15 5.375C16.6333 5.375 17.025 4.98325 17.025 4.5C17.025 4.01675 16.6333 3.625 16.15 3.625V5.375ZM14.775 2.25C14.775 1.76675 14.3833 1.375 13.9 1.375C13.4168 1.375 13.025 1.76675 13.025 2.25H14.775ZM13.025 6.75C13.025 7.23325 13.4168 7.625 13.9 7.625C14.3833 7.625 14.775 7.23325 14.775 6.75H13.025ZM11.65 5.375H16.15V3.625H11.65V5.375ZM13.025 2.25V6.75H14.775V2.25H13.025Z" fill="white" fill-opacity="0.6"/>
+        </svg>
+    )
+}
+
+function IconMailsm(props) {
+    return( 
+        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
+        <rect x="2.65002" y="3.75" width="13.5" height="10.5" rx="2" stroke={props.color} stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="2.65002" y="3.75" width="13.5" height="10.5" rx="2" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M2.65002 5.25L9.40002 9.75L16.15 5.25" stroke={props.color} stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M2.65002 5.25L9.40002 9.75L16.15 5.25" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    )
+}
+
+function IconMsgsm(props) {
+    return( 
+        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
+        <path d="M9.40002 15L7.15002 12.75H5.65002C4.40738 12.75 3.40002 11.7426 3.40002 10.5V6C3.40002 4.75736 4.40738 3.75 5.65002 3.75H13.15C14.3927 3.75 15.4 4.75736 15.4 6V10.5C15.4 11.7426 14.3927 12.75 13.15 12.75H11.65L9.40002 15" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9.40002 15L7.15002 12.75H5.65002C4.40738 12.75 3.40002 11.7426 3.40002 10.5V6C3.40002 4.75736 4.40738 3.75 5.65002 3.75H13.15C14.3927 3.75 15.4 4.75736 15.4 6V10.5C15.4 11.7426 14.3927 12.75 13.15 12.75H11.65L9.40002 15" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6.40002 6.75H12.4" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6.40002 6.75H12.4" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6.40002 9.75H10.9" stroke="#4B465C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6.40002 9.75H10.9" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    )
+}
+
+
+function CardOverlay(props) {
+    return( 
+        <svg xmlns="http://www.w3.org/2000/svg" width="349" height="168" viewBox="0 0 349 168" fill="none">
+        <path opacity="0.4" d="M496.066 359.125C393.151 476.675 214.428 488.539 96.8782 385.623C-20.6718 282.708 -105.78 82.7901 169.995 86.5727C445.77 90.3552 386.299 -120.736 503.849 -17.8206C621.399 85.095 598.982 241.575 496.066 359.125Z" fill={props.color} fill-opacity="0.1"/>
+        </svg>
+    )
+}
+
+
+
+
+
+
 export  {
     IconAdd,
     IconTableimport,
@@ -277,5 +326,9 @@ export  {
     IconVoice,
     IconDocument,
     IconAvatar,
-    IconCard
+    IconCard,
+    IconCallAdd,
+    IconMailsm,
+    IconMsgsm,
+    CardOverlay
 };

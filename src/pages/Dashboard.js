@@ -27,7 +27,11 @@ import {
     IconVoice,
     IconDocument,
     IconAvatar,
-    IconCard
+    IconCard,
+    IconCallAdd,
+    IconMailsm,
+    IconMsgsm,
+    CardOverlay
 
 } from '../utilities/Iconsheet';
 
@@ -344,7 +348,7 @@ function Dashboard() {
                                                                     <ul className='short-card-status'>
                                                                         <li>
                                                                             <label>Status</label>
-                                                                            <p className='olive-green-text'>Active</p>
+                                                                            <p>Inactive</p>
                                                                         </li>
                                                                         <li>
                                                                             <label>Start Dat</label>
@@ -381,7 +385,7 @@ function Dashboard() {
                                                                     <IconData color="#28C76F"/>
                                                                 </figure>
                                                                 <div className='short-card-details'>
-                                                                    <h5>100 SMS Pack</h5>
+                                                                    <h5>50 GB Data Booster</h5>
                                                                     <p>Asset Number <span>0637230</span></p>
                                                                     <ul className='short-card-status'>
                                                                         <li>
@@ -423,12 +427,12 @@ function Dashboard() {
                                                                    <IconVoice color="#EA5455"/>
                                                                 </figure>
                                                                 <div className='short-card-details'>
-                                                                    <h5>100 SMS Pack</h5>
+                                                                    <h5>12 Months Voice Pack</h5>
                                                                     <p>Asset Number <span>0637230</span></p>
                                                                     <ul className='short-card-status'>
                                                                         <li>
                                                                             <label>Status</label>
-                                                                            <p className='olive-green-text'>Active</p>
+                                                                            <p className='red-shade-text'>Suspended</p>
                                                                         </li>
                                                                         <li>
                                                                             <label>Start Dat</label>
@@ -489,11 +493,16 @@ function Dashboard() {
                                                     <Col span={12}>
                                                         <Card>
                                                             <div className='short-card horizontal-card'>
-                                                                <figure className='icon-box olive-green round'>
-                                                                    <IconDocument color="#28C76F"/>
-                                                                </figure>
+                                                                <div className='div-flex-between mb-4'>
+                                                                    <figure className='icon-box olive-green round'>
+                                                                        <IconDocument color="#28C76F"/>
+                                                                    </figure>
+                                                                    <button>
+                                                                        <Tag bordered={false} className='olive-green'>Download Document</Tag>
+                                                                    </button>
+                                                                </div>
                                                                 <div className='short-card-details'>
-                                                                    <h5>100 SMS Pack</h5>
+                                                                    <h5>CON12345</h5>
                                                                     <ul className='short-card-status'>
                                                                         <li>
                                                                             <label>Status</label>
@@ -501,20 +510,17 @@ function Dashboard() {
                                                                         </li>
                                                                         <li>
                                                                             <label>Duration</label>
-                                                                            <p>12/02/2023</p>
+                                                                            <p>365 Days</p>
                                                                         </li>
                                                                         <li>
                                                                             <label>Start Date</label>
-                                                                            <p>12/02/2023</p>
+                                                                            <p>12 Jul 2023</p>
                                                                         </li>
                                                                         <li>
                                                                             <label>End Date</label>
-                                                                            <p>None</p>
+                                                                            <p>12 Jul 2024</p>
                                                                         </li>
                                                                     </ul>
-                                                                    <button className='more-option-drop'>
-                                                                        <Tag bordered={false} className='olive-green'>Download Document</Tag>
-                                                                    </button>
                                                                 </div>
                                                             </div>
                                                         </Card>
@@ -522,32 +528,34 @@ function Dashboard() {
                                                     <Col span={12}>
                                                         <Card>
                                                             <div className='short-card horizontal-card'>
-                                                                <figure className='icon-box red-shade round'>
-                                                                    <IconDocument color="#EA5455"/>
-                                                                </figure>
+                                                                <div className='div-flex-between mb-4'>
+                                                                    <figure className='icon-box red-shade round'>
+                                                                        <IconDocument color="#EA5455"/>
+                                                                    </figure>
+                                                                    <button className='action-button'>
+                                                                        <Tag bordered={false} className='red-shade'>Download Document</Tag>
+                                                                    </button>
+                                                                </div>
                                                                 <div className='short-card-details'>
-                                                                    <h5>100 SMS Pack</h5>
+                                                                    <h5>CON12345</h5>
                                                                     <ul className='short-card-status'>
                                                                         <li>
                                                                             <label>Status</label>
-                                                                            <p className='olive-green-text'>Active</p>
+                                                                            <p className='red-shade-text'>Expired</p>
                                                                         </li>
                                                                         <li>
                                                                             <label>Duration</label>
-                                                                            <p>12/02/2023</p>
+                                                                            <p>365 Days</p>
                                                                         </li>
                                                                         <li>
                                                                             <label>Start Date</label>
-                                                                            <p>12/02/2023</p>
+                                                                            <p>12 Jul 2023</p>
                                                                         </li>
                                                                         <li>
                                                                             <label>End Date</label>
-                                                                            <p>None</p>
+                                                                            <p>12 Jul 2024</p>
                                                                         </li>
                                                                     </ul>
-                                                                    <button className='more-option-drop'>
-                                                                        <Tag bordered={false} className='red-shade'>Download Document</Tag>
-                                                                    </button>
                                                                 </div>
                                                             </div>
                                                         </Card>
@@ -581,15 +589,17 @@ function Dashboard() {
                                                     <Col span={8}>
                                                         <Card>
                                                             <div className='short-card horizontal-card'>
-                                                                <figure className='icon-box blue-berry round'>
-                                                                    <IconAvatar color="#634CE3"/>
-                                                                </figure>
+                                                                <div className='div-flex-between mb-4'>
+                                                                    <figure className='icon-box blue-berry round'>
+                                                                        <IconAvatar color="#634CE3"/>
+                                                                    </figure>
+                                                                </div>
                                                                 <div className='short-card-details'>
                                                                     <h5>Identity Card</h5>
                                                                     <ul className='short-card-status'>
                                                                         <li>
                                                                             <p>1234567890</p>
-                                                                            <label>02/02/2025</label>
+                                                                            <label>02 Jul 2023</label>
                                                                         </li>
                                                                     </ul>
                                                                 </div>
@@ -599,15 +609,17 @@ function Dashboard() {
                                                     <Col span={8}>
                                                         <Card>
                                                             <div className='short-card horizontal-card'>
-                                                                <figure className='icon-box blue-berry round'>
-                                                                    <IconCard color="#634CE3"/>
-                                                                </figure>
+                                                                <div className='div-flex-between mb-4'>
+                                                                    <figure className='icon-box blue-berry round'>
+                                                                        <IconCard color="#634CE3"/>
+                                                                    </figure>
+                                                                </div>
                                                                 <div className='short-card-details'>
-                                                                    <h5>Identity Card</h5>
+                                                                    <h5>GST Document</h5>
                                                                     <ul className='short-card-status'>
                                                                         <li>
-                                                                            <p>1234567890</p>
-                                                                            <label>02/02/2025</label>
+                                                                            <p>GSTIN 123 456 7890</p>
+                                                                            <label>02 Jul 2023</label>
                                                                         </li>
                                                                     </ul>
                                                                 </div>
@@ -617,15 +629,17 @@ function Dashboard() {
                                                     <Col span={8}>
                                                         <Card>
                                                             <div className='short-card horizontal-card'>
-                                                                <figure className='icon-box blue-berry round'>
-                                                                    <IconCard color="#634CE3"/>
-                                                                </figure>
+                                                                <div className='div-flex-between mb-4'>
+                                                                    <figure className='icon-box blue-berry round'>
+                                                                        <IconCard color="#634CE3"/>
+                                                                    </figure>
+                                                                </div>
                                                                 <div className='short-card-details'>
-                                                                    <h5>Identity Card</h5>
+                                                                    <h5>TAN Number</h5>
                                                                     <ul className='short-card-status'>
                                                                         <li>
-                                                                            <p>1234567890</p>
-                                                                            <label>02/02/2025</label>
+                                                                            <p>TAN 123 456 7890</p>
+                                                                            <label>02 Jul 2023</label>
                                                                         </li>
                                                                     </ul>
                                                                 </div>
@@ -707,7 +721,7 @@ function Dashboard() {
                                                     </li>
                                                     <li>
                                                         <button>
-                                                            <IconMsg color="#4B465C"/>
+                                                            <IconMsglg color="#4B465C"/>
                                                         </button>
                                                     </li>
                                                 </ul>
@@ -734,6 +748,9 @@ function Dashboard() {
                                                 </ul>
                                             </div>
                                         </div>
+                                        <div className='card-overlay'>
+                                            <CardOverlay color="#28C76F"/>
+                                        </div>
                                     </Card>
                                 </Col>
                                 <Col span={6}>
@@ -756,7 +773,7 @@ function Dashboard() {
                                                     </li>
                                                     <li>
                                                         <button>
-                                                            <IconMsg color="#4B465C"/>
+                                                            <IconMsglg color="#4B465C"/>
                                                         </button>
                                                     </li>
                                                 </ul>
@@ -783,6 +800,9 @@ function Dashboard() {
                                                 </ul>
                                             </div>
                                         </div>
+                                        <div className='card-overlay'>
+                                            <CardOverlay color="#46B6FF"/>
+                                        </div>
                                     </Card>
                                 </Col>
                                 <Col span={6}>
@@ -805,7 +825,7 @@ function Dashboard() {
                                                     </li>
                                                     <li>
                                                         <button>
-                                                            <IconMsg color="#4B465C"/>
+                                                            <IconMsglg color="#4B465C"/>
                                                         </button>
                                                     </li>
                                                 </ul>
@@ -832,6 +852,9 @@ function Dashboard() {
                                                 </ul>
                                             </div>
                                         </div>
+                                        <div className='card-overlay'>
+                                            <CardOverlay color="#00CFE8"/>
+                                        </div>
                                     </Card>
                                 </Col>
                                 <Col span={6}>
@@ -854,7 +877,7 @@ function Dashboard() {
                                                     </li>
                                                     <li>
                                                         <button>
-                                                            <IconMsg color="#4B465C"/>
+                                                            <IconMsglg color="#4B465C"/>
                                                         </button>
                                                     </li>
                                                 </ul>
@@ -880,6 +903,9 @@ function Dashboard() {
                                                     </li>
                                                 </ul>
                                             </div>
+                                        </div>
+                                        <div className='card-overlay'>
+                                            <CardOverlay color="#FF9F43"/>
                                         </div>
                                     </Card>
                                 </Col>
