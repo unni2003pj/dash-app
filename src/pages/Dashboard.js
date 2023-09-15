@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { Col, Row } from 'antd';
-import { Button, Space, Card, Breadcrumb, Menu, Dropdown, Avatar, Tag } from 'antd';
+import { Button, Space, Card, Breadcrumb, Menu, Dropdown, Avatar, Tag, Progress } from 'antd';
 
 import Linechart from '../utilities/charts/Linechart';
 import Groupchart from '../utilities/charts/Groupchart';
@@ -28,9 +28,6 @@ import {
     IconDocument,
     IconAvatar,
     IconCard,
-    IconCallAdd,
-    IconMailsm,
-    IconMsgsm,
     CardOverlay
 
 } from '../utilities/Iconsheet';
@@ -705,7 +702,7 @@ function Dashboard() {
                                     <Card>
                                         <div className='short-card horizontal-card'>
                                             <div className='div-flex-between mb-4'>
-                                                <figure className='icon-box olive-green round'>
+                                                <figure className='icon-box olive-green'>
                                                     <IconDocument color="#28C76F"/>
                                                 </figure>
                                                 <ul className='button-list'>
@@ -727,25 +724,18 @@ function Dashboard() {
                                                 </ul>
                                             </div>
                                             <div className='short-card-details'>
-                                                <h5>100 SMS Pack</h5>
+                                                <h5>$500 <span className='red-shade-text'>(-50%)</span></h5>
                                                 <ul className='short-card-status'>
                                                     <li>
-                                                        <label>Status</label>
-                                                        <p className='olive-green-text'>Active</p>
-                                                    </li>
-                                                    <li>
-                                                        <label>Duration</label>
-                                                        <p>12/02/2023</p>
-                                                    </li>
-                                                    <li>
-                                                        <label>Start Date</label>
-                                                        <p>12/02/2023</p>
-                                                    </li>
-                                                    <li>
-                                                        <label>End Date</label>
-                                                        <p>None</p>
+                                                        <label>Customer Since 2020</label>
                                                     </li>
                                                 </ul>
+                                                <div className='short-card-bottom div-flex-between'>
+                                                    <p>Customer Lifetime Value</p>
+                                                    <button>
+                                                        <Tag bordered={false} className='olive-green'>+ Add Offer</Tag>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                         <div className='card-overlay'>
@@ -757,47 +747,21 @@ function Dashboard() {
                                     <Card>
                                         <div className='short-card horizontal-card'>
                                             <div className='div-flex-between mb-4'>
-                                                <figure className='icon-box olive-green round'>
+                                                <figure className='icon-box olive-green'>
                                                     <IconDocument color="#28C76F"/>
                                                 </figure>
-                                                <ul className='button-list'>
-                                                    <li>
-                                                        <button>
-                                                            <IconCall color="#4B465C"/>
-                                                        </button>
-                                                    </li>
-                                                    <li>
-                                                        <button>
-                                                            <IconMail color="#4B465C"/>
-                                                        </button>
-                                                    </li>
-                                                    <li>
-                                                        <button>
-                                                            <IconMsglg color="#4B465C"/>
-                                                        </button>
-                                                    </li>
-                                                </ul>
+                                                <Progress percent={90} size="small" status="active" />
                                             </div>
                                             <div className='short-card-details'>
-                                                <h5>100 SMS Pack</h5>
+                                                <h5>80%</h5>
                                                 <ul className='short-card-status'>
                                                     <li>
-                                                        <label>Status</label>
-                                                        <p className='olive-green-text'>Active</p>
-                                                    </li>
-                                                    <li>
-                                                        <label>Duration</label>
-                                                        <p>12/02/2023</p>
-                                                    </li>
-                                                    <li>
-                                                        <label>Start Date</label>
-                                                        <p>12/02/2023</p>
-                                                    </li>
-                                                    <li>
-                                                        <label>End Date</label>
-                                                        <p>None</p>
+                                                        <label>02 Feb 2022  to 02 Feb 2023</label>
                                                     </li>
                                                 </ul>
+                                                <div className='short-card-bottom div-flex-between'>
+                                                    <p>Repurchasing rate</p>
+                                                </div>
                                             </div>
                                         </div>
                                         <div className='card-overlay'>
@@ -812,44 +776,24 @@ function Dashboard() {
                                                 <figure className='icon-box olive-green round'>
                                                     <IconDocument color="#28C76F"/>
                                                 </figure>
-                                                <ul className='button-list'>
-                                                    <li>
-                                                        <button>
-                                                            <IconCall color="#4B465C"/>
-                                                        </button>
-                                                    </li>
-                                                    <li>
-                                                        <button>
-                                                            <IconMail color="#4B465C"/>
-                                                        </button>
-                                                    </li>
-                                                    <li>
-                                                        <button>
-                                                            <IconMsglg color="#4B465C"/>
-                                                        </button>
-                                                    </li>
-                                                </ul>
+                                                <button className='action-link'>
+                                                    <IconMore color="#4B465C"/>
+                                                    <span>More Details</span>
+                                                </button>
                                             </div>
                                             <div className='short-card-details'>
-                                                <h5>100 SMS Pack</h5>
+                                                <h5>$120</h5>
                                                 <ul className='short-card-status'>
                                                     <li>
-                                                        <label>Status</label>
-                                                        <p className='olive-green-text'>Active</p>
-                                                    </li>
-                                                    <li>
-                                                        <label>Duration</label>
-                                                        <p>12/02/2023</p>
-                                                    </li>
-                                                    <li>
-                                                        <label>Start Date</label>
-                                                        <p>12/02/2023</p>
-                                                    </li>
-                                                    <li>
-                                                        <label>End Date</label>
-                                                        <p>None</p>
+                                                        <label>Last Invoice Generated on 27 Jun 2023</label>
                                                     </li>
                                                 </ul>
+                                                <div className='short-card-bottom div-flex-between'>
+                                                    <p>Invoice Details</p>
+                                                    <button>
+                                                        <Tag bordered={false} className='olive-green'>Download</Tag>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                         <div className='card-overlay'>
@@ -883,25 +827,18 @@ function Dashboard() {
                                                 </ul>
                                             </div>
                                             <div className='short-card-details'>
-                                                <h5>100 SMS Pack</h5>
+                                                <h5>$80</h5>
                                                 <ul className='short-card-status'>
                                                     <li>
-                                                        <label>Status</label>
-                                                        <p className='olive-green-text'>Active</p>
-                                                    </li>
-                                                    <li>
-                                                        <label>Duration</label>
-                                                        <p>12/02/2023</p>
-                                                    </li>
-                                                    <li>
-                                                        <label>Start Date</label>
-                                                        <p>12/02/2023</p>
-                                                    </li>
-                                                    <li>
-                                                        <label>End Date</label>
-                                                        <p>None</p>
+                                                        <label>Last Bill Date 01 Jul 2023</label>
                                                     </li>
                                                 </ul>
+                                                <div className='short-card-bottom div-flex-between'>
+                                                    <p>Last Bill</p>
+                                                    <button>
+                                                        <Tag bordered={false} className='olive-green'>Pay Now</Tag>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                         <div className='card-overlay'>

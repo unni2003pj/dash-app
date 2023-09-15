@@ -300,6 +300,10 @@
     color: #EA5455;
 }
 
+.red-shade-text {
+    color: #EA5455;
+}
+
 .card-panel-header {
     margin-bottom: 16px;
 }
@@ -356,6 +360,15 @@
     .round {
         border-radius: 50%;
     }
+
+    .ant-progress {
+        width: 137px;
+    }
+
+    .action-link {
+        padding: 0;
+    }
+    
 }
 
 .horizontal-card {
@@ -475,5 +488,26 @@
     svg {
         width: 100%;
         border-radius: 6px;
+    }
+}
+
+.short-card-bottom {
+
+    @extend .div-float-cover;
+    margin-top: 4px;
+
+    p {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 30px;
+        color: $textColor;
+        margin-bottom: 0;
+    }
+
+    .ant-tag {
+        padding: 4px 16px;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: $font-600;
     }
 }
