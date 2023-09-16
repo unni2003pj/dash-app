@@ -1,0 +1,43 @@
+.table {
+    @extend .div-float-cover;
+
+    thead {
+
+        tr {
+
+            th {
+                padding: 4px 16px;
+                font-size: $font-11;
+                font-weight: $font-400;
+                line-height: 14px;
+                color: #8D979B;
+                background: rgba($color: #8D979B, $alpha: 0.10) !important;
+                text-align: left;
+            }
+        }
+    }
+    tbody {
+
+        tr {
+
+            td {
+                padding: 8px 16px;
+                font-family: Public Sans;
+                font-size: $font-13;
+                font-weight: $font-600;
+                line-height: 14px; /* 107.692% */
+                color: $textColor;
+                text-align: left;
+            }
+
+            
+        }
+
+        tr:nth-child(even) {
+
+            td {
+                background: #F6F6F7;
+            }
+        }
+    }
+}

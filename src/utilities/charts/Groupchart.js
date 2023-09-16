@@ -11,28 +11,24 @@ const Groupchart = () => {
 
   const asyncFetch = () => {
     setData(ColumnData)
-    // fetch('https://gw.alipayobjects.com/os/antfincdn/PC3daFYjNw/column-data.json')
-    //   .then((response) => response.json())
-    //   .then((json) => setData(json))
-    //   .catch((error) => {
-    //     console.log('fetch data failed', error);
-    //   });
   };
+
   const config = {
     data,
+    height: 180,
     xField: 'city',
     yField: 'value',
     seriesField: 'type',
     isGroup: true,
-    color: ['#28C76F', '#18A4FF', '#FF9F43', '#EA5455'],
+    color: ['rgb(40 199 111 / 40%)', 'rgb(24 164 255 / 40%)', 'rgb(255 159 67 / 40%)', 'rgb(234 83 83 / 40%)'],
     columnStyle: {
-      radius: [20, 20, 0, 0],
+      radius: [3, 3, 0, 0],
+      lineDash: [1, 3],
     },
+    legend: false,
   };
 
   return <Column {...config} />;
 };
-
-// ReactDOM.render(<DemoColumn />, document.getElementById('container'));
 
 export default Groupchart;

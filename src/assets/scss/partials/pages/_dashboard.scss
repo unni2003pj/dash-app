@@ -324,9 +324,28 @@
 
 .card-panel-header-right {
 
+    @extend .div-flex-center-cover;
+
     .action-link {
         padding: 0;
         margin-left: 16px;
+    }
+
+    .select-box {
+        @extend .div-float;
+        margin-left: 16px;
+
+        .ant-select-selector {
+            height: 38px;
+            padding: 0 16px;
+        }
+
+        .ant-select-selection-item {
+            font-size: $font-13;
+            font-weight: $font-400;
+            line-height: 36px;
+            color: $greyText;
+        }
     }
 }
 
@@ -376,6 +395,12 @@
     flex-direction: column;
     position: relative;
     z-index: 2;
+    .short-card-details {
+        
+        h5 {
+            padding-right: 0;
+        }
+    }
 }
 
 .short-card-details {
@@ -386,6 +411,7 @@
         font-size: $font-18;
         font-weight: $font-600;
         line-height: 24px;
+        color: $textColor;
         margin-bottom: 4px;
         padding-right: 25px;
     }
@@ -396,10 +422,10 @@
         line-height: 20px;
         color: rgba($color: #4B465C, $alpha: 0.60);
         margin-bottom: 4px;
-        padding-right: 25px;
 
         span {
             color: $textColor;
+            margin-left: 8px;
         }
     }
     
@@ -413,6 +439,7 @@
     li {
 
         @extend .div-float-cover;
+        padding-right: 16px;
 
         label {
             @extend .div-float-cover;
@@ -455,8 +482,138 @@
     }
 }
 
+.progress-block {
+    width: 137px;
+    @extend .div-flex-column;
+
+    label {
+        font-size: $font-11;
+        font-weight: $font-600;
+        line-height: 14px;
+    }
+
+    p {
+        font-size: $font-11;
+        font-weight: $font-400;
+        line-height: 14px;
+    }
+
+    .ant-progress {
+        margin: 0;
+    }
+
+    .ant-progress-outer {
+        @extend .div-flex;
+        height: 3px !important;
+        padding-inline: 0 !important;
+        top: 2px;
+        position: relative;
+    }
+
+    .ant-progress-bg {
+        height: 5px !important;
+    }
+
+    .ant-progress-inner {
+        height: 5px !important;
+    }
+
+    .ant-progress-text {
+        position: absolute;
+        right: 0;
+        top: -11px;
+        color: $greyText;
+        font-size: 8px;
+        font-weight: $font-400;
+        line-height: 10px;
+    }
+}
+
+.high {
+
+    label {
+        color: #18A4FF;
+    }
+
+    .ant-progress-bg {
+        background-color: #18A4FF;
+    }
+}
+
+.medium {
+
+    label {
+        color: #FF9F43;
+    }
+
+    .ant-progress-bg {
+        background-color: #FF9F43;
+    }
+}
+
 .chart-wrapper {
     @extend .div-float-cover;
+}
+
+.chart-denotation {
+
+    @extend .div-flex-between;
+    margin-bottom: 38px;
+
+    li {
+
+        padding-left: 19px;
+        position: relative;
+
+        &:before {
+            content: "";
+            width: 3px;
+            height: 100%;
+            background: $greyText;
+            @extend .position-left-top;
+        }
+
+        p {
+            font-size: $font-18;
+            font-weight: $font-600;
+            line-height: 24px;
+        }
+
+        label {
+            font-size: $font-13;
+            font-weight: $font-400;
+            line-height: 20px;
+            color: $greyText;
+        }
+    }
+
+    .total {
+
+        &::before {
+            background: #8692D0;
+        }
+    }
+
+    .success {
+
+        &::before {
+            background: #28C76F;
+        }
+    }
+
+    .pending {
+
+        &::before {
+            background: #FF9F43;
+        }
+    }
+
+    .failed {
+
+        &::before {
+            background: #EA5455;
+        }
+    }
 }
 
 .button-list {
@@ -516,7 +673,7 @@
 
     li {
         @extend .div-flex;
-        margin-bottom: 15px;
+        margin-bottom: 16px;
 
         figure {
             width: 44px;
@@ -529,6 +686,7 @@
         .graph-note-details {
 
             p {
+                display: block;
                 font-size: $font-15;
                 font-weight: $font-600;
                 line-height: 22px;
@@ -536,12 +694,17 @@
             }
 
             label {
+                display: block;
                 font-size: $font-13;
                 font-weight: $font-400;
                 line-height: 20px;
                 color: $greyText;
             }
         
+        }
+
+        &:last-child {
+            margin-bottom: 0;
         }
     }
 }
