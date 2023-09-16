@@ -4,6 +4,9 @@ import { Button, Space, Card, Breadcrumb, Menu, Dropdown, Avatar, Tag, Progress 
 
 import Linechart from '../utilities/charts/Linechart';
 import Groupchart from '../utilities/charts/Groupchart';
+import Barchart from '../utilities/charts/Barchart';
+import Gaugechart from '../utilities/charts/Gaugechart';
+import Ringchart from '../utilities/charts/Ringchart';
 
 import {
     IconAdd, 
@@ -28,7 +31,11 @@ import {
     IconDocument,
     IconAvatar,
     IconCard,
-    CardOverlay
+    CardOverlay,
+    IconAnnounce,
+    IconRate,
+    IconInvoice,
+    IconBill
 
 } from '../utilities/Iconsheet';
 
@@ -697,13 +704,13 @@ function Dashboard() {
                     { tab === 2 &&
 
                         <div className="tab-pane">
-                            <Row gutter={[16, 16]}>
+                            <Row gutter={[16, 16]} className='mb-4'>
                                 <Col span={6}>
                                     <Card>
                                         <div className='short-card horizontal-card'>
                                             <div className='div-flex-between mb-4'>
                                                 <figure className='icon-box olive-green'>
-                                                    <IconDocument color="#28C76F"/>
+                                                    <IconAnnounce color="#28C76F"/>
                                                 </figure>
                                                 <ul className='button-list'>
                                                     <li>
@@ -747,8 +754,8 @@ function Dashboard() {
                                     <Card>
                                         <div className='short-card horizontal-card'>
                                             <div className='div-flex-between mb-4'>
-                                                <figure className='icon-box olive-green'>
-                                                    <IconDocument color="#28C76F"/>
+                                                <figure className='icon-box sky-blue'>
+                                                    <IconRate color="#18A4FF"/>
                                                 </figure>
                                                 <Progress percent={90} size="small" status="active" />
                                             </div>
@@ -773,8 +780,8 @@ function Dashboard() {
                                     <Card>
                                         <div className='short-card horizontal-card'>
                                             <div className='div-flex-between mb-4'>
-                                                <figure className='icon-box olive-green round'>
-                                                    <IconDocument color="#28C76F"/>
+                                                <figure className='icon-box sea-blue'>
+                                                    <IconInvoice color="#00CFE8"/>
                                                 </figure>
                                                 <button className='action-link'>
                                                     <IconMore color="#4B465C"/>
@@ -805,8 +812,8 @@ function Dashboard() {
                                     <Card>
                                         <div className='short-card horizontal-card'>
                                             <div className='div-flex-between mb-4'>
-                                                <figure className='icon-box olive-green round'>
-                                                    <IconDocument color="#28C76F"/>
+                                                <figure className='icon-box red-shade'>
+                                                    <IconBill color="#EA5455"/>
                                                 </figure>
                                                 <ul className='button-list'>
                                                     <li>
@@ -842,12 +849,337 @@ function Dashboard() {
                                             </div>
                                         </div>
                                         <div className='card-overlay'>
-                                            <CardOverlay color="#FF9F43"/>
+                                            <CardOverlay color="#EA5455"/>
                                         </div>
                                     </Card>
                                 </Col>
                             </Row>
                             
+                            <Row gutter={[16, 16]}>
+                                <Col span={12}>
+                                    <Row gutter={[16, 16]}>
+                                        <Col span={24}>
+                                            <Card>
+                                                <div className='card-panel-wrapper'>
+                                                    <div className='card-panel-header div-flex-between'>
+                                                        <div className='card-panel-header-left'>
+                                                            <h5>Revenue and Billing</h5>
+                                                        </div>
+                                                        <div className='card-panel-header-right'>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    <div className='card-panel-body'>
+
+                                                        <Barchart/>
+
+                                                    </div>
+                                                </div>
+                                            </Card>
+                                        </Col>
+                                        <Col span={24}>
+                                            <Card>
+                                                <div className='card-panel-wrapper'>
+                                                    <div className='card-panel-header div-flex-between'>
+                                                        <div className='card-panel-header-left'>
+                                                            <h5>Payment History</h5>
+                                                        </div>
+                                                        <div className='card-panel-header-right'>
+                                                            <button className='action-link'>
+                                                                <IconMore color="#4B465C"/>
+                                                                <span>More Details</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div className='card-panel-body'>
+                                                        <div className='scrollable'>
+                                                            <table className='table'>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Date</th>
+                                                                        <th>Transaction ID</th>
+                                                                        <th>Payment Number</th>
+                                                                        <th>Amount</th>
+                                                                        <th>Payment Method</th>
+                                                                        <th>Status</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td>$130</td>
+                                                                        <td></td>
+                                                                        <td className='red-shade-text'>Unpaid</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>14 May 2023</td>
+                                                                        <td>ABC 1234567890</td>
+                                                                        <td>SO12345</td>
+                                                                        <td>$130</td>
+                                                                        <td>Debit Card</td>
+                                                                        <td className='olive-green-text'>Paid</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>14 May 2023</td>
+                                                                        <td>ABC 1234567890</td>
+                                                                        <td>SO12345</td>
+                                                                        <td>$130</td>
+                                                                        <td>Debit Card</td>
+                                                                        <td className='olive-green-text'>Paid</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>14 May 2023</td>
+                                                                        <td>ABC 1234567890</td>
+                                                                        <td>SO12345</td>
+                                                                        <td>$130</td>
+                                                                        <td>Debit Card</td>
+                                                                        <td className='olive-green-text'>Paid</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>14 May 2023</td>
+                                                                        <td>ABC 1234567890</td>
+                                                                        <td>SO12345</td>
+                                                                        <td>$130</td>
+                                                                        <td>Debit Card</td>
+                                                                        <td className='olive-green-text'>Paid</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>14 May 2023</td>
+                                                                        <td>ABC 1234567890</td>
+                                                                        <td>SO12345</td>
+                                                                        <td>$130</td>
+                                                                        <td>Debit Card</td>
+                                                                        <td className='olive-green-text'>Paid</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </Card>
+                                        </Col>
+                                    </Row>
+                                </Col>
+                                <Col span={12}>
+                                    <Row gutter={[16, 16]}>
+                                        <Col span={12}>
+                                            <Card>
+                                                <div className='card-panel-wrapper'>
+                                                    <div className='card-panel-header div-flex-between'>
+                                                        <div className='card-panel-header-left'>
+                                                            <h5>Customer Service Experience</h5>
+                                                        </div>
+                                                        <div className='card-panel-header-right'>
+                                                            <button className='action-link'>
+                                                                <IconMore color="#4B465C"/>
+                                                                <span>More Details</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div className='card-panel-body'>
+                                                        <Row gutter={[16, 16]}>
+                                                            <Col span={12}>
+                                                                <Gaugechart/>
+                                                            </Col>
+                                                            <Col span={12}>
+                                                                <ul className='graph-note'>
+                                                                    <li>
+                                                                        <figure className='icon-box sea-blue'>
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                                                            <circle cx="14" cy="14" r="10.5" stroke="#00CFE8" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                            <path d="M14 8.16675V14.0001L17.5 17.5001" stroke="#00CFE8" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                            </svg>
+                                                                        </figure>
+                                                                        <div className='graph-note-details'>
+                                                                            <p>10 Minutes</p>
+                                                                            <label>Last Interaction</label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <figure className='icon-box sea-blue'>
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                                                            <circle cx="14" cy="14" r="10.5" stroke="#00CFE8" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                            <path d="M14 8.16675V14.0001L17.5 17.5001" stroke="#00CFE8" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                            </svg>
+                                                                        </figure>
+                                                                        <div className='graph-note-details'>
+                                                                            <p>20 Cases</p>
+                                                                            <label>In Progress</label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <figure className='icon-box sea-blue'>
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                                                            <circle cx="14" cy="14" r="10.5" stroke="#00CFE8" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                            <path d="M14 8.16675V14.0001L17.5 17.5001" stroke="#00CFE8" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                            </svg>
+                                                                        </figure>
+                                                                        <div className='graph-note-details'>
+                                                                            <p>12</p>
+                                                                            <label>No. of Disputes</label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <figure className='icon-box sea-blue'>
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                                                            <circle cx="14" cy="14" r="10.5" stroke="#00CFE8" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                            <path d="M14 8.16675V14.0001L17.5 17.5001" stroke="#00CFE8" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                            </svg>
+                                                                        </figure>
+                                                                        <div className='graph-note-details'>
+                                                                            <p>No. of Disputes</p>
+                                                                            <label>Mode of Interaction</label>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>   
+                                                            </Col>
+                                                            <Col span={24}>
+                                                            <ul className='graph-note bordered'>
+                                                                    <li>
+                                                                        <figure className='icon-box sea-blue'>
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                                                            <circle cx="14" cy="14" r="10.5" stroke="#00CFE8" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                            <path d="M14 8.16675V14.0001L17.5 17.5001" stroke="#00CFE8" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                            </svg>
+                                                                        </figure>
+                                                                        <div className='graph-note-details'>
+                                                                            <p>12 Calls</p>
+                                                                            <label>Average No. of Call to Call Center Per Month</label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <figure className='icon-box sea-blue'>
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                                                            <circle cx="14" cy="14" r="10.5" stroke="#00CFE8" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                            <path d="M14 8.16675V14.0001L17.5 17.5001" stroke="#00CFE8" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                            </svg>
+                                                                        </figure>
+                                                                        <div className='graph-note-details'>
+                                                                            <p>Network Stability Issues</p>
+                                                                            <label>Last Interaction Topic</label>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul> 
+                                                            </Col>
+                                                        </Row>
+                                                    </div>
+                                                </div>
+                                            </Card>
+                                        </Col>
+                                        <Col span={12}>
+                                            <Card>
+                                                <div className='card-panel-wrapper'>
+                                                    <div className='card-panel-header div-flex-between'>
+                                                        <div className='card-panel-header-left'>
+                                                            <h5>Usage Details</h5>
+                                                        </div>
+                                                        <div className='card-panel-header-right'>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    <div className='card-panel-body'>
+                                                        <Row className='mb-2'>
+                                                            <Col span={24} >
+                                                                <div className='ring-chart-block'>
+                                                                    <Ringchart/>
+                                                                    <div className='short-card horizontal-card'>
+                                                                        <div className='div-flex-between mb-2'>
+                                                                            <figure className='icon-box sandal round'>
+                                                                                <IconVoice color="#FF9F43"/> Voice
+                                                                            </figure>
+                                                                            
+                                                                        </div>
+                                                                        <div className='short-card-details'>
+                                                                            <ul class="short-card-status">
+                                                                                <li>
+                                                                                    <p>2000 Min</p>
+                                                                                    <label>Total</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <p>1000 Min</p>
+                                                                                    <label>Used</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <p>1000 Min</p>
+                                                                                    <label>Balance</label>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </Col>
+                                                        </Row>
+                                                        <Row className='mb-2'>
+                                                        <Col span={24} >
+                                                                <div className='ring-chart-block'>
+                                                                    <Ringchart/>
+                                                                    <div className='short-card horizontal-card'>
+                                                                        <div className='div-flex-between mb-2'>
+                                                                            <figure className='icon-box sandal round'>
+                                                                                <IconVoice color="#FF9F43"/> Voice
+                                                                            </figure>
+                                                                            
+                                                                        </div>
+                                                                        <div className='short-card-details'>
+                                                                            <ul class="short-card-status">
+                                                                                <li>
+                                                                                    <p>2000 Min</p>
+                                                                                    <label>Total</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <p>1000 Min</p>
+                                                                                    <label>Used</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <p>1000 Min</p>
+                                                                                    <label>Balance</label>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </Col>
+                                                        </Row>
+                                                        <Row>
+                                                        <Col span={24} >
+                                                                <div className='ring-chart-block'>
+                                                                    <Ringchart/>
+                                                                    <div className='short-card horizontal-card'>
+                                                                        <div className='div-flex-between mb-2'>
+                                                                            <figure className='icon-box sandal round'>
+                                                                                <IconVoice color="#FF9F43"/> Voice
+                                                                            </figure>
+                                                                            
+                                                                        </div>
+                                                                        <div className='short-card-details'>
+                                                                            <ul class="short-card-status">
+                                                                                <li>
+                                                                                    <p>2000 Min</p>
+                                                                                    <label>Total</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <p>1000 Min</p>
+                                                                                    <label>Used</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <p>1000 Min</p>
+                                                                                    <label>Balance</label>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </Col>
+                                                        </Row>
+                                                    </div>
+                                                </div>
+                                            </Card>
+                                        </Col>
+                                    </Row>
+                                </Col>
+                            </Row>
                         </div>
                     }
 

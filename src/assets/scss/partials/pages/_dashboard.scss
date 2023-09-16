@@ -301,7 +301,7 @@
 }
 
 .red-shade-text {
-    color: #EA5455;
+    color: #EA5455 !important;
 }
 
 .card-panel-header {
@@ -509,5 +509,98 @@
         font-size: 13px;
         font-style: normal;
         font-weight: $font-600;
+    }
+}
+
+.graph-note {
+
+    li {
+        @extend .div-flex;
+        margin-bottom: 15px;
+
+        figure {
+            width: 44px;
+            height: 44px;
+            border-radius: 6px;
+            margin-right: 8px;
+            @extend .div-flex-center-cover;
+        }
+
+        .graph-note-details {
+
+            p {
+                font-size: $font-15;
+                font-weight: $font-600;
+                line-height: 22px;
+                color: $textColor;
+            }
+
+            label {
+                font-size: $font-13;
+                font-weight: $font-400;
+                line-height: 20px;
+                color: $greyText;
+            }
+        
+        }
+    }
+}
+
+.bordered {
+
+    li {
+        margin-top: 16px;
+        padding-top: 16px;
+        border-top: $border;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.ring-chart-block {
+    @extend .div-float-cover;
+    @extend .div-flex;
+
+    .short-card {
+        margin-left: 16px;
+
+        figure {
+            width: auto;
+            padding: 8px;
+            border-radius: 30px;
+            font-size: $font-13;
+            font-weight: $font-400;
+            line-height: 20px;
+            color: $textColor;
+
+            svg {
+                margin-right: 3px;
+            }
+        }
+    }
+
+    .short-card-status {
+
+        li {
+            p {
+                font-size: $font-13;
+                font-weight: $font-700;
+                line-height: 20px;
+                margin-bottom: 0;
+            }
+
+            label {
+                font-size: $font-11;
+                font-weight: $font-400;
+                line-height: 14px;
+                color: $textColor;
+            }
+        }
     }
 }
