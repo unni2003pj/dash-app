@@ -438,7 +438,7 @@
 
     li {
 
-        @extend .div-float-cover;
+        // @extend .div-float-cover;
         padding-right: 16px;
 
         label {
@@ -504,7 +504,7 @@
 
     .ant-progress-outer {
         @extend .div-flex;
-        height: 3px !important;
+        height: 7px !important;
         padding-inline: 0 !important;
         top: 2px;
         position: relative;
@@ -734,6 +734,7 @@
         margin-left: 16px;
 
         figure {
+            height: auto;
             width: auto;
             padding: 8px;
             border-radius: 30px;
@@ -748,6 +749,10 @@
         }
     }
 
+    .horizontal-card {
+        justify-content: center;
+    }
+
     .short-card-status {
 
         li {
@@ -755,7 +760,34 @@
                 font-size: $font-13;
                 font-weight: $font-700;
                 line-height: 20px;
-                margin-bottom: 0;
+                margin-bottom: 2px;
+            }
+
+            label {
+                font-size: $font-11;
+                font-weight: $font-400;
+                line-height: 14px;
+                color: $textColor;
+            }
+        }
+    }
+}
+
+.ring-chart-more-info {
+
+    padding-top: 7px;
+    margin-top: 7px;
+    border-top: $border;
+
+    .short-card-status {
+
+        li {
+
+            p {
+                font-size: $font-13;
+                font-weight: $font-700;
+                line-height: 20px;
+                margin-bottom: 2px;
             }
 
             label {

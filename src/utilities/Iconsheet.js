@@ -348,6 +348,16 @@ function IconBill(props) {
     )
 }
 
+function IconVoicesm(props) {
+    return(
+        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
+        <path d="M4.25 3H7.25L8.75 6.75L6.875 7.875C7.67822 9.50365 8.99635 10.8218 10.625 11.625L11.75 9.75L15.5 11.25V14.25C15.5 15.0784 14.8284 15.75 14 15.75C7.94574 15.3821 3.11792 10.5543 2.75 4.5C2.75 3.67157 3.42157 3 4.25 3" stroke={props.color} stroke-width="1.21154" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11.75 5.25C12.5784 5.25 13.25 5.92157 13.25 6.75" stroke={props.color} stroke-width="1.21154" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11.75 2.25C14.2353 2.25 16.25 4.26472 16.25 6.75" stroke={props.color} stroke-width="1.21154" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    )
+}
+
 export  {
     IconAdd,
     IconTableimport,
@@ -378,5 +388,6 @@ export  {
     IconAnnounce,
     IconRate,
     IconInvoice,
-    IconBill
+    IconBill,
+    IconVoicesm
 };

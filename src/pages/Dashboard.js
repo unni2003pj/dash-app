@@ -35,7 +35,8 @@ import {
     IconAnnounce,
     IconRate,
     IconInvoice,
-    IconBill
+    IconBill,
+    IconVoicesm
 
 } from '../utilities/Iconsheet';
 
@@ -1176,7 +1177,7 @@ function Dashboard() {
                                                                     <div className='short-card horizontal-card'>
                                                                         <div className='div-flex-between mb-2'>
                                                                             <figure className='icon-box sandal round'>
-                                                                                <IconVoice color="#FF9F43"/> Voice
+                                                                                <IconVoicesm color="#FF9F43"/> Voice
                                                                             </figure>
                                                                             
                                                                         </div>
@@ -1207,38 +1208,7 @@ function Dashboard() {
                                                                     <div className='short-card horizontal-card'>
                                                                         <div className='div-flex-between mb-2'>
                                                                             <figure className='icon-box sandal round'>
-                                                                                <IconVoice color="#FF9F43"/> Voice
-                                                                            </figure>
-                                                                            
-                                                                        </div>
-                                                                        <div className='short-card-details'>
-                                                                            <ul class="short-card-status">
-                                                                                <li>
-                                                                                    <p>2000 Min</p>
-                                                                                    <label>Total</label>
-                                                                                </li>
-                                                                                <li>
-                                                                                    <p>1000 Min</p>
-                                                                                    <label>Used</label>
-                                                                                </li>
-                                                                                <li>
-                                                                                    <p>1000 Min</p>
-                                                                                    <label>Balance</label>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </Col>
-                                                        </Row>
-                                                        <Row className='mb-4'>
-                                                            <Col span={24} >
-                                                                <div className='ring-chart-block'>
-                                                                    <Ringchart/>
-                                                                    <div className='short-card horizontal-card'>
-                                                                        <div className='div-flex-between mb-2'>
-                                                                            <figure className='icon-box sandal round'>
-                                                                                <IconVoice color="#FF9F43"/> Voice
+                                                                                <IconVoicesm color="#FF9F43"/> Voice
                                                                             </figure>
                                                                             
                                                                         </div>
@@ -1265,24 +1235,56 @@ function Dashboard() {
                                                         <Row>
                                                             <Col span={24} >
                                                                 <div className='ring-chart-block'>
+                                                                    <Ringchart/>
                                                                     <div className='short-card horizontal-card'>
+                                                                        <div className='div-flex-between mb-2'>
+                                                                            <figure className='icon-box sandal round'>
+                                                                                <IconVoicesm color="#FF9F43"/> Voice
+                                                                            </figure>
+                                                                            
+                                                                        </div>
                                                                         <div className='short-card-details'>
                                                                             <ul class="short-card-status">
                                                                                 <li>
-                                                                                    <p>Average No. of Calls</p>
-                                                                                    <label>Per month</label>
-                                                                                </li>
-                                                                                <li>
-                                                                                    <p>120</p>
+                                                                                    <p>2000 Min</p>
                                                                                     <label>Total</label>
                                                                                 </li>
                                                                                 <li>
-                                                                                    <p>22</p>
-                                                                                    <label>International</label>
+                                                                                    <p>1000 Min</p>
+                                                                                    <label>Used</label>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <p>1000 Min</p>
+                                                                                    <label>Balance</label>
                                                                                 </li>
                                                                             </ul>
                                                                         </div>
                                                                     </div>
+                                                                </div>
+                                                            </Col>
+                                                        </Row>
+                                                        
+                                                        <Row>
+                                                            <Col span={24} >
+                                                                <div className='ring-chart-more-info'>
+                                                                    <ul class="short-card-status">
+                                                                        <li>
+                                                                            <p>Average No. of Calls</p>
+                                                                            <label>Per month</label>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>120</p>
+                                                                            <label>Total</label>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>22</p>
+                                                                            <label>International</label>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p>178</p>
+                                                                            <label>Roaming</label>
+                                                                        </li>
+                                                                    </ul>
                                                                 </div>
                                                             </Col>
                                                         </Row>
