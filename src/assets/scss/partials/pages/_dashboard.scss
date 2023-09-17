@@ -67,11 +67,13 @@
 .content {
 
     .ant-card {
+        height: 100%;
         border: 0;
         box-shadow: 0px 4px 18px 0px rgba(75, 70, 92, 0.10);
     }
 
     .ant-card-body {
+        height: 100%;
         padding: 16px;
         overflow: hidden;
     }
@@ -644,6 +646,7 @@
 
     svg {
         width: 100%;
+        height: 100%;
         border-radius: 6px;
     }
 }
@@ -797,5 +800,110 @@
                 color: $textColor;
             }
         }
+    }
+}
+
+.network-block  {
+
+    .chart-denotation {
+        margin-left: 16px;
+        margin-bottom: 0;
+    }
+}
+
+.signal-chart-block {
+
+    label {
+        @extend .div-float-cover;
+        font-size: $font-13;
+        font-weight: $font-600;
+        line-height: 14px;
+        color: $greyText;
+        margin-bottom: 4.76px;
+
+        span {
+            color: $textColor;
+        }
+    }
+}
+
+.signal-chart {
+    @extend .div-float-cover;
+    @extend .div-flex;
+    align-items: flex-end;
+    gap: 19.048px;
+    align-self: stretch;
+    height: 72.6px;
+    margin-bottom: 17px;
+
+    li { 
+        float: left;
+        width: 11.9px;
+        height: 100%;
+        border-radius: 16.7px;
+        background: #fafafa;
+        position: relative;
+
+        span {
+            font-size: 9.524px;
+            font-weight: $font-400;
+            line-height: 11.905px; 
+            color: $greyText;
+            @extend .position-left-bottom;
+            bottom: -16.24px;
+        }
+
+        &:nth-child(1) {
+            height: 33.33px;
+        }
+    
+        &:nth-child(2) {
+            height: 44.04px;
+        }
+    
+        &:nth-child(3) {
+            height: 53.57px;
+        }
+    
+        &:nth-child(4) {
+            height: 63.09px;
+        }
+    }
+
+    
+
+    .active {
+        background: #28C76F;
+    }
+}
+
+.social-media-block {
+
+    p {
+        font-size: $font-11;
+        font-weight: $font-400;
+        line-height: 14px;   
+        color: $textColor;    
+        margin-bottom: 8px;       
+    }
+}
+
+.social-block {
+
+    li {
+        @extend .div-float;
+        @extend .div-flex-center-cover;
+        width: 32px;
+        height: 32px;
+        background: rgba($color: #18A4FF, $alpha: 0.08);
+        border-radius: 6px;
+        margin-right: 16px;
+    }
+
+    .ant-tag {
+        font-size: $font-13;
+        font-weight: $font-700;
+        line-height: 20px;
+        padding: 5px 8px;
     }
 }

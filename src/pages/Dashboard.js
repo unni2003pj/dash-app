@@ -36,9 +36,15 @@ import {
     IconRate,
     IconInvoice,
     IconBill,
-    IconVoicesm
+    IconVoicesm,
+    Iconfb,
+    Icontw,
+    Iconig,
+    Iconyt
 
 } from '../utilities/Iconsheet';
+
+import { Column } from '@ant-design/plots';
 
 
 function Dashboard() {
@@ -997,12 +1003,12 @@ function Dashboard() {
                                                                         <td className='red-shade-text'>Unpaid</td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td>14 May 2023</td>
-                                                                        <td>ABC 1234567890</td>
-                                                                        <td>SO12345</td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
                                                                         <td>$130</td>
-                                                                        <td>Debit Card</td>
-                                                                        <td className='olive-green-text'>Paid</td>
+                                                                        <td></td>
+                                                                        <td className='red-shade-text'>Unpaid</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>14 May 2023</td>
@@ -1305,11 +1311,43 @@ function Dashboard() {
                                                         </div>
                                                     </div>
                                                     <div className='card-panel-body'>
-                                                        <Row gutter={[16, 16]}>
+                                                        <Row gutter={[16, 16]} align="middle" className='mb-4'>
                                                             <Col span={12}>
-                                                                <Ringchart/>     
+                                                                <Row gutter={[16, 16]}>
+                                                                    <Col span={12}>
+                                                                        <div className='network-block div-flex-center'>
+                                                                            <Ringchart/>
+                                                                            <ul class="chart-denotation">
+                                                                                <li class="failed">
+                                                                                    <label>No. of Dropped Calls</label>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </Col>
+                                                                </Row>
+                                                                     
                                                             </Col> 
-                                                            <Col span={12}>     
+                                                            <Col span={12}>    
+                                                                <div className='signal-chart-block'>
+                                                                    <label><span>Fair</span> Network Quality</label>
+                                                                    <ul className='signal-chart'>
+                                                                        <li className='active'>
+                                                                            <span>20%</span>
+                                                                        </li>
+                                                                        <li  className='active'>
+                                                                            <span>40%</span>
+                                                                        </li>
+                                                                        <li  className='active'>
+                                                                            <span>60%</span>
+                                                                        </li>
+                                                                        <li>
+                                                                            <span>80%</span>
+                                                                        </li>
+                                                                        <li>
+                                                                            <span>100%</span>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div> 
                                                             </Col>
                                                         </Row>
                                                     </div>
@@ -1321,29 +1359,47 @@ function Dashboard() {
                                                 <div className='short-card horizontal-card'>
                                                     <div className='card-panel-header div-flex-between'>
                                                         <div className='card-panel-header-left'>
-                                                            <h5>Network Experience</h5>
+                                                            <h5>Digital Behaviour</h5>
                                                         </div>
                                                         <div className='card-panel-header-right'>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                    <div className='short-card-details'>
-                                                        <h5>$120</h5>
-                                                        <ul className='short-card-status'>
-                                                            <li>
-                                                                <label>Last Invoice Generated on 27 Jun 2023</label>
-                                                            </li>
-                                                        </ul>
-                                                        <div className='short-card-bottom div-flex-between'>
-                                                            <p>Invoice Details</p>
-                                                            <button>
-                                                                <Tag bordered={false} className='olive-green'>Download</Tag>
+                                                            <button className='action-button'>
+                                                                <Tag bordered={false} className='sea-blue'>Use E-bill</Tag>
                                                             </button>
                                                         </div>
                                                     </div>
+                                                    <div className='short-card-details'>
+                                                        
+                                                        <Row gutter={[16,16]}>
+                                                            <Col span={12}>
+                                                                <div className='social-block'>
+                                                                    <p>Social Media Handles</p>
+                                                                    <ul className='social-media-list'>
+                                                                        <li>
+                                                                            <Iconfb color="#4B465C"/>
+                                                                        </li>
+                                                                        <li>
+                                                                            <Icontw color="#4B465C"/>
+                                                                        </li>
+                                                                        <li>
+                                                                            <Iconig color="#4B465C"/>
+                                                                        </li>
+                                                                        <li>
+                                                                            <Iconyt color="#4B465C"/>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </Col>
+                                                            <Col span={12}>
+                                                                <div className='social-block'>
+                                                                    <p>Area of Interest</p>
+                                                                    <Tag bordered={false} className='sea-blue'>Sports Person, Influencer</Tag>
+                                                                </div>
+                                                            </Col>
+                                                        </Row>
+                                                    </div>
                                                 </div>
                                                 <div className='card-overlay'>
-                                                    <CardOverlay color="#00CFE8"/>
+                                                    <CardOverlay color="#18A4FF"/>
                                                 </div>
                                             </Card>
                                         </Col>
