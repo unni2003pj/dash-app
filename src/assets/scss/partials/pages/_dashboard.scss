@@ -81,6 +81,14 @@
         .card-panel-header {
             padding: 16px 16px 0 16px;
         }
+
+        .ring-chart-block {
+            padding: 0 16px 0 16px;
+        }
+
+        .ring-chart-more-info {
+            padding: 8px 16px 0 16px;
+        }
     }
 
     .ant-card-body {
@@ -789,8 +797,8 @@
 
 .ring-chart-more-info {
 
-    padding-top: 7px;
-    margin-top: 7px;
+    padding-top: 8px;
+    margin-top: 8px;
     border-top: $border;
 
     .short-card-status {

@@ -330,7 +330,7 @@ function Dashboard() {
                                             </div>
                                             <div className='card-panel-body'>
                                                 <Row gutter={[16, 16]}>
-                                                    <Col span={6}>
+                                                    <Col xl={6} lg={12} xs={24} span={6}>
                                                         <Card>
                                                             <div className='short-card'>
                                                                 <figure className='icon-box olive-green'>
@@ -372,7 +372,7 @@ function Dashboard() {
                                                             </div>
                                                         </Card>
                                                     </Col>
-                                                    <Col span={6}>
+                                                    <Col xl={6} lg={12} xs={24} span={6}>
                                                         <Card>
                                                             <div className='short-card'>
                                                                 <figure className='icon-box'>
@@ -414,7 +414,7 @@ function Dashboard() {
                                                             </div>
                                                         </Card>
                                                     </Col>
-                                                    <Col span={6}>
+                                                    <Col xl={6} lg={12} xs={24} span={6}>
                                                         <Card>
                                                             <div className='short-card'>
                                                                 <figure className='icon-box olive-green'>
@@ -456,7 +456,7 @@ function Dashboard() {
                                                             </div>
                                                         </Card>
                                                     </Col>
-                                                    <Col span={6}>
+                                                    <Col xl={6} lg={12} xs={24} span={6}>
                                                         <Card>
                                                             <div className='short-card'>
                                                                 <figure className='icon-box red-shade'>
@@ -508,7 +508,7 @@ function Dashboard() {
 
                             <Row gutter={[16, 16]} className='mb-5'>
 
-                                <Col span={12}>
+                                <Col xl={12} lg={24} xs={24} span={12}>
                                     <Card>
                                         <div className='card-panel-wrapper'>
                                             <div className='card-panel-header div-flex-between'>
@@ -528,7 +528,7 @@ function Dashboard() {
                                             </div>
                                             <div className='card-panel-body'>
                                                 <Row gutter={[16, 16]}>
-                                                    <Col span={12}>
+                                                    <Col xl={12} lg={12} xs={24} span={12}>
                                                         <Card>
                                                             <div className='short-card horizontal-card'>
                                                                 <div className='div-flex-between mb-1'>
@@ -563,7 +563,7 @@ function Dashboard() {
                                                             </div>
                                                         </Card>
                                                     </Col>
-                                                    <Col span={12}>
+                                                    <Col xl={12} lg={12} xs={24} span={12}>
                                                         <Card>
                                                             <div className='short-card horizontal-card'>
                                                                 <div className='div-flex-between mb-1'>
@@ -604,7 +604,7 @@ function Dashboard() {
                                     </Card>
                                 </Col>
 
-                                <Col span={12}>
+                                <Col xl={12} lg={24} xs={24} span={12}>
                                     <Card>
                                         <div className='card-panel-wrapper'>
                                             <div className='card-panel-header div-flex-between'>
@@ -624,7 +624,7 @@ function Dashboard() {
                                             </div>
                                             <div className='card-panel-body'>
                                                 <Row gutter={[16, 16]}>
-                                                    <Col span={8}>
+                                                    <Col xl={8} lg={8} xs={24} span={8}>
                                                         <Card>
                                                             <div className='short-card horizontal-card'>
                                                                 <div className='div-flex-between mb-1'>
@@ -644,7 +644,7 @@ function Dashboard() {
                                                             </div>
                                                         </Card>
                                                     </Col>
-                                                    <Col span={8}>
+                                                    <Col xl={8} lg={8} xs={24} span={8}>
                                                         <Card>
                                                             <div className='short-card horizontal-card'>
                                                                 <div className='div-flex-between mb-1'>
@@ -664,7 +664,7 @@ function Dashboard() {
                                                             </div>
                                                         </Card>
                                                     </Col>
-                                                    <Col span={8}>
+                                                    <Col xl={8} lg={8} xs={24} span={8}>
                                                         <Card>
                                                             <div className='short-card horizontal-card'>
                                                                 <div className='div-flex-between mb-1'>
@@ -694,7 +694,7 @@ function Dashboard() {
 
                             <Row gutter={[16, 16]}>
 
-                                <Col span={12}>
+                                <Col xl={12} lg={24} xs={24} span={12}>
                                     <Card>
                                         <div className='card-panel-wrapper'>
                                             <div className='card-panel-header div-flex-between'>
@@ -745,7 +745,7 @@ function Dashboard() {
                                     </Card>
                                 </Col>
 
-                                <Col span={12}>
+                                <Col xl={12} lg={24} xs={24} span={12}>
                                     <Card>
                                         <div className='card-panel-wrapper'>
                                             <div className='card-panel-header div-flex-between'>
@@ -803,7 +803,7 @@ function Dashboard() {
 
                         <div className="tab-pane">
                             <Row gutter={[16, 16]} className='mb-4'>
-                                <Col span={6}>
+                                <Col xl={6} lg={12} xs={24} span={6}>
                                     <Card>
                                         <div className='short-card horizontal-card'>
                                             <div className='div-flex-between mb-4'>
@@ -848,7 +848,7 @@ function Dashboard() {
                                         </div>
                                     </Card>
                                 </Col>
-                                <Col span={6}>
+                                <Col xl={6} lg={12} xs={24} span={6}>
                                     <Card>
                                         <div className='short-card horizontal-card'>
                                             <div className='div-flex-between mb-4'>
@@ -877,7 +877,7 @@ function Dashboard() {
                                         </div>
                                     </Card>
                                 </Col>
-                                <Col span={6}>
+                                <Col xl={6} lg={12} xs={24} span={6}>
                                     <Card>
                                         <div className='short-card horizontal-card'>
                                             <div className='div-flex-between mb-4'>
@@ -909,7 +909,7 @@ function Dashboard() {
                                         </div>
                                     </Card>
                                 </Col>
-                                <Col span={6}>
+                                <Col xl={6} lg={12} xs={24} span={6}>
                                     <Card>
                                         <div className='short-card horizontal-card'>
                                             <div className='div-flex-between mb-4'>
@@ -957,7 +957,7 @@ function Dashboard() {
                             </Row>
                             
                             <Row gutter={[16, 16]}>
-                                <Col span={12}>
+                                <Col xl={12} lg={24} xs={24}  span={12}>
                                     <Row gutter={[16, 16]}>
                                         <Col span={24}>
                                             <Card>
@@ -1073,9 +1073,9 @@ function Dashboard() {
                                         </Col>
                                     </Row>
                                 </Col>
-                                <Col span={12}>
+                                <Col xl={12} lg={24} xs={24} span={12}>
                                     <Row gutter={[16, 16]}>
-                                        <Col span={12}>
+                                        <Col xl={12} lg={24} xs={24} span={12}>
                                             <Card>
                                                 <div className='card-panel-wrapper'>
                                                     <div className='card-panel-header div-flex-between'>
@@ -1182,8 +1182,8 @@ function Dashboard() {
                                                 </div>
                                             </Card>
                                         </Col>
-                                        <Col span={12}>
-                                            <Card>
+                                        <Col xl={12} lg={24} xs={24} span={12}>
+                                            <Card className='p-0'>
                                                 <div className='card-panel-wrapper'>
                                                     <div className='card-panel-header div-flex-between'>
                                                         <div className='card-panel-header-left'>
@@ -1321,7 +1321,7 @@ function Dashboard() {
                                                 </div>
                                             </Card>
                                         </Col>
-                                        <Col span={12}>
+                                        <Col xl={12} lg={24} xs={24} span={12}>
                                             <Card>
                                                 <div className='card-panel-wrapper'>
                                                     <div className='card-panel-header div-flex-between'>
@@ -1376,7 +1376,7 @@ function Dashboard() {
                                                 </div>
                                             </Card>
                                         </Col>
-                                        <Col span={12}>
+                                        <Col xl={12} lg={24} xs={24} span={12}>
                                             <Card>
                                                 <div className='short-card horizontal-card'>
                                                     <div className='card-panel-header div-flex-between'>

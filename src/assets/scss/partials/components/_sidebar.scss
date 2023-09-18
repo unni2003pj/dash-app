@@ -3,6 +3,10 @@
     background-color: #2C3B49;
     flex-shrink: 0;
     transition: $transition;
+
+    @include medium-device {
+        display: none;
+    }
 }
 
 .side-bar-button {
