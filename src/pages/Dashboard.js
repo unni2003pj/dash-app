@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { Col, Row } from 'antd';
-import { Button, Space, Card, Breadcrumb, Menu, Dropdown, Avatar, Tag, Progress, Select } from 'antd';
+import { Button, Space, Card, Breadcrumb, Menu, Dropdown, Avatar, Tag, Progress, Select, Drawer } from 'antd';
 
 import Linechart from '../utilities/charts/Linechart';
 import Groupchart from '../utilities/charts/Groupchart';
@@ -55,6 +55,8 @@ function Dashboard() {
         setTab(t)
     }
 
+    const [visible, setVisible] = useState(false);
+
     return(
         <main className='content'>
 
@@ -71,7 +73,10 @@ function Dashboard() {
                     </div>
                     <div className='filter-header-right'>
                         <Space wrap>
-                            <Button type="primary">
+                            <Button type="primary" 
+                            onClick={() => {
+                                setVisible(true);
+                            }}>
                                 <IconAdd color="white"/>
                             </Button>
                             <Button type="primary" >
@@ -87,6 +92,22 @@ function Dashboard() {
                                 <IconCustomize color="white"/>
                                 <span>Customize</span>
                             </Button>
+
+                            <Drawer
+                            title="Add Widget"
+                            placement="right"
+                            visible={visible}
+                            width='500'
+                            onClose={() => {
+                                setVisible(false)
+                            }}
+                            >
+                            <p>Item One</p>
+                            <p>Item Two</p>
+                            <p>Item Three</p>
+                            <p>Item Four</p>
+                            <p>Item Five</p>
+                            </Drawer>
                         </Space>
                     </div>
                 </div>
@@ -115,6 +136,7 @@ function Dashboard() {
                                     <IconActivities color="#4B465C"/>
                                     <span>Activities</span>
                                 </button>
+
                             </div>
                             <div className='card-action-right'>
                                 <button className='action-link'>
@@ -286,10 +308,10 @@ function Dashboard() {
 
                         <div className="tab-pane">
 
-                            <Row gutter={[16, 16]}>
+                            <Row gutter={[16, 16]} className='mb-5'>
 
                                 <Col span={24}>
-                                    <Card className='mb-5'>
+                                    <Card>
                                         <div className='card-panel-wrapper'>
                                             <div className='card-panel-header div-flex-between'>
                                                 <div className='card-panel-header-left'>
@@ -484,10 +506,10 @@ function Dashboard() {
 
                             </Row>
 
-                            <Row gutter={[16, 16]}>
+                            <Row gutter={[16, 16]} className='mb-5'>
 
                                 <Col span={12}>
-                                    <Card className='mb-5'>
+                                    <Card>
                                         <div className='card-panel-wrapper'>
                                             <div className='card-panel-header div-flex-between'>
                                                 <div className='card-panel-header-left'>
@@ -967,7 +989,7 @@ function Dashboard() {
                                             </Card>
                                         </Col>
                                         <Col span={24}>
-                                            <Card>
+                                            <Card className='p-0'>
                                                 <div className='card-panel-wrapper'>
                                                     <div className='card-panel-header div-flex-between'>
                                                         <div className='card-panel-header-left'>
