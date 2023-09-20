@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { RingProgress } from '@ant-design/plots';
 
-const Ringchart = () => {
+const Ringchart = (props) => {
   const config = {
     height: 100,
     width: 100,
     autoFit: false,
     percent: 0.6,
-    color: ['#FF9F43', '#E8EDF3'],
+    color: [props.fgColor, props.bgColor],
     innerRadius: .75,
     radius: 0.98,
     content: {

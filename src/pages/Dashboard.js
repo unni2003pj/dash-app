@@ -175,73 +175,73 @@ function Dashboard() {
                                         <div className='dashboard-data-right-top'>
                                             <h5>Standard Chartered</h5>
                                             <Row gutter={16}> 
-                                                <Col span={4}>
+                                                <Col xxl={4} lg={6} md={12} sm={24} span={4}>
                                                     <div className='short-description'>
                                                         <label>Account Number</label>
                                                         <p>AD001122</p>
                                                     </div>
                                                 </Col>
-                                                <Col span={4}>
+                                                <Col xxl={4} lg={6} md={12} sm={24} span={4}>
                                                     <div className='short-description'>
                                                         <label>Customer Type</label>
                                                         <p>Business</p>
                                                     </div>
                                                 </Col>
-                                                <Col span={4}>
+                                                <Col xxl={4} lg={6} md={12} sm={24} span={4}>
                                                     <div className='short-description'>
                                                         <label>Total Revenue</label>
                                                         <p>$5000.00</p>
                                                     </div>
                                                 </Col>
-                                                <Col span={4}>
+                                                <Col xxl={4} lg={6} md={12} sm={24} span={4}>
                                                     <div className='short-description'>
                                                         <label>Customer Rating</label>
                                                         <p>AD001122</p>
                                                     </div>
                                                 </Col>
-                                                <Col span={4}>
+                                                <Col xxl={4} lg={6} md={12} sm={24} span={4}>
                                                     <div className='short-description'>
                                                         <label>KYC Status</label>
                                                         <p>Verified</p>
                                                     </div>
                                                 </Col>
-                                                <Col span={4}>
+                                                <Col xxl={4} lg={6} md={12} sm={24} span={4}>
                                                     <div className='short-description'>
                                                         <label>Loyality Points</label>
                                                         <p>100</p>
                                                     </div>
                                                 </Col>
-                                                <Col span={4}>
+                                                <Col xxl={4} lg={6} md={12} sm={24} span={4}>
                                                     <div className='short-description'>
                                                         <label>Phone Number</label>
                                                         <p>+123 456 7890</p>
                                                     </div>
                                                 </Col>
-                                                <Col span={4}>
+                                                <Col xxl={4} lg={6} md={12} sm={24} span={4}>
                                                     <div className='short-description'>
                                                         <label>Status</label>
                                                         <p>Active</p>
                                                     </div>
                                                 </Col>
-                                                <Col span={4}>
+                                                <Col xxl={4} lg={6} md={12} sm={24} span={4}>
                                                     <div className='short-description'>
                                                         <label>Platform</label>
                                                         <p>Postpaid</p>
                                                     </div>
                                                 </Col>
-                                                <Col span={4}>
+                                                <Col xxl={4} lg={6} md={12} sm={24} span={4}>
                                                     <div className='short-description'>
                                                         <label>Credit Score</label>
                                                         <p>Good</p>
                                                     </div>
                                                 </Col>
-                                                <Col span={4}>
+                                                <Col xxl={4} lg={6} md={12} sm={24} span={4}>
                                                     <div className='short-description'>
                                                         <label>Balance</label>
                                                         <p>$200.00</p>
                                                     </div>
                                                 </Col>
-                                                <Col span={4}>
+                                                <Col xxl={4} lg={6} md={12} sm={24} span={4}>
                                                     <div className='short-description'>
                                                         <label>Address</label>
                                                         <p>Lorem Ipsum, CA</p>
@@ -1201,7 +1201,7 @@ function Dashboard() {
                                                         <Row className='mb-2'>
                                                             <Col span={24} >
                                                                 <div className='ring-chart-block'>
-                                                                    <Ringchart/>
+                                                                    <Ringchart fgColor={'#FF9F43'}  bgColor={'#fff0e1'}/>
                                                                     <div className='short-card horizontal-card'>
                                                                         <div className='div-flex-between mb-2'>
                                                                             <figure className='icon-box sandal round'>
@@ -1232,7 +1232,7 @@ function Dashboard() {
                                                         <Row className='mb-2'>
                                                             <Col span={24} >
                                                                 <div className='ring-chart-block'>
-                                                                    <Ringchart/>
+                                                                    <Ringchart fgColor={'#28C76F'}  bgColor={'#ddf6e8'}/>
                                                                     <div className='short-card horizontal-card'>
                                                                         <div className='div-flex-between mb-2'>
                                                                             <figure className='icon-box sandal round'>
@@ -1263,7 +1263,7 @@ function Dashboard() {
                                                         <Row>
                                                             <Col span={24} >
                                                                 <div className='ring-chart-block'>
-                                                                    <Ringchart/>
+                                                                    <Ringchart fgColor={'#18A4FF'}  bgColor={'#daf0ff'}/>
                                                                     <div className='short-card horizontal-card'>
                                                                         <div className='div-flex-between mb-2'>
                                                                             <figure className='icon-box sandal round'>
@@ -1338,7 +1338,7 @@ function Dashboard() {
                                                                 <Row gutter={[16, 16]}>
                                                                     <Col span={12}>
                                                                         <div className='network-block div-flex-center'>
-                                                                            <Ringchart/>
+                                                                            <Ringchart fgColor={'#F20000'}  bgColor={'#fbdddd'}/>
                                                                             <ul class="chart-denotation">
                                                                                 <li class="failed">
                                                                                     <label>No. of Dropped Calls</label>

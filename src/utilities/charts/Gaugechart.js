@@ -18,8 +18,8 @@ const Gaugechart = () => {
       content: {
         offsetY: -85,
         style: {
-          fontSize: '13.2px',
-          lineHeight: '16.8px',
+          fontSize: '0.825em',
+          lineHeight: '1.05em',
           color: 'rgba(75, 70, 92, 0.6)',
           whiteSpace: 'normal',
           maxWidth: '66px',
@@ -29,10 +29,10 @@ const Gaugechart = () => {
       title: {
         offsetY: -28,
         style: {
-          fontSize: '21.6px',
+          fontSize: '1.35em',
           color: '#4B535E',
           fontWeight: '600',
-          lineHeight: '28.8px',
+          lineHeight: '1.8em',
           
         },
         formatter: () => '85%',

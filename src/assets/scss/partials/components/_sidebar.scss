@@ -5,7 +5,17 @@
     transition: $transition;
 
     @include medium-device {
+        // position: absolute;
+        // left: 0;
+        // top: 0;
         display: none;
+    }
+}
+
+.sidebar-active {
+
+    .side-bar {
+        display: block;
     }
 }
 

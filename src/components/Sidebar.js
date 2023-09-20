@@ -3,11 +3,11 @@ import { MenuOutlined, AppstoreAddOutlined, ContainerOutlined, GroupOutlined, Wa
 
 const Sidebar = () => {
 
-    const [sidebarToggle, setSidebarToggle] = useState(false);
+    const [sidebarExpand, setSidebarToggle] = useState(false);
     return(
-        <aside className={`side-bar ${sidebarToggle ? '' : 'skew'}`}>
+        <aside className={`side-bar ${sidebarExpand ? '' : 'skew'}`}>
 
-            <button className="side-bar-button" onClick={() => setSidebarToggle(!sidebarToggle)}>
+            <button className="side-bar-button" onClick={() => setSidebarToggle(!sidebarExpand)}>
                 <span className="section-icon menu-icon">
                     <MenuOutlined />
                 </span>
