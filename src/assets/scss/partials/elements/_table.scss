@@ -13,6 +13,10 @@
                 color: #8D979B;
                 background: rgba($color: #8D979B, $alpha: 0.10) !important;
                 text-align: left;
+
+                @include small-device {
+                    white-space: nowrap;
+                }
             }
         }
     }
@@ -28,6 +32,10 @@
                 line-height: 14px; /* 107.692% */
                 color: $textColor;
                 text-align: left;
+
+                @include small-device {
+                    white-space: nowrap;
+                }
             }
 
             
@@ -39,5 +47,17 @@
                 background: #F6F6F7;
             }
         }
+    }
+}
+
+.scrollable {
+
+    @include small-device {
+
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
     }
 }
