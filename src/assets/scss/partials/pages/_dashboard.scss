@@ -1091,3 +1091,16 @@
         padding: 5px 8px;
     }
 }
+
+.ant-drawer-header-title {
+
+    .ant-drawer-close {
+        order: 1;
+        margin: 0;
+    }
+
+    .ant-drawer-title {
+        order: 0;
+    }
+
+}

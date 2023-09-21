@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { Col, Row } from 'antd';
-import { Button, Space, Card, Breadcrumb, Menu, Dropdown, Avatar, Tag, Progress, Select, Drawer } from 'antd';
+import { Button, Space, Card, Breadcrumb, Menu, Dropdown, Avatar, Tag, Progress, Select, Drawer, Checkbox } from 'antd';
 
 import Linechart from '../utilities/charts/Linechart';
 import Groupchart from '../utilities/charts/Groupchart';
@@ -102,11 +102,13 @@ function Dashboard() {
                                 setVisible(false)
                             }}
                             >
-                            <p>Item One</p>
-                            <p>Item Two</p>
-                            <p>Item Three</p>
-                            <p>Item Four</p>
-                            <p>Item Five</p>
+                                <div className='input-block'>
+                                    <label>Module Status <span className='mandate'>*</span></label>
+                                    <div className='checkbox-wrapper'>
+                                        <Checkbox>Show</Checkbox>
+                                        <Checkbox>Hide</Checkbox>
+                                    </div>
+                                </div>
                             </Drawer>
                         </Space>
                     </div>
