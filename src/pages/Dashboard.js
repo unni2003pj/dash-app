@@ -2,11 +2,16 @@ import React, {useState} from 'react';
 import { Col, Row } from 'antd';
 import { Button, Space, Card, Breadcrumb, Menu, Dropdown, Avatar, Tag, Progress, Select, Drawer, Checkbox, Radio } from 'antd';
 
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
+
 import Linechart from '../utilities/charts/Linechart';
 import Groupchart from '../utilities/charts/Groupchart';
 import Barchart from '../utilities/charts/Barchart';
 import Gaugechart from '../utilities/charts/Gaugechart';
 import Ringchart from '../utilities/charts/Ringchart';
+
+import Container from './Container';
 
 import {
     IconAdd, 
@@ -45,6 +50,10 @@ import {
 } from '../utilities/Iconsheet';
 
 import { Column } from '@ant-design/plots';
+import CardOne from './cards/CardOne';
+import CardTwo from './cards/CardTwo';
+import CardThree from './cards/CardThree';
+import CardFour from './cards/CardFour';
 
 
 function Dashboard() {
@@ -73,7 +82,7 @@ function Dashboard() {
                     </div>
                     <div className='filter-header-right'>
                         <Space wrap>
-                            <Button type="primary" 
+                            {/* <Button type="primary" 
                             onClick={() => {
                                 setVisible(true);
                             }}>
@@ -91,6 +100,19 @@ function Dashboard() {
                             <Button type="primary">
                                 <IconCustomize color="white"/>
                                 <span>Customize</span>
+                            </Button> */}
+
+                            <Button type="primary" onClick={handleAddRow}>
+                                <IconCustomize color="white"/>
+                                <span>Add Row</span>
+                            </Button>
+                            <Button type="primary">
+                                <IconCustomize color="white"/>
+                                <span>Add Column</span>
+                            </Button>
+                            <Button type="primary">
+                                <IconCustomize color="white"/>
+                                <span>Exit Customization</span>
                             </Button>
 
                             <Drawer
@@ -172,6 +194,13 @@ function Dashboard() {
                         </Space>
                     </div>
                 </div>
+
+                <DndProvider backend={HTML5Backend}>
+                    <Container/>
+				</DndProvider>
+                    
+                    
+                
 
                 <div className='pinned-main-card'>
                     <Card>
@@ -392,172 +421,16 @@ function Dashboard() {
                                             <div className='card-panel-body'>
                                                 <Row gutter={[16, 16]}>
                                                     <Col xl={6} lg={12} xs={24} span={6}>
-                                                        <Card>
-                                                            <div className='short-card'>
-                                                                <figure className='icon-box olive-green'>
-                                                                    <IconPhone color="#28C76F"/>
-                                                                </figure>
-                                                                <div className='short-card-details'>
-                                                                    <h5>iPhone 14 Pro</h5>
-                                                                    <p>Asset Number<span>0637230</span></p>
-                                                                    <ul className='short-card-status'>
-                                                                        <li>
-                                                                            <label>Status</label>
-                                                                            <p className='olive-green-text'>Active</p>
-                                                                        </li>
-                                                                        <li>
-                                                                            <label>Start Dat</label>
-                                                                            <p>12/02/2023</p>
-                                                                        </li>
-                                                                        <li>
-                                                                            <label>Validity Till</label>
-                                                                            <p>None</p>
-                                                                        </li>
-                                                                    </ul>
-                                                                    <button className='more-option-drop'>
-                                                                        <Dropdown
-                                                                            overlay={(
-                                                                            <Menu>
-                                                                                <Menu.Item key="0">Edit</Menu.Item>
-                                                                                <Menu.Item key="1">Delete</Menu.Item>
-                                                                                <Menu.Item key="2">Preview</Menu.Item>
-                                                                            </Menu>
-                                                                            )}
-                                                                            trigger={['click']}>
-                                                                            <span className="ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                                                <IconDotright color="#4B465C"/>
-                                                                            </span>
-                                                                        </Dropdown>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </Card>
+                                                        <CardOne/>
                                                     </Col>
                                                     <Col xl={6} lg={12} xs={24} span={6}>
-                                                        <Card>
-                                                            <div className='short-card'>
-                                                                <figure className='icon-box'>
-                                                                    <IconMsglg color="#4B465C"/>
-                                                                </figure>
-                                                                <div className='short-card-details'>
-                                                                    <h5>100 SMS Pack</h5>
-                                                                    <p>Asset Number<span>0637230</span></p>
-                                                                    <ul className='short-card-status'>
-                                                                        <li>
-                                                                            <label>Status</label>
-                                                                            <p>Inactive</p>
-                                                                        </li>
-                                                                        <li>
-                                                                            <label>Start Dat</label>
-                                                                            <p>12/02/2023</p>
-                                                                        </li>
-                                                                        <li>
-                                                                            <label>Validity Till</label>
-                                                                            <p>None</p>
-                                                                        </li>
-                                                                    </ul>
-                                                                    <button className='more-option-drop'>
-                                                                        <Dropdown
-                                                                            overlay={(
-                                                                            <Menu>
-                                                                                <Menu.Item key="0">Edit</Menu.Item>
-                                                                                <Menu.Item key="1">Delete</Menu.Item>
-                                                                                <Menu.Item key="2">Preview</Menu.Item>
-                                                                            </Menu>
-                                                                            )}
-                                                                            trigger={['click']}>
-                                                                            <span className="ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                                                <IconDotright color="#4B465C"/>
-                                                                            </span>
-                                                                        </Dropdown>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </Card>
+                                                        <CardTwo/>
                                                     </Col>
                                                     <Col xl={6} lg={12} xs={24} span={6}>
-                                                        <Card>
-                                                            <div className='short-card'>
-                                                                <figure className='icon-box olive-green'>
-                                                                    <IconData color="#28C76F"/>
-                                                                </figure>
-                                                                <div className='short-card-details'>
-                                                                    <h5>50 GB Data Booster</h5>
-                                                                    <p>Asset Number<span>0637230</span></p>
-                                                                    <ul className='short-card-status'>
-                                                                        <li>
-                                                                            <label>Status</label>
-                                                                            <p className='olive-green-text'>Active</p>
-                                                                        </li>
-                                                                        <li>
-                                                                            <label>Start Dat</label>
-                                                                            <p>12/02/2023</p>
-                                                                        </li>
-                                                                        <li>
-                                                                            <label>Validity Till</label>
-                                                                            <p>None</p>
-                                                                        </li>
-                                                                    </ul>
-                                                                    <button className='more-option-drop'>
-                                                                        <Dropdown
-                                                                            overlay={(
-                                                                            <Menu>
-                                                                                <Menu.Item key="0">Edit</Menu.Item>
-                                                                                <Menu.Item key="1">Delete</Menu.Item>
-                                                                                <Menu.Item key="2">Preview</Menu.Item>
-                                                                            </Menu>
-                                                                            )}
-                                                                            trigger={['click']}>
-                                                                            <span className="ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                                                <IconDotright color="#4B465C"/>
-                                                                            </span>
-                                                                        </Dropdown>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </Card>
+                                                        <CardThree/>
                                                     </Col>
                                                     <Col xl={6} lg={12} xs={24} span={6}>
-                                                        <Card>
-                                                            <div className='short-card'>
-                                                                <figure className='icon-box red-shade'>
-                                                                   <IconVoice color="#EA5455"/>
-                                                                </figure>
-                                                                <div className='short-card-details'>
-                                                                    <h5>12 Months Voice Pack</h5>
-                                                                    <p>Asset Number<span>0637230</span></p>
-                                                                    <ul className='short-card-status'>
-                                                                        <li>
-                                                                            <label>Status</label>
-                                                                            <p className='red-shade-text'>Suspended</p>
-                                                                        </li>
-                                                                        <li>
-                                                                            <label>Start Dat</label>
-                                                                            <p>12/02/2023</p>
-                                                                        </li>
-                                                                        <li>
-                                                                            <label>Validity Till</label>
-                                                                            <p>None</p>
-                                                                        </li>
-                                                                    </ul>
-                                                                    <button className='more-option-drop'>
-                                                                        <Dropdown
-                                                                            overlay={(
-                                                                            <Menu>
-                                                                                <Menu.Item key="0">Edit</Menu.Item>
-                                                                                <Menu.Item key="1">Delete</Menu.Item>
-                                                                                <Menu.Item key="2">Preview</Menu.Item>
-                                                                            </Menu>
-                                                                            )}
-                                                                            trigger={['click']}>
-                                                                            <span className="ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                                                <IconDotright color="#4B465C"/>
-                                                                            </span>
-                                                                        </Dropdown>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </Card>
+                                                        <CardFour/>
                                                     </Col>
                                                 </Row>
                                             </div>
