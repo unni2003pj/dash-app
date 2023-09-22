@@ -5,7 +5,7 @@ import DropZone from "./DropZone";
 import Column from "./Column";
 
 const style = {};
-const Row = ({ data, components, handleDrop, path }) => {
+const Row = ({ data, components, handleDrop, path, rowDeleteCallback, colunDeleteCallback }) => {
   const ref = useRef(null);
 
   const [{ isDragging }, drag] = useDrag({
@@ -23,7 +23,16 @@ const Row = ({ data, components, handleDrop, path }) => {
   const opacity = isDragging ? 0 : 1;
   drag(ref);
 
-  const renderColumn = (column, currentPath) => {
+  const deleteRow = (id) => {
+    rowDeleteCallback(id);
+  }
+
+  const renderColumn = (column, currentPath, rowId) => {
+
+    const handleDeleteColumn = () => {
+      colunDeleteCallback(rowId, column.id);
+    }
+
     return (
       <Column
         key={column.id}
@@ -31,12 +40,14 @@ const Row = ({ data, components, handleDrop, path }) => {
         components={components}
         handleDrop={handleDrop}
         path={currentPath}
+        handleDeleteColumn={handleDeleteColumn}
       />
     );
   };
 
   return (
     <div ref={ref} style={{ ...style, opacity }} className="base draggable row">
+      <a onClick={() => { deleteRow(data.id) }} className="remove-row">remove row</a>
       {data.id}
       <div className="columns">
         {data.children.map((column, index) => {
@@ -52,7 +63,7 @@ const Row = ({ data, components, handleDrop, path }) => {
                 onDrop={handleDrop}
                 className="horizontalDrag"
               />
-              {renderColumn(column, currentPath)}
+              {renderColumn(column, currentPath, data.id)}
             </React.Fragment>
           );
         })}

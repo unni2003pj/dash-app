@@ -1,5 +1,41 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
+import { Button, Space, Card, Breadcrumb, Menu, Dropdown, Avatar, Tag, Progress, Select, Drawer, Checkbox, Radio } from 'antd';
 
+import {
+  IconAdd,
+  IconTableimport,
+  IconTableexport,
+  IconSettings,
+  IconCustomize,
+  IconBack,
+  IconCall,
+  IconMail,
+  IconMsg,
+  IconActivities,
+  IconMore,
+  IconDotbottom,
+  IconAddlg,
+  IconSettingslg,
+  IconPhone,
+  IconDotright,
+  IconMsglg,
+  IconData,
+  IconVoice,
+  IconDocument,
+  IconAvatar,
+  IconCard,
+  CardOverlay,
+  IconAnnounce,
+  IconRate,
+  IconInvoice,
+  IconBill,
+  IconVoicesm,
+  Iconfb,
+  Icontw,
+  Iconig,
+  Iconyt
+
+} from '../utilities/Iconsheet';
 import DropZone from "./DropZone";
 import TrashDropZone from "./TrashDropZone";
 import SideBarItem from "./SideBarItem";
@@ -9,17 +45,22 @@ import {
   handleMoveWithinParent,
   handleMoveToDifferentParent,
   handleMoveSidebarComponentIntoParent,
-  handleRemoveItemFromLayout
+  handleRemoveItemFromLayout,
+  handleAddNewRow,
+  handleAddColumDataToSelectedRow,
+  handleRemoveRow,
+  handleRemoveRowColumn
 } from "./helpers";
 
 import { SIDEBAR_ITEMS, SIDEBAR_ITEM, COMPONENT, COLUMN } from "./constants";
 import shortid from "shortid";
 
-const Container = () => {
+const Container = (props) => {
   const initialLayout = initialData.layout;
   const initialComponents = initialData.components;
   const [layout, setLayout] = useState(initialLayout);
   const [components, setComponents] = useState(initialComponents);
+  const [addColumnSelect, setAddColumnSelect] = useState(false);
 
   const handleDropToTrashBin = useCallback(
     (dropZone, item) => {
@@ -31,8 +72,6 @@ const Container = () => {
 
   const handleDrop = useCallback(
     (dropZone, item) => {
-      console.log('dropZone', dropZone)
-      console.log('item', item)
 
       const splitDropZonePath = dropZone.path.split("-");
       const pathToDropZone = splitDropZonePath.slice(0, -1).join("-");
@@ -107,7 +146,15 @@ const Container = () => {
     [layout, components]
   );
 
-  const renderRow = (row, currentPath) => {
+  const renderRow = (row, currentPath, layout) => {
+    const handleRowDelete = (id) => {
+      setLayout(handleRemoveRow(layout, id));
+    }
+
+    const handleColumnDelete = (rawId, columnId) => {
+      setLayout(handleRemoveRowColumn(layout, rawId, columnId));
+    }
+
     return (
       <Row
         key={row.id}
@@ -115,19 +162,51 @@ const Container = () => {
         handleDrop={handleDrop}
         components={components}
         path={currentPath}
+        rowDeleteCallback={(id) => { handleRowDelete(id) }}
+        colunDeleteCallback={(rawId, colunId) => { handleColumnDelete(rawId, colunId) }}
       />
     );
   };
+
+  const handleAddColumn = () => {
+    setAddColumnSelect(true);
+  }
+
+  const handleAddRow = () => {
+
+    setLayout(handleAddNewRow(layout));
+  }
+
+  const handleSelectRow = (row) => {
+    if (addColumnSelect) {
+      setLayout(handleAddColumDataToSelectedRow(layout, row.id));
+      setAddColumnSelect(false);
+    }
+  }
 
   // dont use index for key when mapping over items
   // causes this issue - https://github.com/react-dnd/react-dnd/issues/342
   return (
     <div className="body">
-      <div className="sideBar">
+      <div className="dndButtons">
+        <Button type="primary" onClick={handleAddRow}>
+          <IconCustomize color="white" />
+          <span>Add Row</span>
+        </Button>
+        <Button type="primary" onClick={handleAddColumn}>
+          <IconCustomize color="white" />
+          <span>Add Column</span>
+        </Button>
+        <Button type="primary">
+          <IconCustomize color="white" />
+          <span>Exit Customization</span>
+        </Button>
+      </div>
+      {/* <div className="sideBar">
         {Object.values(SIDEBAR_ITEMS).map((sideBarItem, index) => (
           <SideBarItem key={sideBarItem.id} data={sideBarItem} />
         ))}
-      </div>
+      </div> */}
       <div className="pageContainer">
         <div className="page">
           {layout.map((row, index) => {
@@ -143,7 +222,9 @@ const Container = () => {
                   onDrop={handleDrop}
                   path={currentPath}
                 />
-                {renderRow(row, currentPath)}
+                <div onClick={() => { handleSelectRow(row) }}>
+                  {renderRow(row, currentPath, layout)}
+                </div>
               </React.Fragment>
             );
           })}
@@ -157,12 +238,12 @@ const Container = () => {
           />
         </div>
 
-        <TrashDropZone
+        {/* <TrashDropZone
           data={{
             layout
           }}
           onDrop={handleDropToTrashBin}
-        />
+        /> */}
       </div>
     </div>
   );

@@ -220,6 +220,61 @@ export const handleMoveSidebarComponentIntoParent = (
   return addChildToChildren(layout, splitDropZonePath, newLayoutStructure);
 };
 
+export const handleAddNewRow = (layout) => {
+  const layoutCopy = [...layout];
+  layoutCopy.push({
+    type: ROW,
+    id: 'row' + shortid.generate(),
+    children: []
+  })
+  return layoutCopy;
+}
+
+export const handleAddColumDataToSelectedRow = (layout, rowId) => {
+  const layoutCopy = [...layout];
+  const COLUMN_STRUCTURE = {
+    type: COLUMN,
+    id: shortid.generate(),
+    children: [
+      {
+        type: COMPONENT,
+        id: "addContentComponent"
+      },
+    ]
+  };
+
+  return layoutCopy.map(row => {
+    if (row.id === rowId) {
+      if (row.children.length < 6) {
+        row.children = [...row.children, COLUMN_STRUCTURE];
+      } else {
+        alert('Column Limit Exceeded')
+      }
+
+    }
+    return row;
+  });
+};
+
+export const handleRemoveRow = (layout, rowId) => {
+  const layoutCopy = [...layout];
+
+  return layoutCopy.filter(item => item.id != rowId)
+};
+
+export const handleRemoveRowColumn = (layout, rowId, columnId) => {
+  const layoutCopy = [...layout];
+
+  return layoutCopy.map(row => {
+    if (row.id === rowId) {
+      row.children.splice(row.children.findIndex(function (i) {
+        return i.id === columnId;
+      }), 1);
+    }
+    return row;
+  });
+};
+
 export const handleRemoveItemFromLayout = (layout, splitItemPath) => {
   return removeChildFromChildren(layout, splitItemPath);
 };

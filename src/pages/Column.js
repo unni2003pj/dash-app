@@ -5,7 +5,7 @@ import DropZone from "./DropZone";
 import Component from "./Component";
 
 const style = {};
-const Column = ({ data, components, handleDrop, path }) => {
+const Column = ({ data, components, handleDrop, path, handleDeleteColumn }) => {
   const ref = useRef(null);
 
   const [{ isDragging }, drag] = useDrag({
@@ -34,12 +34,17 @@ const Column = ({ data, components, handleDrop, path }) => {
     );
   };
 
+  const removeColumnHandler = () => {
+    handleDeleteColumn();
+  }
+
   return (
     <div
       ref={ref}
       style={{ ...style, opacity }}
       className="base draggable column"
     >
+      <a className="remove-column" onClick={removeColumnHandler}>Remove Column</a>
       {data.id}
       {data.children.map((component, index) => {
         const currentPath = `${path}-${index}`;

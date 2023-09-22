@@ -39,3 +39,13 @@ body {
     @extend .full-cover;
     overflow-y: auto;
 }
+
+.dndButtons {
+    position: absolute;
+    right: 0;
+    top: 80px;
+    padding: 10px;
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+}
