@@ -1,11 +1,18 @@
 import React, { useRef } from "react";
+import {Col} from "antd";
+
 import { useDrag } from "react-dnd";
 import { COLUMN } from "./constants";
 import DropZone from "./DropZone";
 import Component from "./Component";
 
+import {
+  IconClose
+} from '../Iconsheet';
+
 const style = {};
-const Column = ({ data, components, handleDrop, path, handleDeleteColumn }) => {
+const ColumnBlock = ({ data, components, handleDrop, path, handleDeleteColumn }) => {
+
   const ref = useRef(null);
 
   const [{ isDragging }, drag] = useDrag({
@@ -15,9 +22,11 @@ const Column = ({ data, components, handleDrop, path, handleDeleteColumn }) => {
       children: data.children,
       path
     },
+
     collect: (monitor) => ({
       isDragging: monitor.isDragging()
     })
+
   });
 
   const opacity = isDragging ? 0 : 1;
@@ -39,17 +48,22 @@ const Column = ({ data, components, handleDrop, path, handleDeleteColumn }) => {
   }
 
   return (
-    <div
-      ref={ref}
-      style={{ ...style, opacity }}
-      className="base draggable column"
-    >
-      <a className="remove-column" onClick={removeColumnHandler}>Remove Column</a>
-      {data.id}
+
+    <div ref={ref} style={{ ...style, opacity }} className="column">
+
+      {/* <a className="remove-column" onClick={removeColumnHandler}>Remove Column</a> */}
+
+      <nav onClick={removeColumnHandler} className="remove-icon">
+        <IconClose/>
+      </nav>
+
+      {/* {data.id} */}
+
       {data.children.map((component, index) => {
         const currentPath = `${path}-${index}`;
 
         return (
+
           <React.Fragment key={component.id}>
             <DropZone
               data={{
@@ -60,8 +74,11 @@ const Column = ({ data, components, handleDrop, path, handleDeleteColumn }) => {
             />
             {renderComponent(component, currentPath)}
           </React.Fragment>
+
         );
+
       })}
+
       <DropZone
         data={{
           path: `${path}-${data.children.length}`,
@@ -70,7 +87,10 @@ const Column = ({ data, components, handleDrop, path, handleDeleteColumn }) => {
         onDrop={handleDrop}
         isLast
       />
+
     </div>
+
   );
 };
-export default Column;
+
+export default ColumnBlock;

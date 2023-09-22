@@ -396,6 +396,17 @@ function Iconyt(props) {
     )
 }
 
+function IconClose(props) {
+    return(
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+        <path d="M5.09996 4.70009L11.6996 11.2998" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M5.09996 11.2999L11.6996 4.70025" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    )
+}
+
+
+
 export  {
     IconAdd,
     IconTableimport,
@@ -431,5 +442,6 @@ export  {
     Iconfb,
     Icontw,
     Iconig,
-    Iconyt
+    Iconyt,
+    IconClose
 };

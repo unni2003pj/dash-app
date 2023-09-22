@@ -1,0 +1,91 @@
+.dnd-wrapper {
+    width: 100%;
+}
+
+.dnd-page {
+    flex: 1 1 auto;
+}
+
+.dropZone {
+    flex: 0 0 auto;
+    height: 16px;
+    transition: 200ms all;
+
+    :nth-child(2n) {
+        display: none;
+    }
+}
+
+.dropZone.horizontalDrag {
+    width: 16px;
+    height: auto;
+
+    &:first-child {
+      width: auto;
+    }
+
+    &:last-child {
+      width: auto;
+    }
+}
+
+.dropZone:not(.horizontalDrag).isLast {
+    flex: 1 1 auto;
+}
+
+.dropZone.active {
+    background: #00a2ff;
+    transition: 100ms all;
+}
+
+.row {
+    border: 3px dashed #DBDADE;
+    padding: 16px;
+    display: flex;
+    position: relative;
+    transition: .3s ease-out;
+
+    &:hover {
+        border-color: $theme;
+    }
+}
+
+.columns {
+    width: 100%;
+    display: flex;
+    padding: 16px;
+}
+
+.column {
+    border: 3px dashed #8692D0;
+    flex: 1 1 100%;
+    padding: 16px;
+    position: relative;
+}
+
+.remove-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 8px;
+    @extend .div-flex-center-cover;
+    background: rgba($color: #4B465C, $alpha: 0.70);
+    @extend .position-right-top;
+    right: -10px;
+    top: -10px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.column {
+
+    .remove-icon {
+      background: #8692D0;
+    }
+
+}
+
+.component {
+    width: 100%;
+    @extend .div-flex-center-cover;
+    height: auto;
+}

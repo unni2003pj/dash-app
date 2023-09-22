@@ -2,11 +2,11 @@ import React, { useRef } from "react";
 import { useDrag } from "react-dnd";
 import { COMPONENT } from "./constants";
 
-const style = {
-  border: "1px dashed black",
-  backgroundColor: "white",
-  cursor: "move"
-};
+// const style = {
+//   border: "1px dashed black",
+//   backgroundColor: "white",
+//   cursor: "move"
+// };
 const Component = ({ data, components, path }) => {
   const ref = useRef(null);
 
@@ -17,19 +17,15 @@ const Component = ({ data, components, path }) => {
     })
   });
 
-  const opacity = isDragging ? 0 : 1;
+  // const opacity = isDragging ? 1 : 1;
   drag(ref);
 
   const component = components[data.id];
 
   return (
-    <div
-      ref={ref}
-      style={{ ...style, opacity }}
-      className="component draggable"
-    >
+    <div ref={ref} className="component draggable">
       {/* <div>{data.id}</div> */}
-      <div>{component.content}</div>
+      <>{component.content}</>
     </div>
   );
 };

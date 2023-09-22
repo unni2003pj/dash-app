@@ -42,22 +42,22 @@ import {
 import { Column } from '@ant-design/plots';
 
 
-function CardOne() {
+function CardVoice() {
 
     return(
 
         <Card>
             <div className='short-card'>
-                <figure className='icon-box olive-green'>
-                    <IconPhone color="#28C76F"/>
+                <figure className='icon-box red-shade'>
+                    <IconVoice color="#EA5455"/>
                 </figure>
                 <div className='short-card-details'>
-                    <h5>iPhone 14 Pro</h5>
+                    <h5>12 Months Voice Pack</h5>
                     <p>Asset Number<span>0637230</span></p>
                     <ul className='short-card-status'>
                         <li>
                             <label>Status</label>
-                            <p className='olive-green-text'>Active</p>
+                            <p className='red-shade-text'>Suspended</p>
                         </li>
                         <li>
                             <label>Start Dat</label>
@@ -91,4 +91,4 @@ function CardOne() {
 
 }
 
-export default CardOne
+export default CardVoice

@@ -11,7 +11,8 @@ import Barchart from '../utilities/charts/Barchart';
 import Gaugechart from '../utilities/charts/Gaugechart';
 import Ringchart from '../utilities/charts/Ringchart';
 
-import Container from './Container';
+import Container from '../utilities/dnd/Container';
+import BaseCard from '../views/cards/BaseCard';
 
 import {
     IconAdd,
@@ -50,10 +51,17 @@ import {
 } from '../utilities/Iconsheet';
 
 import { Column } from '@ant-design/plots';
-import CardOne from './cards/CardOne';
-import CardTwo from './cards/CardTwo';
-import CardThree from './cards/CardThree';
-import CardFour from './cards/CardFour';
+import CardIphone from '../views/cards/CardIphone';
+import CardSms from '../views/cards/CardSms';
+import CardData from '../views/cards/CardData';
+import CardVoice from '../views/cards/CardVoice';
+import CardContractOne from '../views/cards/CardContractOne';
+import CardContractTwo from '../views/cards/CardContractTwo';
+import CardDocumentOne from '../views/cards/CardDocumentOne';
+import CardDocumentTwo from '../views/cards/CardDocumentTwo';
+import CardDocumentThree from '../views/cards/CardDocumentThree';
+import CardLineChart from '../views/cards/CardLineChart';
+import CardGroupChart from '../views/cards/CardGroupChart';
 
 
 function Dashboard() {
@@ -409,17 +417,17 @@ function Dashboard() {
                                             </div>
                                             <div className='card-panel-body'>
                                                 <Row gutter={[16, 16]}>
-                                                    <Col xl={6} lg={12} xs={24} span={6}>
-                                                        <CardOne />
+                                                    <Col>
+                                                        <CardIphone/>
                                                     </Col>
-                                                    <Col xl={6} lg={12} xs={24} span={6}>
-                                                        <CardTwo />
+                                                    <Col>
+                                                        <CardSms/>
                                                     </Col>
-                                                    <Col xl={6} lg={12} xs={24} span={6}>
-                                                        <CardThree />
+                                                    <Col>
+                                                        <CardData/>
                                                     </Col>
-                                                    <Col xl={6} lg={12} xs={24} span={6}>
-                                                        <CardFour />
+                                                    <Col>
+                                                        <CardVoice/>
                                                     </Col>
                                                 </Row>
                                             </div>
@@ -452,74 +460,10 @@ function Dashboard() {
                                             <div className='card-panel-body'>
                                                 <Row gutter={[16, 16]}>
                                                     <Col xl={12} lg={12} xs={24} span={12}>
-                                                        <Card>
-                                                            <div className='short-card horizontal-card'>
-                                                                <div className='div-flex-between mb-1'>
-                                                                    <figure className='icon-box olive-green round'>
-                                                                        <IconDocument color="#28C76F" />
-                                                                    </figure>
-                                                                    <button>
-                                                                        <Tag bordered={false} className='olive-green'>Download Document</Tag>
-                                                                    </button>
-                                                                </div>
-                                                                <div className='short-card-details'>
-                                                                    <h5>CON12345</h5>
-                                                                    <ul className='short-card-status'>
-                                                                        <li>
-                                                                            <label>Status</label>
-                                                                            <p className='olive-green-text'>Active</p>
-                                                                        </li>
-                                                                        <li>
-                                                                            <label>Duration</label>
-                                                                            <p>365 Days</p>
-                                                                        </li>
-                                                                        <li>
-                                                                            <label>Start Date</label>
-                                                                            <p>12 Jul 2023</p>
-                                                                        </li>
-                                                                        <li>
-                                                                            <label>End Date</label>
-                                                                            <p>12 Jul 2024</p>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </Card>
+                                                        <CardContractOne/>
                                                     </Col>
                                                     <Col xl={12} lg={12} xs={24} span={12}>
-                                                        <Card>
-                                                            <div className='short-card horizontal-card'>
-                                                                <div className='div-flex-between mb-1'>
-                                                                    <figure className='icon-box red-shade round'>
-                                                                        <IconDocument color="#EA5455" />
-                                                                    </figure>
-                                                                    <button className='action-button'>
-                                                                        <Tag bordered={false} className='red-shade'>Download Document</Tag>
-                                                                    </button>
-                                                                </div>
-                                                                <div className='short-card-details'>
-                                                                    <h5>CON12345</h5>
-                                                                    <ul className='short-card-status'>
-                                                                        <li>
-                                                                            <label>Status</label>
-                                                                            <p className='red-shade-text'>Expired</p>
-                                                                        </li>
-                                                                        <li>
-                                                                            <label>Duration</label>
-                                                                            <p>365 Days</p>
-                                                                        </li>
-                                                                        <li>
-                                                                            <label>Start Date</label>
-                                                                            <p>12 Jul 2023</p>
-                                                                        </li>
-                                                                        <li>
-                                                                            <label>End Date</label>
-                                                                            <p>12 Jul 2024</p>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </Card>
+                                                        <CardContractTwo/>
                                                     </Col>
                                                 </Row>
                                             </div>
@@ -548,64 +492,13 @@ function Dashboard() {
                                             <div className='card-panel-body'>
                                                 <Row gutter={[16, 16]}>
                                                     <Col xl={8} lg={8} xs={24} span={8}>
-                                                        <Card>
-                                                            <div className='short-card horizontal-card'>
-                                                                <div className='div-flex-between mb-1'>
-                                                                    <figure className='icon-box blue-berry round'>
-                                                                        <IconAvatar color="#634CE3" />
-                                                                    </figure>
-                                                                </div>
-                                                                <div className='short-card-details'>
-                                                                    <h5>Identity Card</h5>
-                                                                    <ul className='short-card-status'>
-                                                                        <li>
-                                                                            <p>1234567890</p>
-                                                                            <label>02 Jul 2023</label>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </Card>
+                                                        <CardDocumentOne/>
                                                     </Col>
                                                     <Col xl={8} lg={8} xs={24} span={8}>
-                                                        <Card>
-                                                            <div className='short-card horizontal-card'>
-                                                                <div className='div-flex-between mb-1'>
-                                                                    <figure className='icon-box blue-berry round'>
-                                                                        <IconCard color="#634CE3" />
-                                                                    </figure>
-                                                                </div>
-                                                                <div className='short-card-details'>
-                                                                    <h5>GST Document</h5>
-                                                                    <ul className='short-card-status'>
-                                                                        <li>
-                                                                            <p>GSTIN 123 456 7890</p>
-                                                                            <label>02 Jul 2023</label>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </Card>
+                                                        <CardDocumentTwo/>
                                                     </Col>
                                                     <Col xl={8} lg={8} xs={24} span={8}>
-                                                        <Card>
-                                                            <div className='short-card horizontal-card'>
-                                                                <div className='div-flex-between mb-1'>
-                                                                    <figure className='icon-box blue-berry round'>
-                                                                        <IconCard color="#634CE3" />
-                                                                    </figure>
-                                                                </div>
-                                                                <div className='short-card-details'>
-                                                                    <h5>TAN Number</h5>
-                                                                    <ul className='short-card-status'>
-                                                                        <li>
-                                                                            <p>TAN 123 456 7890</p>
-                                                                            <label>02 Jul 2023</label>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </Card>
+                                                        <CardDocumentThree/>
                                                     </Col>
                                                 </Row>
                                             </div>
@@ -618,104 +511,11 @@ function Dashboard() {
                             <Row gutter={[16, 16]}>
 
                                 <Col xl={12} lg={24} xs={24} span={12}>
-                                    <Card>
-                                        <div className='card-panel-wrapper'>
-                                            <div className='card-panel-header div-flex-between chart-mob'>
-                                                <div className='card-panel-header-left'>
-                                                    <h5>Order Details</h5>
-                                                </div>
-                                                <div className='card-panel-header-right'>
-                                                    <div className='select-box'>
-                                                        <Select defaultValue="Line Graph" >
-                                                            <option value="Line Graph">Line Graph</option>
-                                                            <option value="Bar Graph">Bar Graph</option>
-                                                            <option value="Gauge Graph">Gauge Graph</option>
-                                                        </Select>
-                                                    </div>
-                                                    <div className='select-box'>
-                                                        <Select defaultValue="Monthly" >
-                                                            <option value="Monthly">Monthly</option>
-                                                            <option value="Weekly">Weekly</option>
-                                                            <option value="Yearly">Yearly</option>
-                                                        </Select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className='card-panel-body'>
-                                                <div className='chart-wrapper'>
-                                                    <ul className='chart-denotation'>
-                                                        <li className='total'>
-                                                            <p>259</p>
-                                                            <label>Total</label>
-                                                        </li>
-                                                        <li className='success'>
-                                                            <p>57</p>
-                                                            <label>Sucess</label>
-                                                        </li>
-                                                        <li className='pending'>
-                                                            <p>49</p>
-                                                            <label>Sucess</label>
-                                                        </li>
-                                                        <li className='failed'>
-                                                            <p>76</p>
-                                                            <label>Sucess</label>
-                                                        </li>
-                                                    </ul>
-                                                    <Linechart />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </Card>
+                                    <CardLineChart/>
                                 </Col>
 
                                 <Col xl={12} lg={24} xs={24} span={12}>
-                                    <Card>
-                                        <div className='card-panel-wrapper'>
-                                            <div className='card-panel-header div-flex-between chart-mob'>
-                                                <div className='card-panel-header-left'>
-                                                    <h5>Complaint Details</h5>
-                                                </div>
-                                                <div className='card-panel-header-right'>
-                                                    <div className='select-box'>
-                                                        <Select defaultValue="Bar Graph" >
-                                                            <option value="Line Graph">Line Graph</option>
-                                                            <option value="Bar Graph">Bar Graph</option>
-                                                            <option value="Gauge Graph">Gauge Graph</option>
-                                                        </Select>
-                                                    </div>
-                                                    <div className='select-box'>
-                                                        <Select defaultValue="Monthly" >
-                                                            <option value="Monthly">Monthly</option>
-                                                            <option value="Weekly">Weekly</option>
-                                                            <option value="Yearly">Yearly</option>
-                                                        </Select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className='card-panel-body'>
-                                                <ul className='chart-denotation'>
-                                                    <li className='total'>
-                                                        <p>259</p>
-                                                        <label>Total</label>
-                                                    </li>
-                                                    <li className='success'>
-                                                        <p>57</p>
-                                                        <label>Sucess</label>
-                                                    </li>
-                                                    <li className='pending'>
-                                                        <p>49</p>
-                                                        <label>Sucess</label>
-                                                    </li>
-                                                    <li className='failed'>
-                                                        <p>76</p>
-                                                        <label>Sucess</label>
-                                                    </li>
-                                                </ul>
-                                                <Groupchart />
-
-                                            </div>
-                                        </div>
-                                    </Card>
+                                    <CardGroupChart/>
                                 </Col>
 
                             </Row>
