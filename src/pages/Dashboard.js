@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { Col, Row } from 'antd';
-import { Button, Space, Card, Breadcrumb, Menu, Dropdown, Avatar, Tag, Progress, Select, Drawer, Checkbox } from 'antd';
+import { Button, Space, Card, Breadcrumb, Menu, Dropdown, Avatar, Tag, Progress, Select, Drawer, Checkbox, Radio } from 'antd';
 
 import Linechart from '../utilities/charts/Linechart';
 import Groupchart from '../utilities/charts/Groupchart';
@@ -109,6 +109,65 @@ function Dashboard() {
                                         <Checkbox>Hide</Checkbox>
                                     </div>
                                 </div>
+                                
+                                <div className='input-block'>
+                                    <div className='each-radio-panel active'>
+                                        <input type='radio' className='radio-active' name='widget'/>
+                                        <label>Default Widgets</label>
+                                        <p>You cannot customize this widget</p>
+                                    </div>
+                                    <div className='each-radio-panel'>
+                                        <input type='radio' name='widget'/>
+                                        <label>Static Widgets</label>
+                                        <p>You cannot customize this widget</p>
+                                    </div>
+                                    <div className='each-radio-panel'>
+                                        <input type='radio' name='widget'/>
+                                        <label>Dynamic Widgets</label>
+                                        <p>You cannot customize this widget</p>
+                                    </div>
+                                </div>
+                                <div className='input-block'>
+                                    <label>Module Action <span className='mandate'>*</span></label>
+                                    <Radio.Group>
+                                        <Radio value={1}>Add  New Widget </Radio>
+                                        <Radio value={2}>Add from Widget Gallery</Radio>
+                                    </Radio.Group>
+                                </div>
+                                <div className='input-block'>
+                                    <label>Select Module *</label>
+                                    <div className='select-box'>
+                                        <Select defaultValue="Line Graph" style={{ height: 48 }} >
+                                            <option value="Select Module">Select Module</option>
+                                            <option value="Line Graph">Line Graph</option>
+                                            <option value="Bar Graph">Bar Graph</option>
+                                            <option value="Gauge Graph">Gauge Graph</option>
+                                        </Select>
+                                    </div>
+                                </div>
+                                <div className='input-block'>
+                                    <label>Select Related Module *</label>
+                                    <div className='select-box'>
+                                        <Select defaultValue="Line Graph" style={{ height: 48 }} >
+                                            <option value="Select Module">Select Related Module</option>
+                                            <option value="Line Graph">Line Graph</option>
+                                            <option value="Bar Graph">Bar Graph</option>
+                                            <option value="Gauge Graph">Gauge Graph</option>
+                                        </Select>
+                                    </div>
+                                </div>
+                                <div className='input-block'>
+                                    <label>Select Group By Field *</label>
+                                    <div className='select-box'>
+                                        <Select defaultValue="Line Graph" style={{ height: 48 }} >
+                                            <option value="Select Module">Select Group By Field</option>
+                                            <option value="Line Graph">Line Graph</option>
+                                            <option value="Bar Graph">Bar Graph</option>
+                                            <option value="Gauge Graph">Gauge Graph</option>
+                                        </Select>
+                                    </div>
+                                </div>
+                                {/* <Button type="primary">Add Widgets</Button> */}
                             </Drawer>
                         </Space>
                     </div>
