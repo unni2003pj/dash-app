@@ -3,7 +3,6 @@ import { Button, Space, Card, Breadcrumb, Menu, Dropdown, Avatar, Tag, Progress,
 
 import {
   IconCustomize
-
 } from '../../utilities/Iconsheet';
 import DropZone from "./DropZone";
 import TrashDropZone from "./TrashDropZone";
@@ -158,6 +157,7 @@ const handleSelectRow = (row) => {
   // dont use index for key when mapping over items
   // causes this issue - https://github.com/react-dnd/react-dnd/issues/342
   return (
+
     <div className="dnd-wrapper">
 
       <div className="dndButtons">

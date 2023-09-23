@@ -192,7 +192,7 @@ function Dashboard() {
                     </div>
                 </div>
 
-                <DndProvider backend={HTML5Backend}>
+                <DndProvider key={1} backend={HTML5Backend}>
                     <Container />
                 </DndProvider>
 
