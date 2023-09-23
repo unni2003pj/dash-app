@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { Col, Row } from 'antd';
 import { Button, Space, Card, Breadcrumb, Menu, Dropdown, Avatar, Tag, Progress, Select, Drawer, Checkbox, Radio } from 'antd';
 
-import { DndProvider } from "react-dnd";
-import { HTML5Backend } from "react-dnd-html5-backend";
 
 import Linechart from '../utilities/charts/Linechart';
 import Groupchart from '../utilities/charts/Groupchart';
@@ -110,7 +108,7 @@ function Dashboard() {
                                 <span>Customize</span>
                             </Button> */}
 
-                            
+
 
                             <Drawer
                                 title="Add Widget"
@@ -192,9 +190,7 @@ function Dashboard() {
                     </div>
                 </div>
 
-                <DndProvider key={1} backend={HTML5Backend}>
-                    <Container />
-                </DndProvider>
+                <Container />
 
 
 
@@ -418,16 +414,16 @@ function Dashboard() {
                                             <div className='card-panel-body'>
                                                 <Row gutter={[16, 16]}>
                                                     <Col>
-                                                        <CardIphone/>
+                                                        <CardIphone />
                                                     </Col>
                                                     <Col>
-                                                        <CardSms/>
+                                                        <CardSms />
                                                     </Col>
                                                     <Col>
-                                                        <CardData/>
+                                                        <CardData />
                                                     </Col>
                                                     <Col>
-                                                        <CardVoice/>
+                                                        <CardVoice />
                                                     </Col>
                                                 </Row>
                                             </div>
@@ -460,10 +456,10 @@ function Dashboard() {
                                             <div className='card-panel-body'>
                                                 <Row gutter={[16, 16]}>
                                                     <Col xl={12} lg={12} xs={24} span={12}>
-                                                        <CardContractOne/>
+                                                        <CardContractOne />
                                                     </Col>
                                                     <Col xl={12} lg={12} xs={24} span={12}>
-                                                        <CardContractTwo/>
+                                                        <CardContractTwo />
                                                     </Col>
                                                 </Row>
                                             </div>
@@ -492,13 +488,13 @@ function Dashboard() {
                                             <div className='card-panel-body'>
                                                 <Row gutter={[16, 16]}>
                                                     <Col xl={8} lg={8} xs={24} span={8}>
-                                                        <CardDocumentOne/>
+                                                        <CardDocumentOne />
                                                     </Col>
                                                     <Col xl={8} lg={8} xs={24} span={8}>
-                                                        <CardDocumentTwo/>
+                                                        <CardDocumentTwo />
                                                     </Col>
                                                     <Col xl={8} lg={8} xs={24} span={8}>
-                                                        <CardDocumentThree/>
+                                                        <CardDocumentThree />
                                                     </Col>
                                                 </Row>
                                             </div>
@@ -511,11 +507,11 @@ function Dashboard() {
                             <Row gutter={[16, 16]}>
 
                                 <Col xl={12} lg={24} xs={24} span={12}>
-                                    <CardLineChart/>
+                                    <CardLineChart />
                                 </Col>
 
                                 <Col xl={12} lg={24} xs={24} span={12}>
-                                    <CardGroupChart/>
+                                    <CardGroupChart />
                                 </Col>
 
                             </Row>
