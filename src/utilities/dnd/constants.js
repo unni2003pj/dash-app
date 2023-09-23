@@ -11,6 +11,16 @@ import CardDocumentThree from '../../views/cards/CardDocumentThree';
 import CardLineChart from '../../views/cards/CardLineChart';
 import CardGroupChart from '../../views/cards/CardGroupChart';
 import CardHeader from "../../views/cards/CardHeader"
+import CardStatOne from "../../views/cards/CardStatOne";
+import CardStatThree from "../../views/cards/CardStatThree";
+import CardStatFour from "../../views/cards/CardStatFour";
+import CardStatTwo from "../../views/cards/CardStatTwo";
+import CardBarChart from "../../views/cards/CardBarChart";
+import CardTable from "../../views/cards/CardTable";
+import CardRingChart from "../../views/cards/CardRingChart";
+import CardGaugeChart from "../../views/cards/CardGaugeChart";
+import CardNetwork from "../../views/cards/CardNetwork";
+import CardSocial from "../../views/cards/CardSocial";
 
 export const SIDEBAR_ITEM = "sidebarItem";
 export const ROW = "row";
@@ -112,6 +122,94 @@ export const SIDEBAR_ITEMS = [
     component: {
       type: "Card Header",
       content: <CardHeader/>
+    }
+  },
+  {
+    id: shortid.generate(),
+    type: SIDEBAR_ITEM,
+    component: {
+      type: "Card Header",
+      content: <CardHeader/>
+    }
+  },
+  {
+    id: shortid.generate(),
+    type: SIDEBAR_ITEM,
+    component: {
+      type: "Card Stat One",
+      content: <CardStatOne/>
+    }
+  },
+  {
+    id: shortid.generate(),
+    type: SIDEBAR_ITEM,
+    component: {
+      type: "Card Stat Two",
+      content: <CardStatTwo/>
+    }
+  },
+  {
+    id: shortid.generate(),
+    type: SIDEBAR_ITEM,
+    component: {
+      type: "Card Stat Three",
+      content: <CardStatThree/>
+    }
+  },
+  {
+    id: shortid.generate(),
+    type: SIDEBAR_ITEM,
+    component: {
+      type: "Card Stat Four",
+      content: <CardStatFour/>
+    }
+  },
+  {
+    id: shortid.generate(),
+    type: SIDEBAR_ITEM,
+    component: {
+      type: "Bar Chart",
+      content: <CardBarChart/>
+    }
+  },
+  {
+    id: shortid.generate(),
+    type: SIDEBAR_ITEM,
+    component: {
+      type: "Table",
+      content: <CardTable/>
+    }
+  },
+  {
+    id: shortid.generate(),
+    type: SIDEBAR_ITEM,
+    component: {
+      type: "Gauge Chart",
+      content: <CardGaugeChart/>
+    }
+  },
+  {
+    id: shortid.generate(),
+    type: SIDEBAR_ITEM,
+    component: {
+      type: "Ring Chart",
+      content: <CardRingChart/>
+    }
+  },
+  {
+    id: shortid.generate(),
+    type: SIDEBAR_ITEM,
+    component: {
+      type: "Network Chart",
+      content: <CardNetwork/>
+    }
+  },
+  {
+    id: shortid.generate(),
+    type: SIDEBAR_ITEM,
+    component: {
+      type: "Card Social",
+      content: <CardSocial/>
     }
   }
 ];

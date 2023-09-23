@@ -1,12 +1,9 @@
 import React, { useRef } from "react";
-// import {Col} from "antd";
 import {Col} from "react-bootstrap";
-
 import { useDrag } from "react-dnd";
 import { COLUMN } from "./constants";
 import DropZone from "./DropZone";
 import Component from "./Component";
-
 import {
   IconClose
 } from '../Iconsheet';
@@ -52,8 +49,6 @@ const ColumnBlock = ({ data, components, handleDrop, path, handleDeleteColumn })
 
     
     <Col ref={ref} style={{ ...style, opacity }} className="draggable-column">
-
-      {/* <a className="remove-column" onClick={removeColumnHandler}>Remove Column</a> */}
 
       <nav onClick={removeColumnHandler} className="remove-icon">
         <IconClose/>

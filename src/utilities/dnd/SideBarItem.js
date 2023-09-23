@@ -10,7 +10,7 @@ const SideBarItem = ({ data }) => {
   });
   
   return (
-    <div className="sideBarItem" ref={drag} style={{ opacity }}>
+    <div className="each-widget" ref={drag} style={{ opacity }}>
       {data.component.type}
     </div>
   );

@@ -258,8 +258,8 @@ function IconCard(props) {
 function IconCallAdd(props) {
     return( 
         <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
-        <path d="M4.15002 3H7.15002L8.65002 6.75L6.77502 7.875C7.57824 9.50365 8.89638 10.8218 10.525 11.625L11.65 9.75L15.4 11.25V14.25C15.4 15.0784 14.7285 15.75 13.9 15.75C7.84576 15.3821 3.01794 10.5543 2.65002 4.5C2.65002 3.67157 3.3216 3 4.15002 3" stroke={props.color} stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M4.15002 3H7.15002L8.65002 6.75L6.77502 7.875C7.57824 9.50365 8.89638 10.8218 10.525 11.625L11.65 9.75L15.4 11.25V14.25C15.4 15.0784 14.7285 15.75 13.9 15.75C7.84576 15.3821 3.01794 10.5543 2.65002 4.5C2.65002 3.67157 3.3216 3 4.15002 3" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M4.15002 3H7.15002L8.65002 6.75L6.77502 7.875C7.57824 9.50365 8.89638 10.8218 10.525 11.625L11.65 9.75L15.4 11.25V14.25C15.4 15.0784 14.7285 15.75 13.9 15.75C7.84576 15.3821 3.01794 10.5543 2.65002 4.5C2.65002 3.67157 3.3216 3 4.15002 3" stroke={props.color} strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M4.15002 3H7.15002L8.65002 6.75L6.77502 7.875C7.57824 9.50365 8.89638 10.8218 10.525 11.625L11.65 9.75L15.4 11.25V14.25C15.4 15.0784 14.7285 15.75 13.9 15.75C7.84576 15.3821 3.01794 10.5543 2.65002 4.5C2.65002 3.67157 3.3216 3 4.15002 3" stroke="white" stroke-opacity="0.6" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M11.65 3.625C11.1668 3.625 10.775 4.01675 10.775 4.5C10.775 4.98325 11.1668 5.375 11.65 5.375V3.625ZM16.15 5.375C16.6333 5.375 17.025 4.98325 17.025 4.5C17.025 4.01675 16.6333 3.625 16.15 3.625V5.375ZM14.775 2.25C14.775 1.76675 14.3833 1.375 13.9 1.375C13.4168 1.375 13.025 1.76675 13.025 2.25H14.775ZM13.025 6.75C13.025 7.23325 13.4168 7.625 13.9 7.625C14.3833 7.625 14.775 7.23325 14.775 6.75H13.025ZM11.65 5.375H16.15V3.625H11.65V5.375ZM13.025 2.25V6.75H14.775V2.25H13.025Z" fill={props.color}/>
         <path d="M11.65 3.625C11.1668 3.625 10.775 4.01675 10.775 4.5C10.775 4.98325 11.1668 5.375 11.65 5.375V3.625ZM16.15 5.375C16.6333 5.375 17.025 4.98325 17.025 4.5C17.025 4.01675 16.6333 3.625 16.15 3.625V5.375ZM14.775 2.25C14.775 1.76675 14.3833 1.375 13.9 1.375C13.4168 1.375 13.025 1.76675 13.025 2.25H14.775ZM13.025 6.75C13.025 7.23325 13.4168 7.625 13.9 7.625C14.3833 7.625 14.775 7.23325 14.775 6.75H13.025ZM11.65 5.375H16.15V3.625H11.65V5.375ZM13.025 2.25V6.75H14.775V2.25H13.025Z" fill="white" fillOpacity="0.6"/>
         </svg>
@@ -269,10 +269,10 @@ function IconCallAdd(props) {
 function IconMailsm(props) {
     return( 
         <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
-        <rect x="2.65002" y="3.75" width="13.5" height="10.5" rx="2" stroke={props.color} stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-        <rect x="2.65002" y="3.75" width="13.5" height="10.5" rx="2" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M2.65002 5.25L9.40002 9.75L16.15 5.25" stroke={props.color} stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M2.65002 5.25L9.40002 9.75L16.15 5.25" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="2.65002" y="3.75" width="13.5" height="10.5" rx="2" stroke={props.color} strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="2.65002" y="3.75" width="13.5" height="10.5" rx="2" stroke="white" stroke-opacity="0.6" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M2.65002 5.25L9.40002 9.75L16.15 5.25" stroke={props.color} strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M2.65002 5.25L9.40002 9.75L16.15 5.25" stroke="white" stroke-opacity="0.6" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
     )
 }
@@ -280,12 +280,12 @@ function IconMailsm(props) {
 function IconMsgsm(props) {
     return( 
         <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
-        <path d="M9.40002 15L7.15002 12.75H5.65002C4.40738 12.75 3.40002 11.7426 3.40002 10.5V6C3.40002 4.75736 4.40738 3.75 5.65002 3.75H13.15C14.3927 3.75 15.4 4.75736 15.4 6V10.5C15.4 11.7426 14.3927 12.75 13.15 12.75H11.65L9.40002 15" stroke={props.color} stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M9.40002 15L7.15002 12.75H5.65002C4.40738 12.75 3.40002 11.7426 3.40002 10.5V6C3.40002 4.75736 4.40738 3.75 5.65002 3.75H13.15C14.3927 3.75 15.4 4.75736 15.4 6V10.5C15.4 11.7426 14.3927 12.75 13.15 12.75H11.65L9.40002 15" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M6.40002 6.75H12.4" stroke={props.color} stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M6.40002 6.75H12.4" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M6.40002 9.75H10.9" stroke={props.color} stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M6.40002 9.75H10.9" stroke="white" stroke-opacity="0.6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9.40002 15L7.15002 12.75H5.65002C4.40738 12.75 3.40002 11.7426 3.40002 10.5V6C3.40002 4.75736 4.40738 3.75 5.65002 3.75H13.15C14.3927 3.75 15.4 4.75736 15.4 6V10.5C15.4 11.7426 14.3927 12.75 13.15 12.75H11.65L9.40002 15" stroke={props.color} strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9.40002 15L7.15002 12.75H5.65002C4.40738 12.75 3.40002 11.7426 3.40002 10.5V6C3.40002 4.75736 4.40738 3.75 5.65002 3.75H13.15C14.3927 3.75 15.4 4.75736 15.4 6V10.5C15.4 11.7426 14.3927 12.75 13.15 12.75H11.65L9.40002 15" stroke="white" stroke-opacity="0.6" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6.40002 6.75H12.4" stroke={props.color} strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6.40002 6.75H12.4" stroke="white" stroke-opacity="0.6" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6.40002 9.75H10.9" stroke={props.color} strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6.40002 9.75H10.9" stroke="white" stroke-opacity="0.6" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         
     )
@@ -303,11 +303,11 @@ function CardOverlay(props) {
 function IconAnnounce(props) {
     return( 
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-        <path d="M21 12.8333H23.3333" stroke={props.color} stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M21 7.82496L22.6499 6.17505" stroke={props.color} stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M22.6499 19.8333L21 18.1833" stroke={props.color} stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M11.6667 9.33325V22.1666C11.6667 22.8109 11.3185 23.3333 10.8889 23.3333H8.94446C8.51491 23.3333 8.16669 22.8109 8.16669 22.1666V16.3333" stroke={props.color} stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.4334 9.32262L16.0076 4.91072C16.279 4.64913 16.6566 4.59286 16.9763 4.76637C17.2961 4.93987 17.5002 5.31181 17.5 5.72054V19.9463C17.5002 20.355 17.2961 20.727 16.9763 20.9005C16.6566 21.074 16.279 21.0177 16.0076 20.7561L11.4334 16.3442H5.6778C5.11938 16.3442 4.66669 15.8203 4.66669 15.1739V10.4929C4.66669 9.84656 5.11938 9.32262 5.6778 9.32262H11.4334Z" stroke={props.color} stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M21 12.8333H23.3333" stroke={props.color} strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M21 7.82496L22.6499 6.17505" stroke={props.color} strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M22.6499 19.8333L21 18.1833" stroke={props.color} strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11.6667 9.33325V22.1666C11.6667 22.8109 11.3185 23.3333 10.8889 23.3333H8.94446C8.51491 23.3333 8.16669 22.8109 8.16669 22.1666V16.3333" stroke={props.color} strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path fill-rule="evenodd" clipRule="evenodd" d="M11.4334 9.32262L16.0076 4.91072C16.279 4.64913 16.6566 4.59286 16.9763 4.76637C17.2961 4.93987 17.5002 5.31181 17.5 5.72054V19.9463C17.5002 20.355 17.2961 20.727 16.9763 20.9005C16.6566 21.074 16.279 21.0177 16.0076 20.7561L11.4334 16.3442H5.6778C5.11938 16.3442 4.66669 15.8203 4.66669 15.1739V10.4929C4.66669 9.84656 5.11938 9.32262 5.6778 9.32262H11.4334Z" stroke={props.color} strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
     )
 }
@@ -315,9 +315,9 @@ function IconAnnounce(props) {
 function IconRate(props) {
     return( 
         <svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" viewBox="0 0 29 28" fill="none">
-        <path d="M10.9001 5.83325H8.56673C7.27807 5.83325 6.2334 6.87792 6.2334 8.16659V22.1666C6.2334 23.4552 7.27807 24.4999 8.56673 24.4999H20.2334C21.5221 24.4999 22.5667 23.4552 22.5667 22.1666V8.16659C22.5667 6.87792 21.5221 5.83325 20.2334 5.83325H17.9001" stroke={props.color} stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-        <rect x="10.9" y="3.5" width="7" height="4.66667" rx="2" stroke={props.color} stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M16.7333 12.8333H13.8167C12.8502 12.8333 12.0667 13.6168 12.0667 14.5833C12.0667 15.5498 12.8502 16.3333 13.8167 16.3333H14.9833C15.9498 16.3333 16.7333 17.1168 16.7333 18.0833C16.7333 19.0498 15.9498 19.8333 14.9833 19.8333H12.0667" stroke={props.color} stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10.9001 5.83325H8.56673C7.27807 5.83325 6.2334 6.87792 6.2334 8.16659V22.1666C6.2334 23.4552 7.27807 24.4999 8.56673 24.4999H20.2334C21.5221 24.4999 22.5667 23.4552 22.5667 22.1666V8.16659C22.5667 6.87792 21.5221 5.83325 20.2334 5.83325H17.9001" stroke={props.color} strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="10.9" y="3.5" width="7" height="4.66667" rx="2" stroke={props.color} strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M16.7333 12.8333H13.8167C12.8502 12.8333 12.0667 13.6168 12.0667 14.5833C12.0667 15.5498 12.8502 16.3333 13.8167 16.3333H14.9833C15.9498 16.3333 16.7333 17.1168 16.7333 18.0833C16.7333 19.0498 15.9498 19.8333 14.9833 19.8333H12.0667" stroke={props.color} strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M15.275 19.8334C15.275 19.3502 14.8832 18.9584 14.4 18.9584C13.9167 18.9584 13.525 19.3502 13.525 19.8334H15.275ZM13.525 21.0001C13.525 21.4833 13.9167 21.8751 14.4 21.8751C14.8832 21.8751 15.275 21.4833 15.275 21.0001H13.525ZM15.275 11.6667C15.275 11.1835 14.8832 10.7917 14.4 10.7917C13.9167 10.7917 13.525 11.1835 13.525 11.6667H15.275ZM13.525 12.8334C13.525 13.3167 13.9167 13.7084 14.4 13.7084C14.8832 13.7084 15.275 13.3167 15.275 12.8334H13.525ZM13.525 19.8334V21.0001H15.275V19.8334H13.525ZM13.525 11.6667V12.8334H15.275V11.6667H13.525Z" fill={props.color}/>
         </svg>
     )
@@ -327,11 +327,11 @@ function IconRate(props) {
 function IconInvoice(props) {
     return(
         <svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" viewBox="0 0 29 28" fill="none">
-        <path d="M17.1334 3.5V8.16667C17.1334 8.811 17.6558 9.33333 18.3001 9.33333H22.9668" stroke={props.color} stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.6334 24.5H8.96676C7.67809 24.5 6.63342 23.4553 6.63342 22.1667V5.83333C6.63342 4.54467 7.67809 3.5 8.96676 3.5H17.1334L22.9668 9.33333V22.1667C22.9668 23.4553 21.9221 24.5 20.6334 24.5Z" stroke={props.color} stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M11.3 8.16659H12.4667" stroke={props.color} stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M11.3 15.1666H18.3" stroke={props.color} stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M15.9667 19.8333H18.3" stroke={props.color} stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M17.1334 3.5V8.16667C17.1334 8.811 17.6558 9.33333 18.3001 9.33333H22.9668" stroke={props.color} strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path fill-rule="evenodd" clipRule="evenodd" d="M20.6334 24.5H8.96676C7.67809 24.5 6.63342 23.4553 6.63342 22.1667V5.83333C6.63342 4.54467 7.67809 3.5 8.96676 3.5H17.1334L22.9668 9.33333V22.1667C22.9668 23.4553 21.9221 24.5 20.6334 24.5Z" stroke={props.color} strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11.3 8.16659H12.4667" stroke={props.color} strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11.3 15.1666H18.3" stroke={props.color} strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15.9667 19.8333H18.3" stroke={props.color} strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
     )
 }
@@ -339,12 +339,12 @@ function IconInvoice(props) {
 function IconBill(props) {
     return(
         <svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" viewBox="0 0 29 28" fill="none">
-        <path d="M16.5332 11.375H13.6166C12.6501 11.375 11.8666 12.0279 11.8666 12.8333C11.8666 13.6387 12.6501 14.2917 13.6166 14.2917H14.7832C15.7497 14.2917 16.5332 14.9446 16.5332 15.75C16.5332 16.5554 15.7497 17.2083 14.7832 17.2083H11.8666" stroke={props.color} stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M16.5332 11.375H13.6166C12.6501 11.375 11.8666 12.0279 11.8666 12.8333C11.8666 13.6387 12.6501 14.2917 13.6166 14.2917H14.7832C15.7497 14.2917 16.5332 14.9446 16.5332 15.75C16.5332 16.5554 15.7497 17.2083 14.7832 17.2083H11.8666" stroke={props.color} strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M15.075 10.0625C15.075 9.57925 14.6832 9.1875 14.2 9.1875C13.7167 9.1875 13.325 9.57925 13.325 10.0625H15.075ZM13.325 10.0625V11.0833H15.075V10.0625H13.325Z" fill={props.color}/>
         <path d="M15.075 19.1042C15.075 19.5875 14.6832 19.9792 14.2 19.9792C13.7167 19.9792 13.325 19.5875 13.325 19.1042H15.075ZM13.325 19.1042V18.0834H15.075V19.1042H13.325Z" fill={props.color}/>
-        <path d="M21.2 11.0834H23.5333" stroke={props.color} stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M4.86658 11.0834H7.19991" stroke={props.color} stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.86658 22.2963L4.86658 6.87037C4.86658 5.6533 6.06048 4.66667 7.53324 4.66667H11.5332C11.5332 5.88374 12.7272 6.87037 14.1999 6.87037C15.6727 6.87037 16.8666 5.88374 16.8666 4.66667H20.8666C22.3393 4.66667 23.5332 5.6533 23.5332 6.87037V22.2963C23.5332 23.5134 22.3393 24.5 20.8666 24.5H16.8666C16.8666 23.2829 15.6727 22.2963 14.1999 22.2963C12.7272 22.2963 11.5332 23.2829 11.5332 24.5H7.53324C6.06048 24.5 4.86658 23.5134 4.86658 22.2963Z" stroke={props.color} stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M21.2 11.0834H23.5333" stroke={props.color} strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M4.86658 11.0834H7.19991" stroke={props.color} strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path fill-rule="evenodd" clipRule="evenodd" d="M4.86658 22.2963L4.86658 6.87037C4.86658 5.6533 6.06048 4.66667 7.53324 4.66667H11.5332C11.5332 5.88374 12.7272 6.87037 14.1999 6.87037C15.6727 6.87037 16.8666 5.88374 16.8666 4.66667H20.8666C22.3393 4.66667 23.5332 5.6533 23.5332 6.87037V22.2963C23.5332 23.5134 22.3393 24.5 20.8666 24.5H16.8666C16.8666 23.2829 15.6727 22.2963 14.1999 22.2963C12.7272 22.2963 11.5332 23.2829 11.5332 24.5H7.53324C6.06048 24.5 4.86658 23.5134 4.86658 22.2963Z" stroke={props.color} strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
     )
 }
@@ -352,9 +352,9 @@ function IconBill(props) {
 function IconVoicesm(props) {
     return(
         <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
-        <path d="M4.25 3H7.25L8.75 6.75L6.875 7.875C7.67822 9.50365 8.99635 10.8218 10.625 11.625L11.75 9.75L15.5 11.25V14.25C15.5 15.0784 14.8284 15.75 14 15.75C7.94574 15.3821 3.11792 10.5543 2.75 4.5C2.75 3.67157 3.42157 3 4.25 3" stroke={props.color} stroke-width="1.21154" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M11.75 5.25C12.5784 5.25 13.25 5.92157 13.25 6.75" stroke={props.color} stroke-width="1.21154" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M11.75 2.25C14.2353 2.25 16.25 4.26472 16.25 6.75" stroke={props.color} stroke-width="1.21154" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M4.25 3H7.25L8.75 6.75L6.875 7.875C7.67822 9.50365 8.99635 10.8218 10.625 11.625L11.75 9.75L15.5 11.25V14.25C15.5 15.0784 14.8284 15.75 14 15.75C7.94574 15.3821 3.11792 10.5543 2.75 4.5C2.75 3.67157 3.42157 3 4.25 3" stroke={props.color} strokeWidth="1.21154" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11.75 5.25C12.5784 5.25 13.25 5.92157 13.25 6.75" stroke={props.color} strokeWidth="1.21154" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11.75 2.25C14.2353 2.25 16.25 4.26472 16.25 6.75" stroke={props.color} strokeWidth="1.21154" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
     )
 }
@@ -399,12 +399,103 @@ function Iconyt(props) {
 function IconClose(props) {
     return(
         <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
-        <path d="M5.09996 4.70009L11.6996 11.2998" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M5.09996 11.2999L11.6996 4.70025" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M5.09996 4.70009L11.6996 11.2998" stroke="white" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M5.09996 11.2999L11.6996 4.70025" stroke="white" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
     )
 }
 
+function IconInteraction(props) {
+    return(
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <circle cx="14" cy="14" r="10.5" stroke="#00CFE8" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M14 8.16675V14.0001L17.5 17.5001" stroke="#00CFE8" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    )
+}
+
+function IconProgress(props) {
+    return(
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path fill-rule="evenodd" clipRule="evenodd" d="M3.5 24.5V5.83333C3.5 4.54467 4.84315 3.5 6.5 3.5H21.5C23.1569 3.5 24.5 4.54467 24.5 5.83333V24.5L20 22.1667L17 24.5L14 22.1667L11 24.5L8 22.1667L3.5 24.5Z" stroke="#00CFE8" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M9.33337 12.8334C9.33337 12.1891 9.85571 11.6667 10.5 11.6667V11.6667C11.1444 11.6667 11.6667 12.1891 11.6667 12.8334V14.0001C11.6667 14.6444 11.1444 15.1667 10.5 15.1667V15.1667C9.85571 15.1667 9.33337 14.6444 9.33337 14.0001V12.8334Z" stroke="#00CFE8" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M16.3334 12.8334C16.3334 12.1891 16.8557 11.6667 17.5 11.6667V11.6667C18.1444 11.6667 18.6667 12.1891 18.6667 12.8334V14.0001C18.6667 14.6444 18.1444 15.1667 17.5 15.1667V15.1667C16.8557 15.1667 16.3334 14.6444 16.3334 14.0001V12.8334Z" stroke="#00CFE8" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M9.33337 12.8334V11.2424C9.33337 8.89942 11.4227 7.00002 14 7.00002C16.5774 7.00002 18.6667 8.89942 18.6667 11.2424V12.8334" stroke="#00CFE8" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M17.5 15.1667C17.5 16.7131 16.4553 18.6667 15.1666 18.6667" stroke="#00CFE8" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    )
+}
+
+function IconDispute(props) {
+    return(
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M8.16667 15.1665V5.83322C8.16667 5.18888 7.64433 4.66655 7 4.66655H4.66667C4.02233 4.66655 3.5 5.18888 3.5 5.83322V13.9999C3.5 14.6442 4.02233 15.1665 4.66667 15.1665H8.16667C10.744 15.1665 12.8333 17.2559 12.8333 19.8332V20.9999C12.8333 22.2885 13.878 23.3332 15.1667 23.3332C16.4553 23.3332 17.5 22.2885 17.5 20.9999V15.1665H21C22.2887 15.1665 23.3333 14.1219 23.3333 12.8332L22.1667 6.99988C21.822 5.52958 20.8707 4.57829 19.8333 4.66655H11.6667C9.73367 4.66655 8.16667 6.23355 8.16667 8.16655" stroke="#00CFE8" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    )
+}
+
+function IconInteractionLg(props) {
+    return(
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path fill-rule="evenodd" clipRule="evenodd" d="M3.5 22.2727L8.27273 17.5H19.4091C20.2877 17.5 21 16.7877 21 15.9091V5.09091C21 4.21227 20.2877 3.5 19.4091 3.5H5.09091C4.21227 3.5 3.5 4.21227 3.5 5.09091V22.2727Z" stroke="#00CFE8" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M7.58337 8.16675H16.9167" stroke="#00CFE8" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M7.58337 12.8333H14.5834" stroke="#00CFE8" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M11.6667 17.5001V19.8334C11.6667 20.4777 12.189 21.0001 12.8333 21.0001H21L24.5 24.5001V12.8334C24.5 12.1891 23.9777 11.6667 23.3333 11.6667H21" stroke="#00CFE8" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    )
+}
+
+function IconCallCenter(props) {
+    return(
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path fill-rule="evenodd" clipRule="evenodd" d="M3.5 22.2727L8.27273 17.5H19.4091C20.2877 17.5 21 16.7877 21 15.9091V5.09091C21 4.21227 20.2877 3.5 19.4091 3.5H5.09091C4.21227 3.5 3.5 4.21227 3.5 5.09091V22.2727Z" stroke="#00CFE8" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M7.58337 8.16675H16.9167" stroke="#00CFE8" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M7.58337 12.8333H14.5834" stroke="#00CFE8" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M11.6667 17.5001V19.8334C11.6667 20.4777 12.189 21.0001 12.8333 21.0001H21L24.5 24.5001V12.8334C24.5 12.1891 23.9777 11.6667 23.3333 11.6667H21" stroke="#00CFE8" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+     )
+}
+
+function IconStability(props) {
+    return(
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path fill-rule="evenodd" clipRule="evenodd" d="M3.5 22.2727L8.27273 17.5H19.4091C20.2877 17.5 21 16.7877 21 15.9091V5.09091C21 4.21227 20.2877 3.5 19.4091 3.5H5.09091C4.21227 3.5 3.5 4.21227 3.5 5.09091V22.2727Z" stroke="#00CFE8" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M7.58337 8.16675H16.9167" stroke="#00CFE8" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M7.58337 12.8333H14.5834" stroke="#00CFE8" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M11.6667 17.5001V19.8334C11.6667 20.4777 12.189 21.0001 12.8333 21.0001H21L24.5 24.5001V12.8334C24.5 12.1891 23.9777 11.6667 23.3333 11.6667H21" stroke="#00CFE8" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    )
+}
+
+function IconWidget(props) {
+    return(
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M11.933 5H5V21H18V13" stroke="#4B465C" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11.933 5H5V21H18V13" stroke="white" stroke-opacity="0.6" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M14 17H9" stroke="#4B465C" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M14 17H9" stroke="white" stroke-opacity="0.6" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path fill-rule="evenodd" clipRule="evenodd" d="M9 13H14V9H9V13Z" stroke="#4B465C" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path fill-rule="evenodd" clipRule="evenodd" d="M9 13H14V9H9V13Z" stroke="white" stroke-opacity="0.6" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15 5V3" stroke="#4B465C" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15 5V3" stroke="white" stroke-opacity="0.6" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M18 6L20 4" stroke="#4B465C" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M18 6L20 4" stroke="white" stroke-opacity="0.6" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M19 9H21" stroke="#4B465C" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M19 9H21" stroke="white" stroke-opacity="0.6" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    )
+}
+
+function IconWidgetClose(props) {
+    return(
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M18 6L6 18" stroke="#4B465C" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M18 6L6 18" stroke="white" stroke-opacity="0.2" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6 6L18 18" stroke="#4B465C" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6 6L18 18" stroke="white" stroke-opacity="0.2" strokeWidth="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    )
+}
 
 
 export  {
@@ -443,5 +534,13 @@ export  {
     Icontw,
     Iconig,
     Iconyt,
-    IconClose
+    IconClose,
+    IconInteraction,
+    IconProgress,
+    IconWidget,
+    IconWidgetClose,
+    IconDispute,
+    IconInteractionLg,
+    IconCallCenter,
+    IconStability
 };

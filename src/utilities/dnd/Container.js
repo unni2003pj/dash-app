@@ -1,9 +1,5 @@
 import React, { useState, useCallback, useEffect } from "react";
-import { Button, Space, Card, Breadcrumb, Menu, Dropdown, Avatar, Tag, Progress, Select, Drawer, Checkbox, Radio } from 'antd';
 
-import {
-  IconCustomize
-} from '../../utilities/Iconsheet';
 import DropZone from "./DropZone";
 import TrashDropZone from "./TrashDropZone";
 import SideBarItem from "./SideBarItem";
@@ -19,9 +15,12 @@ import {
   handleRemoveRow,
   handleRemoveRowColumn
 } from "./helpers";
-
 import { SIDEBAR_ITEMS, SIDEBAR_ITEM, COMPONENT, COLUMN } from "./constants";
 import shortid from "shortid";
+import {
+  IconWidget,
+  IconWidgetClose
+} from '../../utilities/Iconsheet';
 
 const Container = (props) => {
 const initialLayout = initialData.layout;
@@ -154,13 +153,11 @@ const handleSelectRow = (row) => {
   }
 }
 
-  // dont use index for key when mapping over items
-  // causes this issue - https://github.com/react-dnd/react-dnd/issues/342
   return (
 
     <div className="dnd-wrapper">
 
-      <div className="dndButtons">
+      {/* <div className="dndButtons">
         <Button type="primary" onClick={handleAddRow}>
           <IconCustomize color="white" />
           <span>Add Row</span>
@@ -173,23 +170,31 @@ const handleSelectRow = (row) => {
           <IconCustomize color="white" />
           <span>Exit Customization</span>
         </Button>
-      </div>
+      </div> */}
 
-      <div className="sideBar">
-        {Object.values(SIDEBAR_ITEMS).map((sideBarItem, index) => (
-          <SideBarItem key={sideBarItem.id} data={sideBarItem} />
-        ))}
+      <div className="drawer hide">
+        <div className="drawer-header">
+          <h5><IconWidget/> Widget</h5>
+          <div className="drawer-right">
+              <button className="actio-link">
+                <IconWidgetClose/>
+              </button>
+          </div>
+        </div>
+        <div className="drawer-body">
+         
+            {Object.values(SIDEBAR_ITEMS).map((sideBarItem, index) => (
+              <SideBarItem key={sideBarItem.id} data={sideBarItem} />
+            ))}
+          
+        </div>
       </div>
 
       <div className="dnd-container">
-
         <div className="dnd-page">
-
           {layout.map((row, index) => {
-            
             const currentPath = `${index}`;
             return (
-
               <React.Fragment key={row.id}>
                 <DropZone
                   data={{
@@ -203,9 +208,7 @@ const handleSelectRow = (row) => {
                   {renderRow(row, currentPath, layout)}
                 </div>
               </React.Fragment>
-
             );
-
           })}
 
           <DropZone

@@ -1,12 +1,9 @@
 import React, { useRef } from "react";
-// import {Row} from "antd";
 import {Container, Row} from "react-bootstrap";
 import { useDrag } from "react-dnd";
 import { ROW } from "./constants";
 import DropZone from "./DropZone";
 import Column from "./ColumnBlock";
-
-
 import {
   IconClose
 } from '../Iconsheet';

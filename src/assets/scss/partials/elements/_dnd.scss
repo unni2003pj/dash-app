@@ -60,13 +60,14 @@
 .draggable-column {
     border: 3px dashed #8692D0;
     // flex: 1 1 100%;
-    padding: 16px;
+    // padding: 16px;
     position: relative;
 }
 
 .remove-icon {
     width: 24px;
     height: 24px;
+    padding: 0;
     border-radius: 8px;
     @extend .div-flex-center-cover;
     background: rgba($color: #4B465C, $alpha: 0.70);
@@ -81,7 +82,7 @@
     }
 }
 
-.column {
+.col {
 
     .remove-icon {
       background: #8692D0;
