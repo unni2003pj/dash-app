@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
-import {Col} from "antd";
+// import {Col} from "antd";
+import {Col} from "react-bootstrap";
 
 import { useDrag } from "react-dnd";
 import { COLUMN } from "./constants";
@@ -49,7 +50,8 @@ const ColumnBlock = ({ data, components, handleDrop, path, handleDeleteColumn })
 
   return (
 
-    <div ref={ref} style={{ ...style, opacity }} className="column">
+    
+    <Col ref={ref} style={{ ...style, opacity }} className="draggable-column">
 
       {/* <a className="remove-column" onClick={removeColumnHandler}>Remove Column</a> */}
 
@@ -88,8 +90,8 @@ const ColumnBlock = ({ data, components, handleDrop, path, handleDeleteColumn })
         isLast
       />
 
-    </div>
-
+    </Col>
+    
   );
 };
 

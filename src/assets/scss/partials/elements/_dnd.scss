@@ -38,10 +38,10 @@
     transition: 100ms all;
 }
 
-.row {
+.draggable-row {
     border: 3px dashed #DBDADE;
     padding: 16px;
-    display: flex;
+    // display: flex;
     position: relative;
     transition: .3s ease-out;
 
@@ -56,9 +56,9 @@
     padding: 16px;
 }
 
-.column {
+.draggable-column {
     border: 3px dashed #8692D0;
-    flex: 1 1 100%;
+    // flex: 1 1 100%;
     padding: 16px;
     position: relative;
 }

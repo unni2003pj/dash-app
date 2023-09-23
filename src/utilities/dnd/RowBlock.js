@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
-import {Row} from "antd";
-
+// import {Row} from "antd";
+import {Container, Row} from "react-bootstrap";
 import { useDrag } from "react-dnd";
 import { ROW } from "./constants";
 import DropZone from "./DropZone";
@@ -60,19 +60,13 @@ const RowBlock = ({ data, components, handleDrop, path, rowDeleteCallback, colun
 
   return (
 
-    
-
-      
-      
-      
-
-      
+    <Container fluid>
+      <Row className="draggable-row">
         
-      
-      <div className="row">
         <nav onClick={() => { deleteRow(data.id) }} className="remove-icon">
           <IconClose/>
         </nav>
+
         {data.children.map((column, index) => {
 
           const currentPath = `${path}-${index}`;
@@ -103,8 +97,8 @@ const RowBlock = ({ data, components, handleDrop, path, rowDeleteCallback, colun
           isLast
         />
       
-      </div>
-      
+      </Row>
+    </Container>
       
 
     
