@@ -44,6 +44,7 @@
     // display: flex;
     position: relative;
     transition: .3s ease-out;
+    // --bs-gutter-x: 0rem;
 
     &:hover {
         border-color: $theme;
@@ -74,6 +75,10 @@
     top: -10px;
     z-index: 1;
     cursor: pointer;
+
+    svg {
+        font-size: 16px;
+    }
 }
 
 .column {

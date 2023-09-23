@@ -2,39 +2,7 @@ import React, { useState, useCallback, useEffect } from "react";
 import { Button, Space, Card, Breadcrumb, Menu, Dropdown, Avatar, Tag, Progress, Select, Drawer, Checkbox, Radio } from 'antd';
 
 import {
-  IconAdd,
-  IconTableimport,
-  IconTableexport,
-  IconSettings,
-  IconCustomize,
-  IconBack,
-  IconCall,
-  IconMail,
-  IconMsg,
-  IconActivities,
-  IconMore,
-  IconDotbottom,
-  IconAddlg,
-  IconSettingslg,
-  IconPhone,
-  IconDotright,
-  IconMsglg,
-  IconData,
-  IconVoice,
-  IconDocument,
-  IconAvatar,
-  IconCard,
-  CardOverlay,
-  IconAnnounce,
-  IconRate,
-  IconInvoice,
-  IconBill,
-  IconVoicesm,
-  Iconfb,
-  Icontw,
-  Iconig,
-  Iconyt,
-  IconClose
+  IconCustomize
 
 } from '../../utilities/Iconsheet';
 import DropZone from "./DropZone";
@@ -207,7 +175,7 @@ const handleSelectRow = (row) => {
         </Button>
       </div>
 
-      <div className="sideBar hide">
+      <div className="sideBar">
         {Object.values(SIDEBAR_ITEMS).map((sideBarItem, index) => (
           <SideBarItem key={sideBarItem.id} data={sideBarItem} />
         ))}

@@ -62,7 +62,7 @@ const RowBlock = ({ data, components, handleDrop, path, rowDeleteCallback, colun
 
     <Container fluid>
       <Row className="draggable-row">
-        
+
         <nav onClick={() => { deleteRow(data.id) }} className="remove-icon">
           <IconClose/>
         </nav>
