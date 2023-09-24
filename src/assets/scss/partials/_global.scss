@@ -93,3 +93,7 @@ body {
 .selected .draggable-row {
     border-color: #18A4FF;
 }
+
+.selected .draggable-row > .remove-icon {
+    background: #18A4FF;
+}
