@@ -1,5 +1,6 @@
 import shortid from "shortid";
 import { ROW, COLUMN, COMPONENT } from "./constants";
+import { message } from "antd";
 
 // a little function to help us with reordering the result
 export const reorder = (list, startIndex, endIndex) => {
@@ -231,6 +232,7 @@ export const handleAddNewRow = (layout, selectedRow) => {
   });
   let newArrayIndex = layoutCopy.map(function (x) { return x.id; }).indexOf(newRowId);
   if (selectedRow != '') layoutCopy = array_move(layoutCopy, newArrayIndex, selectedArrayIndex + 1);
+  message.success('Row Added');
   return layoutCopy;
 }
 
@@ -247,8 +249,9 @@ export const handleAddColumDataToSelectedRow = (layout, rowId) => {
     if (row.id === rowId) {
       if (row.children.length < 6) {
         row.children = [...row.children, COLUMN_STRUCTURE];
+        message.success('Column Added');
       } else {
-        alert('Column Limit Exceeded')
+        message.error('Column Limit Exceeded')
       }
 
     }
@@ -258,19 +261,19 @@ export const handleAddColumDataToSelectedRow = (layout, rowId) => {
 
 export const handleRemoveRow = (layout, rowId) => {
   const layoutCopy = [...layout];
-
+  message.success('Row deleted');
   return layoutCopy.filter(item => item.id != rowId)
 };
 
 export const handleRemoveRowColumn = (layout, rowId, columnId) => {
   const layoutCopy = [...layout];
-
   return layoutCopy.map(row => {
     if (row.id === rowId) {
       row.children.splice(row.children.findIndex(function (i) {
         return i.id === columnId;
       }), 1);
     }
+    message.success('Column deleted');
     return row;
   });
 };

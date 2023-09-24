@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect } from "react";
-import { Space, Button } from "antd";
+import { Space, Button, message } from "antd";
 import { IconAdd, IconCustomize } from "../Iconsheet";
 import DropZone from "./DropZone";
 import TrashDropZone from "./TrashDropZone";
@@ -29,8 +29,8 @@ const Container = (props) => {
   const [layout, setLayout] = useState(initialLayout);
   const [components, setComponents] = useState(initialComponents);
   const [addColumnSelect, setAddColumnSelect] = useState(false);
-  const [selectedRow, setSelectedRow] = useState(layout);
-  const [oldLayout, setOldLayout] = useState([]);
+  const [selectedRow, setSelectedRow] = useState('');
+  const [oldLayout, setOldLayout] = useState(layout);
 
   const { addRow, addColumn, setAddRow, setAddColumn, enebleSideBar, setEnebleSideBar } = props;
 
@@ -57,7 +57,7 @@ const Container = (props) => {
   const findNewlyAddedRow = () => {
     console.log('layout', layout);
     var difference = layout.filter(x => !oldLayout.includes(x));
-    if (difference.length) setSelectedRow(difference[0]?.id);
+    if (difference.length && difference.length != layout.length) setSelectedRow(difference[0]?.id);
     console.log('difference', difference);
     setOldLayout(layout);
   }
@@ -148,6 +148,7 @@ const Container = (props) => {
 
     const handleRowDelete = (id) => {
       setLayout(handleRemoveRow(layout, id));
+      setSelectedRow('');
     }
 
     const handleColumnDelete = (rawId, columnId) => {
@@ -177,7 +178,7 @@ const Container = (props) => {
     if (selectedRow != '') {
       setLayout(handleAddColumDataToSelectedRow(layout, selectedRow));
     } else {
-      alert('Please select row')
+      message.error('Please select row to add column')
     }
     setAddColumn(false);
   }
