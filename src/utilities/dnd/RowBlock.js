@@ -8,7 +8,6 @@ import {
   IconClose
 } from '../Iconsheet';
 
-const style = {};
 const RowBlock = ({ data, components, handleDrop, path, rowDeleteCallback, colunDeleteCallback }) => {
   
   const ref = useRef(null);

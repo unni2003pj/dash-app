@@ -1,8 +1,10 @@
 import React, { useState, useCallback, useEffect } from "react";
-import { Space, Button, message } from "antd";
-import { IconAdd, IconCustomize } from "../Iconsheet";
+import { message } from "antd";
+import {
+  IconWidget,
+  IconWidgetClose
+} from '../../utilities/Iconsheet';
 import DropZone from "./DropZone";
-import TrashDropZone from "./TrashDropZone";
 import SideBarItem from "./SideBarItem";
 import Row from "./RowBlock";
 import initialData from "./initial-data";
@@ -18,10 +20,6 @@ import {
 } from "./helpers";
 import { SIDEBAR_ITEMS, SIDEBAR_ITEM, COMPONENT, COLUMN } from "./constants";
 import shortid from "shortid";
-import {
-  IconWidget,
-  IconWidgetClose
-} from '../../utilities/Iconsheet';
 
 const Container = (props) => {
   const initialLayout = initialData.layout;
@@ -42,14 +40,6 @@ const Container = (props) => {
     if (addColumn) handleAddColumn()
   }, [addColumn])
 
-  const handleDropToTrashBin = useCallback(
-    (dropZone, item) => {
-      const splitItemPath = item.path.split("-");
-      setLayout(handleRemoveItemFromLayout(layout, splitItemPath));
-    },
-    [layout]
-  );
-
   useEffect(() => {
     findNewlyAddedRow();
   }, [layout])
@@ -57,7 +47,7 @@ const Container = (props) => {
   const findNewlyAddedRow = () => {
     console.log('layout', layout);
     var difference = layout.filter(x => !oldLayout.includes(x));
-    if (difference.length && difference.length != layout.length) setSelectedRow(difference[0]?.id);
+    if (difference.length && difference.length !== layout.length) setSelectedRow(difference[0]?.id);
     console.log('difference', difference);
     setOldLayout(layout);
     if(difference.length !== 0) {
@@ -168,7 +158,7 @@ const Container = (props) => {
 
     return (
       <div onClick={() => { handleRowSelect(row.id) }}
-        className={`${row.id == selectedRow ? 'selected' : ''}`
+        className={`${row.id === selectedRow ? 'selected' : ''}`
         }>
         <Row
           key={row.id}
@@ -186,7 +176,7 @@ const Container = (props) => {
   const handleAddColumn = () => {
     console.log('clicked')
     console.log('selectedRow', selectedRow)
-    if (selectedRow != '') {
+    if (selectedRow !== '') {
       setLayout(handleAddColumDataToSelectedRow(layout, selectedRow));
     } else {
       message.error('Please select row to add column')
@@ -276,12 +266,7 @@ const Container = (props) => {
 
         </div>
 
-        {/* <TrashDropZone
-          data={{
-            layout
-          }}
-          onDrop={handleDropToTrashBin}
-        /> */}
+      
 
       </div>
 

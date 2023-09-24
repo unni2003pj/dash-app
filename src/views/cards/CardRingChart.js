@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Col, Row} from 'antd';
 import {Card, Progress } from 'antd';
 import Ringchart from '../../utilities/charts/Ringchart';
@@ -37,7 +37,7 @@ function CardRingChart() {
 
                                     </div>
                                     <div className='short-card-details'>
-                                        <ul class="short-card-status">
+                                        <ul className="short-card-status">
                                             <li>
                                                 <p>2000 Min</p>
                                                 <label>Total</label>
@@ -68,7 +68,7 @@ function CardRingChart() {
 
                                     </div>
                                     <div className='short-card-details'>
-                                        <ul class="short-card-status">
+                                        <ul className="short-card-status">
                                             <li>
                                                 <p>2000 Min</p>
                                                 <label>Total</label>
@@ -99,7 +99,7 @@ function CardRingChart() {
 
                                     </div>
                                     <div className='short-card-details'>
-                                        <ul class="short-card-status">
+                                        <ul className="short-card-status">
                                             <li>
                                                 <p>2000 Min</p>
                                                 <label>Total</label>
@@ -122,7 +122,7 @@ function CardRingChart() {
                     <Row>
                         <Col span={24} >
                             <div className='ring-chart-more-info'>
-                                <ul class="short-card-status">
+                                <ul className="short-card-status">
                                     <li>
                                         <p>Average No. of Calls</p>
                                         <label>Per month</label>

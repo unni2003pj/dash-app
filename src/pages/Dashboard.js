@@ -83,7 +83,7 @@ function Dashboard() {
                             </Button>
                         </Space>
                         <Space>
-                            {tab == 2 ?
+                            {tab === 2 ?
                                 <>
                                     {allowCustomize ?
                                         <>
@@ -105,10 +105,18 @@ function Dashboard() {
                                             </Button>
                                         </>
                                         : <>
-                                            {/* <Button type="primary" className='general-btn' onClick={() => { setAllowCustomize(true) }}>
-                                                <IconCustomize color="white" />
-                                                <span>Customization</span>
-                                            </Button> */}
+                                            <Button type="primary">
+                                                <IconAdd color="white" />
+                                            </Button>
+                                            <Button type="primary" >
+                                                <IconTableimport color="white" />
+                                            </Button>
+                                            <Button type="primary">
+                                                <IconTableexport color="white" />
+                                            </Button>
+                                            <Button type="primary">
+                                                <IconSettings color="white" />
+                                            </Button>
                                             <Button type="primary" onClick={() => { setAllowCustomize(true) }}>
                                                 <IconCustomize color="white" />
                                                 <span>Customize</span>
@@ -119,7 +127,7 @@ function Dashboard() {
                             <Drawer
                                 title="Add Widget"
                                 placement="right"
-                                visible={visible}
+                                open={visible}
                                 width='500'
                                 onClose={() => {
                                     setVisible(false)

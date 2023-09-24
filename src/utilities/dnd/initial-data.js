@@ -1,6 +1,4 @@
-import {Button} from "antd";
 import {COMPONENT, ROW, COLUMN } from "./constants";
-import { IconAdd } from "../Iconsheet";
 import CardStatOne from "../../views/cards/CardStatOne";
 import CardStatTwo from "../../views/cards/CardStatTwo";
 import CardStatThree from "../../views/cards/CardStatThree";

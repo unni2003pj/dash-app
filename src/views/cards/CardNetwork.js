@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Col, Row} from 'antd';
 import {Card} from 'antd';
 import Ringchart from '../../utilities/charts/Ringchart';
@@ -23,8 +23,8 @@ function CardNetwork() {
 
                             <div className='network-block div-flex-center'>
                                 <Ringchart fgColor={'#F20000'} bgColor={'#fbdddd'} />
-                                <ul class="chart-denotation">
-                                    <li class="failed">
+                                <ul className="chart-denotation">
+                                    <li className="failed">
                                         <label>No. of Dropped Calls</label>
                                     </li>
                                 </ul>

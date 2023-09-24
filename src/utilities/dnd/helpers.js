@@ -231,7 +231,7 @@ export const handleAddNewRow = (layout, selectedRow) => {
     children: []
   });
   let newArrayIndex = layoutCopy.map(function (x) { return x.id; }).indexOf(newRowId);
-  if (selectedRow != '') layoutCopy = array_move(layoutCopy, newArrayIndex, selectedArrayIndex + 1);
+  if (selectedRow !== '') layoutCopy = array_move(layoutCopy, newArrayIndex, selectedArrayIndex + 1);
   message.success('Row Added');
   return layoutCopy;
 }
@@ -262,7 +262,7 @@ export const handleAddColumDataToSelectedRow = (layout, rowId) => {
 export const handleRemoveRow = (layout, rowId) => {
   const layoutCopy = [...layout];
   message.success('Row deleted');
-  return layoutCopy.filter(item => item.id != rowId)
+  return layoutCopy.filter(item => item.id !== rowId)
 };
 
 export const handleRemoveRowColumn = (layout, rowId, columnId) => {
