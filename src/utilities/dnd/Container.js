@@ -29,9 +29,10 @@ const Container = (props) => {
   const [layout, setLayout] = useState(initialLayout);
   const [components, setComponents] = useState(initialComponents);
   const [addColumnSelect, setAddColumnSelect] = useState(false);
-  const [selectedRow, setSelectedRow] = useState('');
+  const [selectedRow, setSelectedRow] = useState(layout);
+  const [oldLayout, setOldLayout] = useState([]);
 
-  const { addRow, addColumn, setAddRow, setAddColumn } = props;
+  const { addRow, addColumn, setAddRow, setAddColumn, enebleSideBar, setEnebleSideBar } = props;
 
   useEffect(() => {
     if (addRow) handleAddRow()
@@ -48,6 +49,18 @@ const Container = (props) => {
     },
     [layout]
   );
+
+  useEffect(() => {
+    findNewlyAddedRow();
+  }, [layout])
+
+  const findNewlyAddedRow = () => {
+    console.log('layout', layout);
+    var difference = layout.filter(x => !oldLayout.includes(x));
+    if (difference.length) setSelectedRow(difference[0]?.id);
+    console.log('difference', difference);
+    setOldLayout(layout);
+  }
 
   const handleDrop = useCallback(
 
@@ -200,11 +213,11 @@ const Container = (props) => {
         </Button>
       </div> */}
 
-      <div className="drawer">
+      <div className={`drawer ${enebleSideBar ? 'active' : ''}`}>
         <div className="drawer-header">
           <h5><IconWidget /> Widget</h5>
           <div className="drawer-right">
-            <button className="actio-link">
+            <button className="actio-link" onClick={() => { setEnebleSideBar(false) }}>
               <IconWidgetClose />
             </button>
           </div>
@@ -212,7 +225,7 @@ const Container = (props) => {
         <div className="drawer-body">
 
           {Object.values(SIDEBAR_ITEMS).map((sideBarItem, index) => (
-            <SideBarItem key={sideBarItem.id} data={sideBarItem} />
+            <SideBarItem key={sideBarItem.id} data={sideBarItem} sideBarHide={(value) => { setEnebleSideBar(value) }} />
           ))}
 
         </div>

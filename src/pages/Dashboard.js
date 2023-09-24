@@ -37,6 +37,7 @@ function Dashboard() {
     const [addRow, setAddRow] = useState(false);
     const [addColumn, setAddColumn] = useState(false);
     const [allowCustomize, setAllowCustomize] = useState(false);
+    const [enebleSideBar, setEnebleSideBar] = useState(false);
 
     function tabChange(t) {
         setTab(t);
@@ -86,6 +87,10 @@ function Dashboard() {
                                 <>
                                     {allowCustomize ?
                                         <div className='customise-action'>
+                                            <Button type="primary" className="general-btn" onClick={() => { setEnebleSideBar(true) }}>
+                                                <IconAdd color="#fff" />
+                                                <span>Widgets</span>
+                                            </Button>
                                             <Button type="primary" className='grey-btn' onClick={() => { setAddRow(true) }}>
                                                 <IconAdd color="#4B465C" />
                                                 <span>Add Row</span>
@@ -514,7 +519,14 @@ function Dashboard() {
 
                         <div className="tab-pane">
 
-                            <Container addRow={addRow} addColumn={addColumn} setAddRow={setAddRow} setAddColumn={setAddColumn} />
+                            <Container
+                                addRow={addRow}
+                                addColumn={addColumn}
+                                setAddRow={setAddRow}
+                                setAddColumn={setAddColumn}
+                                enebleSideBar={enebleSideBar}
+                                setEnebleSideBar={setEnebleSideBar}
+                            />
 
                             {/* <Row gutter={[16, 16]} className='mb-4'>
                                 <Col xl={6} lg={12} xs={24} span={6}>

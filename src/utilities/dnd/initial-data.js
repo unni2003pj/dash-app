@@ -32,10 +32,7 @@ const initialData = {
           type: COLUMN,
           id: "column1",
           children: [
-            {
-              type: COMPONENT,
-              id: "addContentComponent"
-            }
+            
           ]
         },
         {
@@ -122,7 +119,6 @@ const initialData = {
     component7: { id: "component7", type: "phone", content: <CardRingChart/> },
     component8: { id: "component8", type: "phone", content: <CardNetwork/> },
     component9: { id: "component9", type: "phone", content: <CardSocial/> },
-    addContentComponent: { id: "addContentComponent", type: "new button", content: <div className="widget-add-container"><Button type="primary" className="general-btn"><IconAdd color="#FFFFFF"/> Add Widget</Button></div> }
   }
 };
 

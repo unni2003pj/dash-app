@@ -240,10 +240,6 @@ export const handleAddColumDataToSelectedRow = (layout, rowId) => {
     type: COLUMN,
     id: shortid.generate(),
     children: [
-      {
-        type: COMPONENT,
-        id: "addContentComponent"
-      },
     ]
   };
 
