@@ -24,73 +24,95 @@ import {
 } from '../../utilities/Iconsheet';
 
 const Container = (props) => {
-const initialLayout = initialData.layout;
-const initialComponents = initialData.components;
-const [layout, setLayout] = useState(initialLayout);
-const [components, setComponents] = useState(initialComponents);
-const [addColumnSelect, setAddColumnSelect] = useState(false);
+  const initialLayout = initialData.layout;
+  const initialComponents = initialData.components;
+  const [layout, setLayout] = useState(initialLayout);
+  const [components, setComponents] = useState(initialComponents);
+  const [addColumnSelect, setAddColumnSelect] = useState(false);
 
-const handleDropToTrashBin = useCallback(
-  (dropZone, item) => {
-    const splitItemPath = item.path.split("-");
-    setLayout(handleRemoveItemFromLayout(layout, splitItemPath));
-  },
-  [layout]
-);
+  const { addRow, addColumn, setAddRow, setAddColumn } = props;
 
-const handleDrop = useCallback(
+  useEffect(() => {
+    if (addRow) handleAddRow()
+  }, [addRow])
 
-  (dropZone, item) => {
+  useEffect(() => {
+    if (addColumn) handleAddColumn()
+  }, [addColumn])
 
-    const splitDropZonePath = dropZone.path.split("-");
-    const pathToDropZone = splitDropZonePath.slice(0, -1).join("-");
+  const handleDropToTrashBin = useCallback(
+    (dropZone, item) => {
+      const splitItemPath = item.path.split("-");
+      setLayout(handleRemoveItemFromLayout(layout, splitItemPath));
+    },
+    [layout]
+  );
 
-    const newItem = { id: item.id, type: item.type };
-    if (item.type === COLUMN) {
-      newItem.children = item.children;
-    }
+  const handleDrop = useCallback(
 
-    // sidebar into
-    if (item.type === SIDEBAR_ITEM) {
-      // 1. Move sidebar item into page
-      const newComponent = {
-        id: shortid.generate(),
-        ...item.component
-      };
-      const newItem = {
-        id: newComponent.id,
-        type: COMPONENT
-      };
-      setComponents({
-        ...components,
-        [newComponent.id]: newComponent
-      });
-      setLayout(
-        handleMoveSidebarComponentIntoParent(
-          layout,
-          splitDropZonePath,
-          newItem
-        )
-      );
-      return;
-    }
+    (dropZone, item) => {
 
-    // move down here since sidebar items dont have path
-    const splitItemPath = item.path.split("-");
-    const pathToItem = splitItemPath.slice(0, -1).join("-");
+      const splitDropZonePath = dropZone.path.split("-");
+      const pathToDropZone = splitDropZonePath.slice(0, -1).join("-");
 
-    // 2. Pure move (no create)
-    if (splitItemPath.length === splitDropZonePath.length) {
-      // 2.a. move within parent
-      if (pathToItem === pathToDropZone) {
+      const newItem = { id: item.id, type: item.type };
+      if (item.type === COLUMN) {
+        newItem.children = item.children;
+      }
+
+      // sidebar into
+      if (item.type === SIDEBAR_ITEM) {
+        // 1. Move sidebar item into page
+        const newComponent = {
+          id: shortid.generate(),
+          ...item.component
+        };
+        const newItem = {
+          id: newComponent.id,
+          type: COMPONENT
+        };
+        setComponents({
+          ...components,
+          [newComponent.id]: newComponent
+        });
         setLayout(
-          handleMoveWithinParent(layout, splitDropZonePath, splitItemPath)
+          handleMoveSidebarComponentIntoParent(
+            layout,
+            splitDropZonePath,
+            newItem
+          )
         );
         return;
       }
 
-      // 2.b. OR move different parent
-      // TODO FIX columns. item includes children
+      // move down here since sidebar items dont have path
+      const splitItemPath = item.path.split("-");
+      const pathToItem = splitItemPath.slice(0, -1).join("-");
+
+      // 2. Pure move (no create)
+      if (splitItemPath.length === splitDropZonePath.length) {
+        // 2.a. move within parent
+        if (pathToItem === pathToDropZone) {
+          setLayout(
+            handleMoveWithinParent(layout, splitDropZonePath, splitItemPath)
+          );
+          return;
+        }
+
+        // 2.b. OR move different parent
+        // TODO FIX columns. item includes children
+        setLayout(
+          handleMoveToDifferentParent(
+            layout,
+            splitDropZonePath,
+            splitItemPath,
+            newItem
+          )
+        );
+        return;
+      }
+
+      // 3. Move + Create
       setLayout(
         handleMoveToDifferentParent(
           layout,
@@ -99,60 +121,50 @@ const handleDrop = useCallback(
           newItem
         )
       );
-      return;
+    },
+    [layout, components]
+  );
+
+  const renderRow = (row, currentPath, layout) => {
+
+    const handleRowDelete = (id) => {
+      setLayout(handleRemoveRow(layout, id));
     }
 
-    // 3. Move + Create
-    setLayout(
-      handleMoveToDifferentParent(
-        layout,
-        splitDropZonePath,
-        splitItemPath,
-        newItem
-      )
+    const handleColumnDelete = (rawId, columnId) => {
+      setLayout(handleRemoveRowColumn(layout, rawId, columnId));
+    }
+
+    return (
+      <Row
+        key={row.id}
+        data={row}
+        handleDrop={handleDrop}
+        components={components}
+        path={currentPath}
+        rowDeleteCallback={(id) => { handleRowDelete(id) }}
+        colunDeleteCallback={(rawId, colunId) => { handleColumnDelete(rawId, colunId) }}
+      />
     );
-  },
-  [layout, components]
-);
+  };
 
-const renderRow = (row, currentPath, layout) => {
-
-  const handleRowDelete = (id) => {
-    setLayout(handleRemoveRow(layout, id));
+  const handleAddColumn = () => {
+    setAddColumnSelect(true);
+    setAddColumn(false);
   }
 
-  const handleColumnDelete = (rawId, columnId) => {
-    setLayout(handleRemoveRowColumn(layout, rawId, columnId));
+  const handleAddRow = () => {
+
+    setLayout(handleAddNewRow(layout));
+    setAddRow(false);
   }
 
-  return (
-    <Row
-      key={row.id}
-      data={row}
-      handleDrop={handleDrop}
-      components={components}
-      path={currentPath}
-      rowDeleteCallback={(id) => { handleRowDelete(id) }}
-      colunDeleteCallback={(rawId, colunId) => { handleColumnDelete(rawId, colunId) }}
-    />
-  );
-};
-
-const handleAddColumn = () => {
-  setAddColumnSelect(true);
-}
-
-const handleAddRow = () => {
-
-  setLayout(handleAddNewRow(layout));
-}
-
-const handleSelectRow = (row) => {
-  if (addColumnSelect) {
-    setLayout(handleAddColumDataToSelectedRow(layout, row.id));
-    setAddColumnSelect(false);
+  const handleSelectRow = (row) => {
+    if (addColumnSelect) {
+      setLayout(handleAddColumDataToSelectedRow(layout, row.id));
+      setAddColumnSelect(false);
+    }
   }
-}
 
   return (
 
@@ -172,39 +184,22 @@ const handleSelectRow = (row) => {
           <span>Exit Customization</span>
         </Button>
       </div> */}
-      
-      <div className="filter-header-right">
-        <Space>
-            <Button type="primary" className='grey-btn' onClick={handleAddRow}>
-                <IconAdd color="#4B465C"/>
-                <span>Add Row</span>
-            </Button>
-            <Button type="primary" className='purple-btn' onClick={handleAddColumn}>
-                <IconAdd color="#4B465C"/>
-                <span>Add Column</span>
-            </Button>
-            <Button type="primary" className='general-btn'>
-                <IconCustomize color="white" />
-                <span>Exit Customization</span>
-            </Button>
-        </Space>
-      </div>
 
       <div className="drawer">
         <div className="drawer-header">
-          <h5><IconWidget/> Widget</h5>
+          <h5><IconWidget /> Widget</h5>
           <div className="drawer-right">
-              <button className="actio-link">
-                <IconWidgetClose/>
-              </button>
+            <button className="actio-link">
+              <IconWidgetClose />
+            </button>
           </div>
         </div>
         <div className="drawer-body">
-         
-            {Object.values(SIDEBAR_ITEMS).map((sideBarItem, index) => (
-              <SideBarItem key={sideBarItem.id} data={sideBarItem} />
-            ))}
-          
+
+          {Object.values(SIDEBAR_ITEMS).map((sideBarItem, index) => (
+            <SideBarItem key={sideBarItem.id} data={sideBarItem} />
+          ))}
+
         </div>
       </div>
 

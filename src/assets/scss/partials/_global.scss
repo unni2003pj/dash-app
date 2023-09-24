@@ -1,7 +1,7 @@
 // Global 
 
 * {
-	box-sizing: border-box !important;
+    box-sizing: border-box !important;
     font-family: $font-family !important;
 }
 
@@ -14,7 +14,7 @@ body {
     text-rendering: geometricPrecision;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    position: relative; 
+    position: relative;
 }
 
 .wrapper {
@@ -48,4 +48,43 @@ body {
     display: flex;
     width: 500px;
     justify-content: space-between;
+}
+
+.customise-action {
+    display: flex;
+    margin: 0 -10px;
+}
+
+.customise-action button {
+    margin: 0 10px;
+}
+
+.customise-action {
+    display: flex;
+    margin: 0 -10px;
+}
+
+.customise-action button {
+    margin: 0 10px;
+}
+
+.customiseNotAllowed {
+    .draggable-row {
+        border: 0;
+        padding: 16px 0;
+        pointer-events: none;
+        margin: 0 -16px;
+    }
+
+    .dropZone {
+        display: none;
+    }
+
+    .draggable-column {
+        border: 0;
+    }
+
+    .remove-icon {
+        display: none;
+    }
 }

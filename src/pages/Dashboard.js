@@ -31,8 +31,13 @@ import CardLineChart from '../views/cards/CardLineChart';
 import CardGroupChart from '../views/cards/CardGroupChart';
 
 function Dashboard() {
-    
+
     const [tab, setTab] = useState(2);
+
+    const [addRow, setAddRow] = useState(false);
+    const [addColumn, setAddColumn] = useState(false);
+    const [allowCustomize, setAllowCustomize] = useState(false);
+
     function tabChange(t) {
         setTab(t)
     }
@@ -40,7 +45,7 @@ function Dashboard() {
     const [visible, setVisible] = useState(false);
 
     return (
-        <main className='content'>
+        <main className={`content ${allowCustomize ? 'customise' : 'customiseNotAllowed'}`}>
 
             <div className='pinned-card-wrapper mb-3'>
 
@@ -55,39 +60,52 @@ function Dashboard() {
                     </div>
                     <div className='filter-header-right'>
                         <Space wrap className='hide'>
-                            <Button type="primary" 
-                            onClick={() => {
-                                setVisible(true);
-                            }}>
-                                <IconAdd color="white"/>
+                            <Button type="primary"
+                                onClick={() => {
+                                    setVisible(true);
+                                }}>
+                                <IconAdd color="white" />
                             </Button>
                             <Button type="primary" >
-                                <IconTableimport color="white"/>
+                                <IconTableimport color="white" />
                             </Button>
                             <Button type="primary">
-                                <IconTableexport color="white"/>
+                                <IconTableexport color="white" />
                             </Button>
                             <Button type="primary">
-                                <IconSettings color="white"/>
+                                <IconSettings color="white" />
                             </Button>
                             <Button type="primary">
-                                <IconCustomize color="white"/>
+                                <IconCustomize color="white" />
                                 <span>Customize</span>
                             </Button>
                         </Space>
                         <Space className=''>
-                            <Button type="primary" className='grey-btn'>
-                                <IconAdd color="#4B465C"/>
-                                <span>Add Row</span>
-                            </Button>
-                            <Button type="primary" className='purple-btn'>
-                                <IconAdd color="#4B465C"/>
-                                <span>Add Column</span>
-                            </Button>
-                            <Button type="primary" className='general-btn'>
-                                <IconCustomize color="white" />
-                                <span>Exit Customization</span>
-                            </Button>
+                            {tab == 2 ?
+                                <>
+                                    {allowCustomize ?
+                                        <div className='customise-action'>
+                                            <Button type="primary" className='grey-btn' onClick={() => { setAddRow(true) }}>
+                                                <IconAdd color="#4B465C" />
+                                                <span>Add Row</span>
+                                            </Button>
+                                            <Button type="primary" className='purple-btn' onClick={() => { setAddColumn(true) }}>
+                                                <IconAdd color="#4B465C" />
+                                                <span>Add Column</span>
+                                            </Button>
+                                            <Button type="primary" className='general-btn' onClick={() => { setAllowCustomize(false) }}>
+                                                <IconCustomize color="white" />
+                                                <span>Exit Customization</span>
+                                            </Button>
+                                        </div>
+                                        : <div>
+                                            <Button type="primary" className='general-btn' onClick={() => { setAllowCustomize(true) }}>
+                                                <IconCustomize color="white" />
+                                                <span>Customization</span>
+                                            </Button>
+                                        </div>}
+                                </>
+                                : null}
                             <Drawer
                                 title="Add Widget"
                                 placement="right"
@@ -353,7 +371,7 @@ function Dashboard() {
                     </Card>
                 </div>
 
-            </div>
+            </div >
 
             <div className='non-sticky-wrapper'>
 
@@ -495,7 +513,7 @@ function Dashboard() {
 
                         <div className="tab-pane">
 
-                            <Container />
+                            <Container addRow={addRow} addColumn={addColumn} setAddRow={setAddRow} setAddColumn={setAddColumn} />
 
                             {/* <Row gutter={[16, 16]} className='mb-4'>
                                 <Col xl={6} lg={12} xs={24} span={6}>
@@ -548,7 +566,7 @@ function Dashboard() {
 
             </div>
 
-        </main>
+        </main >
     )
 }
 
