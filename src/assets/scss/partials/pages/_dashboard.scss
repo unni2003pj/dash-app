@@ -75,6 +75,37 @@
         }
     }
 
+    .grey-btn {
+        background: #C9C7CE;
+        color: $textColor;
+        box-shadow: 0px 4px 18px 0px rgba(75, 70, 92, 0.10);
+
+        &:hover {
+            background: rgba($color: #C9C7CE, $alpha: 0.8) !important;
+            color: $textColor !important;
+        }
+    }
+
+    .purple-btn {
+        background: rgba($color: #8692D0, $alpha: 0.40);
+        color: $textColor;
+        box-shadow: 0px 4px 18px 0px rgba(75, 70, 92, 0.10);
+
+        &:hover {
+            background: rgba($color: #8692D0, $alpha: 0.8) !important;
+            color: $textColor !important;
+        }
+    }
+
+    .general-btn {
+        background: $theme;
+        box-shadow: 0px 4px 18px 0px rgba(75, 70, 92, 0.10);
+
+        &:hover {
+            background: rgba($color: $theme, $alpha: 0.8) !important;
+        }
+    }
+
     @include small-device {
         width: 100%;  
         margin-top: 16px;
@@ -203,7 +234,7 @@
         padding: 8px 20px;
         cursor: pointer;
         position: relative;
-        transition: .3s ease-out;
+        transition: $transition;
 
         &:before {
             content: "";
@@ -214,7 +245,7 @@
             left: 0;
             bottom: 0;
             z-index: 1;
-            transition: .3s ease-out;
+            transition: $transition;
         }
 
         &:hover {

@@ -172,7 +172,7 @@ const handleSelectRow = (row) => {
         </Button>
       </div> */}
 
-      <div className="drawer hide">
+      <div className="drawer">
         <div className="drawer-header">
           <h5><IconWidget/> Widget</h5>
           <div className="drawer-right">

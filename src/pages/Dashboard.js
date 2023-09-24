@@ -32,7 +32,7 @@ import CardGroupChart from '../views/cards/CardGroupChart';
 
 function Dashboard() {
     
-    const [tab, setTab] = useState(1);
+    const [tab, setTab] = useState(2);
     function tabChange(t) {
         setTab(t)
     }
@@ -76,13 +76,15 @@ function Dashboard() {
                             </Button>
                         </Space>
                         <Space>
-                            <Button type="primary">
-                                <span>+ Add Row</span>
+                            <Button type="primary" className='grey-btn'>
+                                <IconAdd color="#4B465C"/>
+                                <span>Add Row</span>
                             </Button>
-                            <Button type="primary">
-                                <span>+ Add Column</span>
+                            <Button type="primary" className='purple-btn'>
+                                <IconAdd color="#4B465C"/>
+                                <span>Add Column</span>
                             </Button>
-                            <Button type="primary">
+                            <Button type="primary" className='general-btn'>
                                 <IconCustomize color="white" />
                                 <span>Exit Customization</span>
                             </Button>

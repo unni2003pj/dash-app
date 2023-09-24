@@ -1,5 +1,6 @@
 import {Button} from "antd";
 import {COMPONENT, ROW, COLUMN } from "./constants";
+import { IconAdd } from "../Iconsheet";
 import CardStatOne from "../../views/cards/CardStatOne";
 import CardStatTwo from "../../views/cards/CardStatTwo";
 import CardStatThree from "../../views/cards/CardStatThree";
@@ -33,7 +34,7 @@ const initialData = {
           children: [
             {
               type: COMPONENT,
-              id: "component1"
+              id: "addContentComponent"
             }
           ]
         },
@@ -121,7 +122,7 @@ const initialData = {
     component7: { id: "component7", type: "phone", content: <CardRingChart/> },
     component8: { id: "component8", type: "phone", content: <CardNetwork/> },
     component9: { id: "component9", type: "phone", content: <CardSocial/> },
-    addContentComponent: { id: "addContentComponent", type: "new button", content: <><Button type="primary">Add Widget</Button></> }
+    addContentComponent: { id: "addContentComponent", type: "new button", content: <div className="widget-add-container"><Button type="primary" className="general-btn"><IconAdd color="#FFFFFF"/> Add Widget</Button></div> }
   }
 };
 

@@ -43,11 +43,15 @@
     padding: 16px;
     // display: flex;
     position: relative;
-    transition: .3s ease-out;
+    transition: $transition;
     // --bs-gutter-x: 0rem;
 
     &:hover {
         border-color: $theme;
+
+        > .remove-icon {
+            background: $theme;
+        }
     }
 }
 
@@ -58,7 +62,7 @@
 }
 
 .draggable-column {
-    border: 3px dashed #8692D0;
+    border: 3px dashed #B6BEE3;
     // flex: 1 1 100%;
     // padding: 16px;
     position: relative;
@@ -70,7 +74,7 @@
     padding: 0;
     border-radius: 8px;
     @extend .div-flex-center-cover;
-    background: rgba($color: #4B465C, $alpha: 0.70);
+    background: #C9C7CE;
     @extend .position-right-top;
     right: -10px;
     top: -10px;
@@ -85,7 +89,7 @@
 .col {
 
     .remove-icon {
-      background: #8692D0;
+      background: #B6BEE3;
     }
 
 }
@@ -94,4 +98,40 @@
     width: 100%;
     @extend .div-flex-center-cover;
     height: auto;
+}
+
+.widget-add-container {
+    width: 100%;
+    height: 174px;
+    @extend .div-flex-center-cover
+}
+
+.normal-view {
+
+    .container-fluid {
+        padding: 0;
+    }
+
+    .draggable-row.row {
+        padding: 0;
+        border: 0;
+    }
+
+    .draggable-row.row .col {
+        border: 0;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .remove-icon,
+    .dropZone,
+    .dropZone.horizontalDrag,
+    .widget-add-container
+     {
+        display: none;
+    }
+
+    .ant-card {
+        margin-bottom: 16px;
+    }
 }
