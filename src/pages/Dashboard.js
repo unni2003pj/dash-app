@@ -39,7 +39,8 @@ function Dashboard() {
     const [allowCustomize, setAllowCustomize] = useState(false);
 
     function tabChange(t) {
-        setTab(t)
+        setTab(t);
+        setAllowCustomize(false);
     }
 
     const [visible, setVisible] = useState(false);

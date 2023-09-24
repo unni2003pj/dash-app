@@ -82,6 +82,7 @@ body {
 
     .draggable-column {
         border: 0;
+        pointer-events: none;
     }
 
     .remove-icon {
