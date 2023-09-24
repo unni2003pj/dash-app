@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useEffect } from "react";
-
+import { Space, Button } from "antd";
+import { IconAdd, IconCustomize } from "../Iconsheet";
 import DropZone from "./DropZone";
 import TrashDropZone from "./TrashDropZone";
 import SideBarItem from "./SideBarItem";
@@ -171,6 +172,23 @@ const handleSelectRow = (row) => {
           <span>Exit Customization</span>
         </Button>
       </div> */}
+      
+      <div className="filter-header-right">
+        <Space>
+            <Button type="primary" className='grey-btn' onClick={handleAddRow}>
+                <IconAdd color="#4B465C"/>
+                <span>Add Row</span>
+            </Button>
+            <Button type="primary" className='purple-btn' onClick={handleAddColumn}>
+                <IconAdd color="#4B465C"/>
+                <span>Add Column</span>
+            </Button>
+            <Button type="primary" className='general-btn'>
+                <IconCustomize color="white" />
+                <span>Exit Customization</span>
+            </Button>
+        </Space>
+      </div>
 
       <div className="drawer">
         <div className="drawer-header">

@@ -75,7 +75,7 @@ function Dashboard() {
                                 <span>Customize</span>
                             </Button>
                         </Space>
-                        <Space>
+                        <Space className=''>
                             <Button type="primary" className='grey-btn'>
                                 <IconAdd color="#4B465C"/>
                                 <span>Add Row</span>
