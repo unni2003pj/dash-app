@@ -220,13 +220,17 @@ export const handleMoveSidebarComponentIntoParent = (
   return addChildToChildren(layout, splitDropZonePath, newLayoutStructure);
 };
 
-export const handleAddNewRow = (layout) => {
-  const layoutCopy = [...layout];
+export const handleAddNewRow = (layout, selectedRow) => {
+  let selectedArrayIndex = layout.map(function (x) { return x.id; }).indexOf(selectedRow);
+  let newRowId = 'row' + shortid.generate();
+  let layoutCopy = [...layout];
   layoutCopy.push({
     type: ROW,
-    id: 'row' + shortid.generate(),
+    id: newRowId,
     children: []
-  })
+  });
+  let newArrayIndex = layoutCopy.map(function (x) { return x.id; }).indexOf(newRowId);
+  if (selectedRow != '') layoutCopy = array_move(layoutCopy, newArrayIndex, selectedArrayIndex + 1);
   return layoutCopy;
 }
 
@@ -277,4 +281,15 @@ export const handleRemoveRowColumn = (layout, rowId, columnId) => {
 
 export const handleRemoveItemFromLayout = (layout, splitItemPath) => {
   return removeChildFromChildren(layout, splitItemPath);
+};
+
+function array_move(arr, old_index, new_index) {
+  if (new_index >= arr.length) {
+    var k = new_index - arr.length + 1;
+    while (k--) {
+      arr.push(undefined);
+    }
+  }
+  arr.splice(new_index, 0, arr.splice(old_index, 1)[0]);
+  return arr; // for testing
 };

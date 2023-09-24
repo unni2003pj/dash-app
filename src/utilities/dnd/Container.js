@@ -29,6 +29,7 @@ const Container = (props) => {
   const [layout, setLayout] = useState(initialLayout);
   const [components, setComponents] = useState(initialComponents);
   const [addColumnSelect, setAddColumnSelect] = useState(false);
+  const [selectedRow, setSelectedRow] = useState('');
 
   const { addRow, addColumn, setAddRow, setAddColumn } = props;
 
@@ -125,6 +126,11 @@ const Container = (props) => {
     [layout, components]
   );
 
+  const handleRowSelect = (rowId) => {
+    console.log('rowSelectedID', rowId);
+    setSelectedRow(rowId);
+  }
+
   const renderRow = (row, currentPath, layout) => {
 
     const handleRowDelete = (id) => {
@@ -136,27 +142,36 @@ const Container = (props) => {
     }
 
     return (
-      <Row
-        key={row.id}
-        data={row}
-        handleDrop={handleDrop}
-        components={components}
-        path={currentPath}
-        rowDeleteCallback={(id) => { handleRowDelete(id) }}
-        colunDeleteCallback={(rawId, colunId) => { handleColumnDelete(rawId, colunId) }}
-      />
+      <div onClick={() => { handleRowSelect(row.id) }}
+        className={`${row.id == selectedRow ? 'selected' : ''}`
+        }>
+        <Row
+          key={row.id}
+          data={row}
+          handleDrop={handleDrop}
+          components={components}
+          path={currentPath}
+          rowDeleteCallback={(id) => { handleRowDelete(id) }}
+          colunDeleteCallback={(rawId, colunId) => { handleColumnDelete(rawId, colunId) }}
+        />
+      </div >
     );
   };
 
   const handleAddColumn = () => {
-    setAddColumnSelect(true);
+    console.log('clicked')
+    console.log('selectedRow', selectedRow)
+    if (selectedRow != '') {
+      setLayout(handleAddColumDataToSelectedRow(layout, selectedRow));
+    } else {
+      alert('Please select row')
+    }
     setAddColumn(false);
   }
 
   const handleAddRow = () => {
-
-    setLayout(handleAddNewRow(layout));
     setAddRow(false);
+    setLayout(handleAddNewRow(layout, selectedRow));
   }
 
   const handleSelectRow = (row) => {
