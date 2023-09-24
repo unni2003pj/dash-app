@@ -420,17 +420,17 @@ function Dashboard() {
                                                 </div>
                                             </div>
                                             <div className='card-panel-body'>
-                                                <Row gutter={[16, 16]}>
-                                                    <Col>
+                                                <Row gutter={[16, 16]} wrap={true}>
+                                                    <Col flex="auto">
                                                         <CardIphone />
                                                     </Col>
-                                                    <Col>
+                                                    <Col flex="auto">
                                                         <CardSms />
                                                     </Col>
-                                                    <Col>
+                                                    <Col flex="auto">
                                                         <CardData />
                                                     </Col>
-                                                    <Col>
+                                                    <Col flex="auto">
                                                         <CardVoice />
                                                     </Col>
                                                 </Row>
