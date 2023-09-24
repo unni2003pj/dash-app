@@ -270,10 +270,10 @@ export const handleRemoveRowColumn = (layout, rowId, columnId) => {
   return layoutCopy.map(row => {
     if (row.id === rowId) {
       row.children.splice(row.children.findIndex(function (i) {
+        message.success('Column deleted');
         return i.id === columnId;
       }), 1);
     }
-    message.success('Column deleted');
     return row;
   });
 };

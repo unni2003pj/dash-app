@@ -82,11 +82,11 @@ function Dashboard() {
                                 <span>Customize</span>
                             </Button>
                         </Space>
-                        <Space className=''>
+                        <Space>
                             {tab == 2 ?
                                 <>
                                     {allowCustomize ?
-                                        <div className='customise-action'>
+                                        <>
                                             <Button type="primary" className="general-btn" onClick={() => { setEnebleSideBar(true) }}>
                                                 <IconAdd color="#fff" />
                                                 <span>Widgets</span>
@@ -103,13 +103,17 @@ function Dashboard() {
                                                 <IconCustomize color="white" />
                                                 <span>Exit Customization</span>
                                             </Button>
-                                        </div>
-                                        : <div>
-                                            <Button type="primary" className='general-btn' onClick={() => { setAllowCustomize(true) }}>
+                                        </>
+                                        : <>
+                                            {/* <Button type="primary" className='general-btn' onClick={() => { setAllowCustomize(true) }}>
                                                 <IconCustomize color="white" />
                                                 <span>Customization</span>
+                                            </Button> */}
+                                            <Button type="primary" onClick={() => { setAllowCustomize(true) }}>
+                                                <IconCustomize color="white" />
+                                                <span>Customize</span>
                                             </Button>
-                                        </div>}
+                                        </>}
                                 </>
                                 : null}
                             <Drawer

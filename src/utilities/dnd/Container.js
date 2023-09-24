@@ -60,6 +60,17 @@ const Container = (props) => {
     if (difference.length && difference.length != layout.length) setSelectedRow(difference[0]?.id);
     console.log('difference', difference);
     setOldLayout(layout);
+    if(difference.length !== 0) {
+      setTimeout(function () {
+        console.log(difference[0].id)
+        const element = document.getElementById(difference[0].id);
+        console.log(element);
+        if (element !== null) {
+          element.scrollIntoView({behavior: "smooth"});
+        }
+      }, 10);
+    }
+    
   }
 
   const handleDrop = useCallback(
@@ -186,6 +197,7 @@ const Container = (props) => {
   const handleAddRow = () => {
     setAddRow(false);
     setLayout(handleAddNewRow(layout, selectedRow));
+    // console.log(layout);
   }
 
   const handleSelectRow = (row) => {

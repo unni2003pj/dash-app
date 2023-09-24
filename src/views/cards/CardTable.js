@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {Table} from 'react-bootstrap';
 import {Card} from 'antd';
 import {
     IconMore
@@ -24,7 +25,7 @@ function CardTable() {
                 </div>
                 <div className='card-panel-body'>
                     <div className='scrollable'>
-                        <table className='table'>
+                        <Table responsive>
                             <thead>
                                 <tr>
                                     <th>Date</th>
@@ -85,7 +86,7 @@ function CardTable() {
                                     <td className='olive-green-text'>Paid</td>
                                 </tr>
                             </tbody>
-                        </table>
+                        </Table>
                     </div>
                 </div>
             </div>

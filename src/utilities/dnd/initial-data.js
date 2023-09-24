@@ -32,7 +32,10 @@ const initialData = {
           type: COLUMN,
           id: "column1",
           children: [
-            
+            {
+              type: COMPONENT,
+              id: "component1"
+            }
           ]
         },
         {
