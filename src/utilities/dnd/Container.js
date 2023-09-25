@@ -29,7 +29,6 @@ const Container = (props) => {
   const [addColumnSelect, setAddColumnSelect] = useState(false);
   const [selectedRow, setSelectedRow] = useState('');
   const [oldLayout, setOldLayout] = useState(layout);
-
   const { addRow, addColumn, setAddRow, setAddColumn, enebleSideBar, setEnebleSideBar } = props;
 
   useEffect(() => {
@@ -59,8 +58,7 @@ const Container = (props) => {
           element.scrollIntoView({behavior: "smooth"});
         }
       }, 10);
-    }
-    
+    } 
   }
 
   const handleDrop = useCallback(
@@ -69,27 +67,31 @@ const Container = (props) => {
 
       const splitDropZonePath = dropZone.path.split("-");
       const pathToDropZone = splitDropZonePath.slice(0, -1).join("-");
-
       const newItem = { id: item.id, type: item.type };
+
       if (item.type === COLUMN) {
         newItem.children = item.children;
       }
 
       // sidebar into
       if (item.type === SIDEBAR_ITEM) {
+
         // 1. Move sidebar item into page
         const newComponent = {
           id: shortid.generate(),
           ...item.component
         };
+
         const newItem = {
           id: newComponent.id,
           type: COMPONENT
         };
+
         setComponents({
           ...components,
           [newComponent.id]: newComponent
         });
+
         setLayout(
           handleMoveSidebarComponentIntoParent(
             layout,
@@ -97,6 +99,7 @@ const Container = (props) => {
             newItem
           )
         );
+
         return;
       }
 
@@ -201,21 +204,6 @@ const Container = (props) => {
 
     <div className="dnd-wrapper">
 
-      {/* <div className="dndButtons">
-        <Button type="primary" onClick={handleAddRow}>
-          <IconCustomize color="white" />
-          <span>Add Row</span>
-        </Button>
-        <Button type="primary" onClick={handleAddColumn}>
-          <IconCustomize color="white" />
-          <span>Add Column</span>
-        </Button>
-        <Button type="primary">
-          <IconCustomize color="white" />
-          <span>Exit Customization</span>
-        </Button>
-      </div> */}
-
       <div className={`drawer ${enebleSideBar ? 'active' : ''}`}>
         <div className="drawer-header">
           <h5><IconWidget /> Widget</h5>
@@ -263,13 +251,8 @@ const Container = (props) => {
             onDrop={handleDrop}
             isLast
           />
-
         </div>
-
-      
-
       </div>
-
     </div>
 
   );

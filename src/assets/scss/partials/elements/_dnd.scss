@@ -43,7 +43,7 @@
 }
 
 .draggable-row {
-    border: 3px dashed #DBDADE;
+    border: 3px dashed $borderColor;
     padding: 16px;
     position: relative;
     transition: $transition;
@@ -87,7 +87,7 @@
     cursor: pointer;
 
     svg {
-        font-size: 16px;
+        font-size: $font-16;
     }
 }
 
@@ -117,11 +117,11 @@
 }
 
 .selected .draggable-row {
-    border-color: #18A4FF;
+    border-color: $theme;
 }
 
 .selected .draggable-row > .remove-icon {
-    background: #18A4FF;
+    background: $theme;
 }
 
 .customiseNotAllowed {

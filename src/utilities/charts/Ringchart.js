@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
 import { RingProgress } from '@ant-design/plots';
 
 const Ringchart = (props) => {
@@ -37,7 +36,5 @@ const Ringchart = (props) => {
   };
   return <RingProgress {...config} />;
 };
-
-//ReactDOM.render(<DemoRingProgress />, document.getElementById('container'));
 
 export default Ringchart;

@@ -35,7 +35,6 @@ export const reorderChildren = (children, splitDropZonePath, splitItemPath) => {
   }
 
   const updatedChildren = [...children];
-
   const curIndex = Number(splitDropZonePath.slice(0, 1));
 
   // Update the specific node's children
@@ -61,7 +60,6 @@ export const removeChildFromChildren = (children, splitItemPath) => {
   }
 
   const updatedChildren = [...children];
-
   const curIndex = Number(splitItemPath.slice(0, 1));
 
   // Update the specific node's children
@@ -85,7 +83,6 @@ export const addChildToChildren = (children, splitDropZonePath, item) => {
   }
 
   const updatedChildren = [...children];
-
   const curIndex = Number(splitDropZonePath.slice(0, 1));
 
   // Update the specific node's children

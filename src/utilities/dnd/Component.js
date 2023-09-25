@@ -19,7 +19,6 @@ const Component = ({ data, components, path }) => {
 
   return (
     <div ref={ref} className="component draggable">
-      {/* <div>{data.id}</div> */}
       <>{component.content}</>
     </div>
   );

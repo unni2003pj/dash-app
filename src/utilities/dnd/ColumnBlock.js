@@ -12,7 +12,6 @@ const style = {};
 const ColumnBlock = ({ data, components, handleDrop, path, handleDeleteColumn }) => {
 
   const ref = useRef(null);
-
   const [{ isDragging }, drag] = useDrag({
     item: {
       type: COLUMN,
@@ -53,8 +52,6 @@ const ColumnBlock = ({ data, components, handleDrop, path, handleDeleteColumn })
       <nav onClick={removeColumnHandler} className="remove-icon">
         <IconClose />
       </nav>
-
-      {/* {data.id} */}
 
       {data.children.map((component, index) => {
         const currentPath = `${path}-${index}`;

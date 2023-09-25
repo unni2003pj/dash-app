@@ -5,6 +5,7 @@ const Sidebar = () => {
 
     const [sidebarExpand, setSidebarToggle] = useState(false);
     return(
+
         <aside className={`side-bar ${sidebarExpand ? '' : 'skew'}`}>
 
             <button className="side-bar-button" onClick={() => setSidebarToggle(!sidebarExpand)}>
@@ -42,6 +43,7 @@ const Sidebar = () => {
             </div>
             
         </aside>
+        
     )
     }
 

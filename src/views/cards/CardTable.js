@@ -1,10 +1,7 @@
 import React from 'react';
 import {Table} from 'react-bootstrap';
 import {Card} from 'antd';
-import {
-    IconMore
-
-} from '../../utilities/Iconsheet';
+import {IconMore} from '../../utilities/Iconsheet';
 
 function CardTable() {
 

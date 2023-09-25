@@ -1,8 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Card, Tag} from 'antd';
-import {
-    IconDocument
-} from '../../utilities/Iconsheet';
+import {IconDocument} from '../../utilities/Iconsheet';
 
 function CardContractTwo() {
 

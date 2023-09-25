@@ -17,7 +17,7 @@
 
         ol {
             li {
-                font-size: 13px;
+                font-size: $font-13;
                 font-weight: $font-400;
                 line-height: 21px;
                 color: $textColor;
@@ -25,7 +25,7 @@
                 &:last-child {
 
                     .ant-breadcrumb-link {
-                        background: var(--light-gradient-colors-menu-active, linear-gradient(72deg, #18A4FF 22.16%, #05C37F 76.47%));
+                        background: var(--light-gradient-colors-menu-active, linear-gradient(72deg, $theme 22.16%, #05C37F 76.47%));
                         background-clip: text;
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
@@ -51,7 +51,7 @@
     .ant-btn {
         width: auto;
         height: 44px;
-        font-size: 13px;
+        font-size: $font-13;
         font-weight: $font-500;
         line-height: 16px;
         letter-spacing: 0.43px;
@@ -240,7 +240,7 @@
             content: "";
             width: 0;
             height: 2px;
-            background: linear-gradient(72deg, #18A4FF 22.16%, #05C37F 76.47%);
+            background: linear-gradient(72deg, $theme 22.16%, #05C37F 76.47%);
             position: absolute;
             left: 0;
             bottom: 0;
@@ -254,7 +254,7 @@
     }
 
     .nav-tab.active {
-        background: var(--light-gradient-colors-menu-active, linear-gradient(72deg, #18A4FF 22.16%, #05C37F 76.47%));
+        background: var(--light-gradient-colors-menu-active, linear-gradient(72deg, $theme 22.16%, #05C37F 76.47%));
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -273,7 +273,7 @@
     .ant-avatar {
         width: 100px;
         height: 100px;
-        border: 1px solid var(--light-solid-color-primary-primary-500-base, #18A4FF);
+        border: 1px solid var(--light-solid-color-primary-primary-500-base, $theme);
         background: var(--light-opacity-color-primary-primary-8, rgba(24, 164, 255, 0.08));
         margin-right: 16px;
         flex-shrink: 0;
@@ -403,8 +403,8 @@
 }
 
 .sky-blue {
-    background-color: rgba($color: #18A4FF, $alpha: 0.15) !important;
-    color: #18A4FF;
+    background-color: rgba($color: $theme, $alpha: 0.15) !important;
+    color: $theme;
 }
 
 .red-shade {
@@ -419,6 +419,12 @@
 .card-panel-header {
     width: 100%;
     margin-bottom: 16px;
+
+    @include small-device {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start
+    }
 }
 
 .card-panel-header-left {
@@ -451,6 +457,11 @@
     .action-link {
         padding: 0;
         margin-left: 16px;
+
+        @include small-device {
+            margin-left: 0;
+            margin-right: 16px;
+        }
     }
 
     .select-box {
@@ -468,6 +479,15 @@
             line-height: 36px;
             color: $greyText;
         }
+
+        @include small-device {
+            margin-left: 0;
+            margin-right: 16px;
+        }
+    }
+
+    @include small-device {
+        margin-top: 8px;
     }
 }
 
@@ -508,7 +528,7 @@
     figure {
         width: 42px;
         height: 42px;
-        background: rgba($color: #4B465C, $alpha: 0.08);
+        background: rgba($color: $textColor, $alpha: 0.08);
         border-radius: 6px;
         margin-right: 16px;
         flex-shrink: 0;
@@ -568,7 +588,7 @@
         font-size: $font-13;
         font-weight: $font-400;
         line-height: 20px;
-        color: rgba($color: #4B465C, $alpha: 0.60);
+        color: rgba($color: $textColor, $alpha: 0.60);
         margin-bottom: 4px;
 
         span {
@@ -594,7 +614,7 @@
             font-size: $font-11;
             font-weight: $font-400;
             line-height: 14px;
-            color: rgba($color: #4B465C, $alpha: 0.60);
+            color: rgba($color: $textColor, $alpha: 0.60);
             margin-bottom: 4px;
 
             &:last-child {
@@ -680,11 +700,11 @@
 .high {
 
     label {
-        color: #18A4FF;
+        color: $theme;
     }
 
     .ant-progress-bg {
-        background-color: #18A4FF;
+        background-color: $theme;
     }
 }
 
@@ -803,8 +823,8 @@
     margin-top: 4px;
 
     p {
-        font-size: 15px;
-        font-weight: 400;
+        font-size: $font-15;
+        font-weight: $font-400;
         line-height: 30px;
         color: $textColor;
         margin-bottom: 0;
@@ -812,7 +832,7 @@
 
     .ant-tag {
         padding: 4px 16px;
-        font-size: 13px;
+        font-size: $font-13;
         font-style: normal;
         font-weight: $font-600;
     }
@@ -1112,7 +1132,7 @@
         @extend .div-flex-center-cover;
         width: 32px;
         height: 32px;
-        background: rgba($color: #18A4FF, $alpha: 0.08);
+        background: rgba($color: $theme, $alpha: 0.08);
         border-radius: 6px;
         margin-right: 16px;
     }

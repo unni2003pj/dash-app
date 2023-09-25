@@ -52,6 +52,4 @@ const Barchart = () => {
   return <Bar {...config} />;
 };
 
-// ReactDOM.render(<DemoBar />, document.getElementById('container'));
-
 export default Barchart;

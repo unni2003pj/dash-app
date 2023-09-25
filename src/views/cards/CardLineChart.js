@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Card, Select} from 'antd';
 import Linechart from '../../utilities/charts/Linechart';
 

@@ -40,15 +40,7 @@ const Gaugechart = () => {
     },
   };
 
-  
-
-
-
-
-
   return <Gauge {...config} />;
 };
-
-//ReactDOM.render(<DemoGauge />, document.getElementById('container'));
 
 export default Gaugechart;

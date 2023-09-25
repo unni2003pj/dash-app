@@ -4,7 +4,6 @@ import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import App from "./App";
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import 'antd-css-utilities/utility.min.css';
 import "./assets/scss/main.scss";
 
 const Root = ReactDOM.createRoot(document.getElementById('root'));

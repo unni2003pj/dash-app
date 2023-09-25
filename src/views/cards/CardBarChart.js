@@ -1,9 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Card, Select} from 'antd';
 import Barchart from '../../utilities/charts/Barchart';
-import {
-    IconMore
-} from '../../utilities/Iconsheet';
+import {IconMore} from '../../utilities/Iconsheet';
 
 function CardBarChart() {
 

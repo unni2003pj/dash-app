@@ -12,16 +12,17 @@ class Header extends React.Component{
          document.querySelector(".wrapper").classList.toggle("sidebar-active")
         }
         return(
+
             <header className="header-block">
 
                 <div className='header-left div-flex-center'>
-                <nav className="mob-toggle" onClick={() => sidebarToggle()}>
-                    <MenuOutlined />
-                </nav>
+                    <nav className="mob-toggle" onClick={() => sidebarToggle()}>
+                        <MenuOutlined />
+                    </nav>
 
-                <figure className="brand-logo">
-                    <img src={Logo} alt="Logo" height={35}/>
-                </figure>
+                    <figure className="brand-logo">
+                        <img src={Logo} alt="Logo" height={35}/>
+                    </figure>
                 </div>
 
                 <div className='search-bar'>

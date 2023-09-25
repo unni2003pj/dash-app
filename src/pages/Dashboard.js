@@ -33,7 +33,6 @@ import CardGroupChart from '../views/cards/CardGroupChart';
 function Dashboard() {
 
     const [tab, setTab] = useState(2);
-
     const [addRow, setAddRow] = useState(false);
     const [addColumn, setAddColumn] = useState(false);
     const [allowCustomize, setAllowCustomize] = useState(false);
@@ -46,7 +45,7 @@ function Dashboard() {
 
     const handleButtonClick = (e) => {
         console.log(e)
-        if (e?.target?.className == 'addWidjetBtn') {
+        if (e?.target?.className === 'addWidjetBtn') {
             setEnebleSideBar(true);
         }
     };
@@ -58,6 +57,7 @@ function Dashboard() {
     const [visible, setVisible] = useState(false);
 
     return (
+        
         <main className={`content ${allowCustomize ? 'customise' : 'customiseNotAllowed'}`}>
 
             <div className='pinned-card-wrapper mb-3'>
@@ -115,7 +115,8 @@ function Dashboard() {
                                                 <span>Exit Customization</span>
                                             </Button>
                                         </>
-                                        : <>
+                                        : 
+                                        <>
                                             <Button type="primary">
                                                 <IconAdd color="white" />
                                             </Button>
@@ -134,7 +135,9 @@ function Dashboard() {
                                             </Button>
                                         </>}
                                 </>
-                                : null}
+                                : 
+                                null}
+
                             <Drawer
                                 title="Add Widget"
                                 placement="right"
@@ -143,7 +146,7 @@ function Dashboard() {
                                 onClose={() => {
                                     setVisible(false)
                                 }}
-                            >
+                                >
                                 <div className='input-block'>
                                     <label>Module Status <span className='mandate'>*</span></label>
                                     <div className='checkbox-wrapper'>
@@ -151,7 +154,6 @@ function Dashboard() {
                                         <Checkbox>Hide</Checkbox>
                                     </div>
                                 </div>
-
                                 <div className='input-block'>
                                     <div className='each-radio-panel active'>
                                         <input type='radio' className='radio-active' name='widget' />
@@ -209,7 +211,6 @@ function Dashboard() {
                                         </Select>
                                     </div>
                                 </div>
-                                {/* <Button type="primary">Add Widgets</Button> */}
                             </Drawer>
                         </Space>
                     </div>
@@ -239,7 +240,6 @@ function Dashboard() {
                                     <IconActivities color="#4B465C" />
                                     <span>Activities</span>
                                 </button>
-
                             </div>
                             <div className='card-action-right'>
                                 <button className='action-link'>
@@ -550,50 +550,6 @@ function Dashboard() {
                                 enebleSideBar={enebleSideBar}
                                 setEnebleSideBar={setEnebleSideBar}
                             />
-
-                            {/* <Row gutter={[16, 16]} className='mb-4'>
-                                <Col xl={6} lg={12} xs={24} span={6}>
-                                    <CardStatOne/>
-                                </Col>
-                                <Col xl={6} lg={12} xs={24} span={6}>
-                                    <CardStatTwo/>
-                                </Col>
-                                <Col xl={6} lg={12} xs={24} span={6}>
-                                    <CardStatThree/>
-                                </Col>
-                                <Col xl={6} lg={12} xs={24} span={6}>
-                                    <CardStatFour/>
-                                </Col>
-                            </Row>
-
-                            <Row gutter={[16, 16]}>
-                                <Col xl={12} lg={24} xs={24} span={12}>
-                                    <Row gutter={[16, 16]}>
-                                        <Col span={24}>
-                                            <CardBarChart/>
-                                        </Col>
-                                        <Col span={24}>
-                                            <CardTable/>
-                                        </Col>
-                                    </Row>
-                                </Col>
-                                <Col xl={12} lg={24} xs={24} span={12}>
-                                    <Row gutter={[16, 16]}>
-                                        <Col xl={12} lg={24} xs={24} span={12}>
-                                            <CardGaugeChart/>
-                                        </Col>
-                                        <Col xl={12} lg={24} xs={24} span={12}>
-                                            <CardRingChart/>
-                                        </Col>
-                                        <Col xl={12} lg={24} xs={24} span={12}>
-                                            <CardNetwork/>
-                                        </Col>
-                                        <Col xl={12} lg={24} xs={24} span={12}>
-                                            <CardSocial/>
-                                        </Col>
-                                    </Row>
-                                </Col>
-                            </Row> */}
 
                         </div>
                     }
