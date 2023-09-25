@@ -67,7 +67,7 @@ function Dashboard() {
                         <Breadcrumb>
                             <Breadcrumb.Item>Dashboard</Breadcrumb.Item>
                             <Breadcrumb.Item>All Accounts</Breadcrumb.Item>
-                            <Breadcrumb.Item>CSmartDev2023</Breadcrumb.Item>
+                            <Breadcrumb.Item>Standard Chartered</Breadcrumb.Item>
                         </Breadcrumb>
                         <h1>Dummy Dashboard</h1>
                     </div>
