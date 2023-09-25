@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import {Col} from "react-bootstrap";
+import { Col } from "react-bootstrap";
 import { useDrag } from "react-dnd";
 import { COLUMN } from "./constants";
 import DropZone from "./DropZone";
@@ -47,20 +47,18 @@ const ColumnBlock = ({ data, components, handleDrop, path, handleDeleteColumn })
 
   return (
 
-    
-    <Col ref={ref} style={{ ...style, opacity }} className="draggable-column">
+
+    <Col ref={ref} style={{ ...style, opacity }} className={`draggable-column ${data.children.length > 1 ? 'hideWidjetButton' : ''}`}>
 
       <nav onClick={removeColumnHandler} className="remove-icon">
-        <IconClose/>
+        <IconClose />
       </nav>
 
       {/* {data.id} */}
 
       {data.children.map((component, index) => {
         const currentPath = `${path}-${index}`;
-
         return (
-
           <React.Fragment key={component.id}>
             <DropZone
               data={{
@@ -71,9 +69,7 @@ const ColumnBlock = ({ data, components, handleDrop, path, handleDeleteColumn })
             />
             {renderComponent(component, currentPath)}
           </React.Fragment>
-
         );
-
       })}
 
       <DropZone
@@ -86,7 +82,7 @@ const ColumnBlock = ({ data, components, handleDrop, path, handleDeleteColumn })
       />
 
     </Col>
-    
+
   );
 };
 

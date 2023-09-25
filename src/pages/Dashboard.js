@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Col, Row } from 'antd';
 import { Button, Space, Card, Breadcrumb, Menu, Dropdown, Select, Avatar, Tag, Drawer, Checkbox, Radio } from 'antd';
 import {
@@ -43,6 +43,17 @@ function Dashboard() {
         setTab(t);
         setAllowCustomize(false);
     }
+
+    const handleButtonClick = (e) => {
+        console.log(e)
+        if (e?.target?.className == 'addWidjetBtn') {
+            setEnebleSideBar(true);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('click', handleButtonClick);
+    }, [])
 
     const [visible, setVisible] = useState(false);
 

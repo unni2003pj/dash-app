@@ -1,5 +1,5 @@
-import {Button} from "antd";
-import {COMPONENT, ROW, COLUMN } from "./constants";
+import { Button } from "antd";
+import { COMPONENT, ROW, COLUMN } from "./constants";
 import { IconAdd } from "../Iconsheet";
 import CardStatOne from "../../views/cards/CardStatOne";
 import CardStatTwo from "../../views/cards/CardStatTwo";
@@ -32,7 +32,10 @@ const initialData = {
           type: COLUMN,
           id: "column1",
           children: [
-            
+            {
+              type: COMPONENT,
+              id: "addContentComponent"
+            }
           ]
         },
         {
@@ -103,22 +106,23 @@ const initialData = {
             }
           ]
         }
-        
+
       ]
     }
-    
+
   ],
   components: {
-    component0: { id: "component0", type: "input", content: <CardStatOne/> },
-    component1: { id: "component1", type: "image", content: <CardStatTwo/> },
-    component2: { id: "component2", type: "email", content: <CardStatThree/> },
-    component3: { id: "component3", type: "name", content: <CardStatFour/> },
-    component4: { id: "component4", type: "phone", content: <CardBarChart/> },
-    component5: { id: "component5", type: "phone", content: <CardTable/> },
-    component6: { id: "component6", type: "phone", content: <CardGaugeChart/> },
-    component7: { id: "component7", type: "phone", content: <CardRingChart/> },
-    component8: { id: "component8", type: "phone", content: <CardNetwork/> },
-    component9: { id: "component9", type: "phone", content: <CardSocial/> },
+    component0: { id: "component0", type: "input", content: <CardStatOne /> },
+    component1: { id: "component1", type: "image", content: <CardStatTwo /> },
+    component2: { id: "component2", type: "email", content: <CardStatThree /> },
+    component3: { id: "component3", type: "name", content: <CardStatFour /> },
+    component4: { id: "component4", type: "phone", content: <CardBarChart /> },
+    component5: { id: "component5", type: "phone", content: <CardTable /> },
+    component6: { id: "component6", type: "phone", content: <CardGaugeChart /> },
+    component7: { id: "component7", type: "phone", content: <CardRingChart /> },
+    component8: { id: "component8", type: "phone", content: <CardNetwork /> },
+    component9: { id: "component9", type: "phone", content: <CardSocial /> },
+    addContentComponent: { id: "addContentComponent", type: "new button", content: <div className="widget-add-container"><button type="primary" className="addWidjetBtn" onClick={() => { localStorage.setItem('openWidjet', true) }}><IconAdd color="#FFFFFF" /> Add Widget</button></div> }
   }
 };
 
