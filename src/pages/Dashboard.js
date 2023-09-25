@@ -64,7 +64,7 @@ function Dashboard() {
 
                 <div className='pinned-filter-header div-flex-between'>
                     <div className='filter-header-left'>
-                        <Breadcrumb>
+                        <Breadcrumb separator=">>">
                             <Breadcrumb.Item>Dashboard</Breadcrumb.Item>
                             <Breadcrumb.Item>All Accounts</Breadcrumb.Item>
                             <Breadcrumb.Item>Standard Chartered</Breadcrumb.Item>

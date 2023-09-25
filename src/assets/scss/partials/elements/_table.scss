@@ -14,6 +14,7 @@
                 color: #8D979B;
                 background: rgba($color: #8D979B, $alpha: 0.10) !important;
                 text-align: left;
+                white-space: nowrap;
 
                 @include small-device {
                     white-space: nowrap;
@@ -33,6 +34,7 @@
                 line-height: 14px; /* 107.692% */
                 color: $textColor;
                 text-align: left;
+                white-space: nowrap;
 
                 @include small-device {
                     white-space: nowrap;
