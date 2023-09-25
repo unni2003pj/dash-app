@@ -8,7 +8,6 @@ import {
   IconClose
 } from '../Iconsheet';
 
-const style = {};
 const RowBlock = ({ data, components, handleDrop, path, rowDeleteCallback, colunDeleteCallback }) => {
   
   const ref = useRef(null);
@@ -58,7 +57,7 @@ const RowBlock = ({ data, components, handleDrop, path, rowDeleteCallback, colun
   return (
 
     <Container fluid>
-      <Row className="draggable-row">
+      <Row className="draggable-row" id={data.id}>
 
         <nav onClick={() => { deleteRow(data.id) }} className="remove-icon">
           <IconClose/>

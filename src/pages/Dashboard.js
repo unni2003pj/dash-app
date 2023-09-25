@@ -93,11 +93,11 @@ function Dashboard() {
                                 <span>Customize</span>
                             </Button>
                         </Space>
-                        <Space className=''>
-                            {tab == 2 ?
+                        <Space>
+                            {tab === 2 ?
                                 <>
                                     {allowCustomize ?
-                                        <div className='customise-action'>
+                                        <>
                                             <Button type="primary" className="general-btn" onClick={() => { setEnebleSideBar(true) }}>
                                                 <IconAdd color="#fff" />
                                                 <span>Widgets</span>
@@ -114,19 +114,31 @@ function Dashboard() {
                                                 <IconCustomize color="white" />
                                                 <span>Exit Customization</span>
                                             </Button>
-                                        </div>
-                                        : <div>
-                                            <Button type="primary" className='general-btn' onClick={() => { setAllowCustomize(true) }}>
-                                                <IconCustomize color="white" />
-                                                <span>Customization</span>
+                                        </>
+                                        : <>
+                                            <Button type="primary">
+                                                <IconAdd color="white" />
                                             </Button>
-                                        </div>}
+                                            <Button type="primary" >
+                                                <IconTableimport color="white" />
+                                            </Button>
+                                            <Button type="primary">
+                                                <IconTableexport color="white" />
+                                            </Button>
+                                            <Button type="primary">
+                                                <IconSettings color="white" />
+                                            </Button>
+                                            <Button type="primary" onClick={() => { setAllowCustomize(true) }}>
+                                                <IconCustomize color="white" />
+                                                <span>Customize</span>
+                                            </Button>
+                                        </>}
                                 </>
                                 : null}
                             <Drawer
                                 title="Add Widget"
                                 placement="right"
-                                visible={visible}
+                                open={visible}
                                 width='500'
                                 onClose={() => {
                                     setVisible(false)
@@ -419,17 +431,17 @@ function Dashboard() {
                                                 </div>
                                             </div>
                                             <div className='card-panel-body'>
-                                                <Row gutter={[16, 16]}>
-                                                    <Col>
+                                                <Row gutter={[16, 16]} wrap={true}>
+                                                    <Col flex="auto">
                                                         <CardIphone />
                                                     </Col>
-                                                    <Col>
+                                                    <Col flex="auto">
                                                         <CardSms />
                                                     </Col>
-                                                    <Col>
+                                                    <Col flex="auto">
                                                         <CardData />
                                                     </Col>
-                                                    <Col>
+                                                    <Col flex="auto">
                                                         <CardVoice />
                                                     </Col>
                                                 </Row>

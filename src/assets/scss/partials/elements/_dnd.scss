@@ -27,6 +27,10 @@
     &:last-child {
       width: auto;
     }
+
+    @include medium-device {
+        margin-bottom: 16px;
+    }
 }
 
 .dropZone:not(.horizontalDrag).isLast {
@@ -41,10 +45,8 @@
 .draggable-row {
     border: 3px dashed #DBDADE;
     padding: 16px;
-    // display: flex;
     position: relative;
     transition: $transition;
-    // --bs-gutter-x: 0rem;
 
     &:hover {
         border-color: $theme;
@@ -63,9 +65,12 @@
 
 .draggable-column {
     border: 3px dashed #B6BEE3;
-    // flex: 1 1 100%;
-    // padding: 16px;
     position: relative;
+
+    @include medium-device {
+        flex: 0 0 auto;
+        width: 100%;
+    }
 }
 
 .remove-icon {
@@ -106,32 +111,59 @@
     @extend .div-flex-center-cover
 }
 
-.normal-view {
+.customise-action {
+    display: flex;
+    margin: 0 -10px;
+}
+
+.selected .draggable-row {
+    border-color: #18A4FF;
+}
+
+.selected .draggable-row > .remove-icon {
+    background: #18A4FF;
+}
+
+.customiseNotAllowed {
+
+    .draggable-row {
+        border: 0;
+        padding: 0;
+        pointer-events: none;
+        margin: 0 -16px;
+    }
+
+    .dropZone {
+        display: none;
+    }
+
+    .draggable-column {
+        border: 0;
+        pointer-events: none;
+        padding-right: 8px;
+        padding-left: 8px;
+
+        @include xlarge-device {
+            flex: 0 0 auto;
+            width: 50%;
+        }
+
+        @include medium-device {
+            flex: 0 0 auto;
+            width: 100%;
+        }
+    }
 
     .container-fluid {
-        padding: 0;
-    }
-
-    .draggable-row.row {
-        padding: 0;
-        border: 0;
-    }
-
-    .draggable-row.row .col {
-        border: 0;
         padding-left: 8px;
         padding-right: 8px;
     }
 
-    .remove-icon,
-    .dropZone,
-    .dropZone.horizontalDrag,
-    .widget-add-container
-     {
+    .remove-icon {
         display: none;
     }
 
-    .ant-card {
+    .component {
         margin-bottom: 16px;
     }
 }
