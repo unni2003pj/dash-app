@@ -100,7 +100,7 @@ function Dashboard() {
                                         <>
                                             <Button type="primary" className="general-btn" onClick={() => { setEnebleSideBar(true) }}>
                                                 <IconAdd color="#fff" />
-                                                <span>Widgets</span>
+                                                <span>Add Widget</span>
                                             </Button>
                                             <Button type="primary" className='grey-btn' onClick={() => { setAddRow(true) }}>
                                                 <IconAdd color="#4B465C" />
