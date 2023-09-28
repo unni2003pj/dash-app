@@ -206,7 +206,7 @@ const Container = (props) => {
 
       <div className={`drawer ${enebleSideBar ? 'active' : ''}`}>
         <div className="drawer-header">
-          <h5><IconWidget /> Widget</h5>
+          <h5><IconWidget /> Add Widget</h5>
           <div className="drawer-right">
             <button className="actio-link" onClick={() => { setEnebleSideBar(false) }}>
               <IconWidgetClose />
@@ -253,7 +253,7 @@ const Container = (props) => {
           />
         </div>
       </div>
-    </div>
+    </div> 
 
   );
 

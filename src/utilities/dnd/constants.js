@@ -32,7 +32,7 @@ export const SIDEBAR_ITEMS = [
     id: shortid.generate(),
     type: SIDEBAR_ITEM,
     component: {
-      type: "Card One",
+      type: <CardIphone/>,
       content: <CardIphone/>
     }
   },
@@ -40,7 +40,7 @@ export const SIDEBAR_ITEMS = [
     id: shortid.generate(),
     type: SIDEBAR_ITEM,
     component: {
-      type: "Card Two",
+      type: <CardSms/>,
       content: <CardSms/>
     }
   },
@@ -48,7 +48,7 @@ export const SIDEBAR_ITEMS = [
     id: shortid.generate(),
     type: SIDEBAR_ITEM,
     component: {
-      type: "Card Three",
+      type: <CardData/>,
       content: <CardData/>
     }
   },
@@ -56,7 +56,7 @@ export const SIDEBAR_ITEMS = [
     id: shortid.generate(),
     type: SIDEBAR_ITEM,
     component: {
-      type: "Card Four",
+      type: <CardVoice/>,
       content: <CardVoice/>
     }
   },
@@ -64,7 +64,7 @@ export const SIDEBAR_ITEMS = [
     id: shortid.generate(),
     type: SIDEBAR_ITEM,
     component: {
-      type: "Card Contract One",
+      type: <CardContractOne/>,
       content: <CardContractOne/>
     }
   },
@@ -72,7 +72,7 @@ export const SIDEBAR_ITEMS = [
     id: shortid.generate(),
     type: SIDEBAR_ITEM,
     component: {
-      type: "Card Contract Two",
+      type: <CardContractTwo/>,
       content: <CardContractTwo/>
     }
   },
@@ -80,7 +80,7 @@ export const SIDEBAR_ITEMS = [
     id: shortid.generate(),
     type: SIDEBAR_ITEM,
     component: {
-      type: "Card Document One",
+      type: <CardDocumentOne/>,
       content: <CardDocumentOne/>
     }
   },
@@ -88,7 +88,7 @@ export const SIDEBAR_ITEMS = [
     id: shortid.generate(),
     type: SIDEBAR_ITEM,
     component: {
-      type: "Card Document Two",
+      type: <CardDocumentTwo/>,
       content: <CardDocumentTwo/>
     }
   },
@@ -96,7 +96,7 @@ export const SIDEBAR_ITEMS = [
     id: shortid.generate(),
     type: SIDEBAR_ITEM,
     component: {
-      type: "Card Document Three",
+      type: <CardDocumentThree/>,
       content: <CardDocumentThree/>
     }
   },
@@ -104,7 +104,7 @@ export const SIDEBAR_ITEMS = [
     id: shortid.generate(),
     type: SIDEBAR_ITEM,
     component: {
-      type: "Line Chart",
+      type: <CardLineChart/>,
       content: <CardLineChart/>
     }
   },
@@ -112,31 +112,15 @@ export const SIDEBAR_ITEMS = [
     id: shortid.generate(),
     type: SIDEBAR_ITEM,
     component: {
-      type: "Group Chart",
+      type: <CardGroupChart/>,
       content: <CardGroupChart/>
     }
-  },
+  }, 
   {
     id: shortid.generate(),
     type: SIDEBAR_ITEM,
     component: {
-      type: "Card Header",
-      content: <CardHeader/>
-    }
-  },
-  {
-    id: shortid.generate(),
-    type: SIDEBAR_ITEM,
-    component: {
-      type: "Card Header",
-      content: <CardHeader/>
-    }
-  },
-  {
-    id: shortid.generate(),
-    type: SIDEBAR_ITEM,
-    component: {
-      type: "Card Stat One",
+      type: <CardStatOne/>,
       content: <CardStatOne/>
     }
   },
@@ -144,7 +128,7 @@ export const SIDEBAR_ITEMS = [
     id: shortid.generate(),
     type: SIDEBAR_ITEM,
     component: {
-      type: "Card Stat Two",
+      type: <CardStatTwo/>,
       content: <CardStatTwo/>
     }
   },
@@ -152,7 +136,7 @@ export const SIDEBAR_ITEMS = [
     id: shortid.generate(),
     type: SIDEBAR_ITEM,
     component: {
-      type: "Card Stat Three",
+      type: <CardStatThree/>,
       content: <CardStatThree/>
     }
   },
@@ -160,7 +144,7 @@ export const SIDEBAR_ITEMS = [
     id: shortid.generate(),
     type: SIDEBAR_ITEM,
     component: {
-      type: "Card Stat Four",
+      type: <CardStatFour/>,
       content: <CardStatFour/>
     }
   },
@@ -168,7 +152,7 @@ export const SIDEBAR_ITEMS = [
     id: shortid.generate(),
     type: SIDEBAR_ITEM,
     component: {
-      type: "Bar Chart",
+      type: <CardBarChart/>,
       content: <CardBarChart/>
     }
   },
@@ -176,7 +160,7 @@ export const SIDEBAR_ITEMS = [
     id: shortid.generate(),
     type: SIDEBAR_ITEM,
     component: {
-      type: "Table",
+      type: <CardTable/>,
       content: <CardTable/>
     }
   },
@@ -184,7 +168,7 @@ export const SIDEBAR_ITEMS = [
     id: shortid.generate(),
     type: SIDEBAR_ITEM,
     component: {
-      type: "Gauge Chart",
+      type: <CardGaugeChart/>,
       content: <CardGaugeChart/>
     }
   },
@@ -192,7 +176,7 @@ export const SIDEBAR_ITEMS = [
     id: shortid.generate(),
     type: SIDEBAR_ITEM,
     component: {
-      type: "Ring Chart",
+      type: <CardRingChart/>,
       content: <CardRingChart/>
     }
   },
@@ -200,7 +184,7 @@ export const SIDEBAR_ITEMS = [
     id: shortid.generate(),
     type: SIDEBAR_ITEM,
     component: {
-      type: "Network Chart",
+      type: <CardNetwork/>,
       content: <CardNetwork/>
     }
   },
@@ -208,7 +192,7 @@ export const SIDEBAR_ITEMS = [
     id: shortid.generate(),
     type: SIDEBAR_ITEM,
     component: {
-      type: "Card Social",
+      type: <CardSocial/>,
       content: <CardSocial/>
     }
   }

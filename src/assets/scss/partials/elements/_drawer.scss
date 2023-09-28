@@ -46,9 +46,7 @@
 
 .each-widget {
     @extend .div-float-cover;
-    padding: 16px;
     border: $border;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     border-radius: 6px;
-    background: #FAFAFA;
-}
+} 
